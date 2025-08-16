@@ -4,7 +4,7 @@ export default function Hero() {
   // the words you want to cycle through
 
   
-  const words = [".STUDENT", ".MUSICIAN", ".CREATOR"];
+  const words = [".DESIGNER", ".MUSICIAN",".STUDENT", ".CREATOR"];
 
   const [w, setW] = useState(0);        // which word
   const [len, setLen] = useState(0);    // how many letters are visible
@@ -12,7 +12,7 @@ export default function Hero() {
 
   useEffect(() => {
     // typing speed
-    const TYPE = 400;
+    const TYPE = 300;
     const ERASE = 150;
     const HOLD = 900;
 
