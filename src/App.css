@@ -331,12 +331,16 @@ main.ui section + section {
 /* stack on mobile + give the image a taller box */
 @media (max-width: 900px){
   .intro-line{
-  margin-left: 80px;
+  margin-left: 65px;
+
+  padding-bottom: 0;
+  font-size: clamp(35px, 5.2vw, 55px);
   
   
 }
 .brand-typing{
-  margin-left: 80px;
+  margin-left: 65px;
+  font-size: clamp(50px, 8vw, 110px);
   margin-top: 40px;
 }
   .hero-inner{ grid-template-columns: 1fr; }
