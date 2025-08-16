@@ -1,5 +1,6 @@
 // src/Projects.js
-export default [
+import { poems } from "./data/poems.js";
+const projects = [
 
   //graphics
   {
@@ -14,7 +15,7 @@ export default [
     id: "Thakan",
     title: "Tired – Thakan",
     description: "As Someone who came to Australia at a young age, redoing something that you don't actually enjoy was something sort of tiring. I felt I needed a rest, a long rest. I wrote Bishram (Rest) during early days of Australia & Thakan is a prequel to that.",
-    cover: "/project/Main Poster - thakan.png",
+    cover: "/project/tired.png",
     tags: ["Design", "Videography"],
     category: "graphics"     
   },
@@ -47,7 +48,7 @@ export default [
     id: "boy-hill",
     title: "Boy Above the Hill",
     description: "One of my friend clicked this picture around the hill areas of Nepal, this inspired me to make a really nice story but just ended up making a book poster.",
-    cover: "../Public/project/Boyabovethehill.png",
+    cover: "../Public/project/boyabovethehill.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -64,7 +65,7 @@ export default [
     id: "Dukha",
     title: "PAIN",
     description: "Paradox of Phool. The Same eyes which lights up on phool cover, they speak some pain just because of the theme change. I wanted to highlight there would be a pain in happiness as well.",
-    cover: "../Public/project/DUKHA.png",
+    cover: "../Public/project/pain.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -73,7 +74,7 @@ export default [
     id: "RED",
     title: "RED",
     description: "Another piece of my movie-poster collection. I made this poster with a red theme and tone of a detective.",
-    cover: "../Public/project/Main poster-red.png",
+    cover: "../Public/project/red.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -81,7 +82,7 @@ export default [
     id: "Fucola",
     title: "Fucola - Poster",
     description: "Name might be sussy but this design is clean",
-    cover: "../Public/project/FUCOLA.png",
+    cover: "../Public/project/fucola.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -90,7 +91,7 @@ export default [
     id: "Boy with a guitar",
     title: "Boy with a guitar",
     description: "Boy with a guitar is a movie poster I made for a practice, I clicked myself playing ukelele and titled it a boy with a guitar, irony.",
-    cover: "../Public/project/MAIN POSTER.png",
+    cover: "../Public/project/boywithaguitar.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -98,7 +99,7 @@ export default [
     id: "MANCHILD",
     title: "MANCHILD",
     description: "One of my early designs, from my movie-poster collection. The Big Manchild is a movie themed around a pshychopath who is there to solve a mystery. idk something like that.",
-    cover: "../Public/project/Mainposter-thebig.png",
+    cover: "../Public/project/thebigmanchild.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -284,12 +285,11 @@ export default [
     category: "photography"   
   },
 
+  //programming
 
-  // Poems can be separate items (shown with a different card)
-  {
-    id: "poem-ashes",
-    title: "Ashes",
-    poem: `I keep a match, a pocket sky...`,
-    category: "poetry"
-  },
+
+  //poetry
+  ...poems
+
 ];
+export default projects;
