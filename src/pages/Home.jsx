@@ -4,21 +4,25 @@ import Row from "../components/Row.jsx";
 import AboutSection from "../sections/AboutSection.jsx";
 import projects from "../Projects.js";
 
+// helper: works with either `category` (string) or `categories` (array)
+const pick = (cat) =>
+  projects.filter(p => p.category === cat || p.categories?.includes(cat));
+
 export default function Home() {
-    const graphics    = projects.filter(p => p.tags?.includes("Design"));
-    const video       = projects.filter(p => p.tags?.includes("Videography"));
-    const photo       = projects.filter(p => p.tags?.includes("Photography"));
-    const programming = projects.filter(p => p.tags?.includes("Programming"));
-    const poems       = projects.filter(p => p.tags?.includes("Poetry"));
+  const graphics    = pick("graphics");
+  const video       = pick("videography");
+  const photo       = pick("photography");
+  const programming = pick("programming");
+  const poems       = pick("poetry");
 
   return (
     <>
-      {/* HERO (no anchor target here) */}
+      {/* HERO */}
       <section id="hero" className="hero-landing">
         <Hero />
       </section>
 
-      {/* ABOUT (nav target) */}
+      {/* ABOUT */}
       <section id="about" className="ui">
         <AboutSection />
       </section>
@@ -26,14 +30,14 @@ export default function Home() {
       {/* WORKS */}
       <main className="ui">
         <section id="works">
-          <Row title="Graphics"     items={graphics}    seeAllTo="/work?cat=Design" />
-          <Row title="Videography"  items={video}       seeAllTo="/work?cat=Videography" />
-          <Row title="Photography"  items={photo}       seeAllTo="/work?cat=Photography" />
-          <Row title="Programming"  items={programming} seeAllTo="/work?cat=Programming" />
+          <Row title="Graphics"     items={graphics}    seeAllTo="/work?cat=graphics" />
+          <Row title="Videography"  items={video}       seeAllTo="/work?cat=videography" />
+          <Row title="Photography"  items={photo}       seeAllTo="/work?cat=photography" />
+          <Row title="Programming"  items={programming} seeAllTo="/work?cat=programming" />
         </section>
 
         <section id="poetries">
-          <Row title="Poetries" items={poems} seeAllTo="/work?cat=Poetry"  />
+          <Row title="Poetries" items={poems} seeAllTo="/work?cat=poetry" />
         </section>
 
         <section id="contact">{/* contact content */}</section>
