@@ -44,14 +44,14 @@ const projects = [
    category: "graphics"      
  },
 
-  {
-    id: "boy-hill",
-    title: "Boy Above the Hill",
-    description: "One of my friend clicked this picture around the hill areas of Nepal, this inspired me to make a really nice story but just ended up making a book poster.",
-    cover: "/project/boyabovethehill.png",
-    tags: ["Design"],
-    category: "graphics"      
-  },
+  // {
+  //   id: "boy-hill",
+  //   title: "Boy Above the Hill",
+  //   description: "One of my friend clicked this picture around the hill areas of Nepal, this inspired me to make a really nice story but just ended up making a book poster.",
+  //   cover: "/project/boyabovethehill.png",
+  //   tags: ["Design"],
+  //   category: "graphics"      
+  // },
   {
     id: "blood-bath",
     title: "Blood Bath",
@@ -75,14 +75,6 @@ const projects = [
     title: "RED",
     description: "Another piece of my movie-poster collection. I made this poster with a red theme and tone of a detective.",
     cover: "/project/red.png",
-    tags: ["Design"],
-    category: "graphics"      
-  },
-  {
-    id: "Fucola",
-    title: "Fucola - Poster",
-    description: "Name might be sussy but this design is clean",
-    cover: "/project/fucola.png",
     tags: ["Design"],
     category: "graphics"      
   },
