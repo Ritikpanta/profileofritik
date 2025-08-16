@@ -54,7 +54,7 @@ export default function Hero() {
 
         {/* RIGHT: your photo only */}
         <div className="hero-photo">
-          <img src="../public/hero/BG.png" alt="Ritik" />
+          <img src="/hero/BG.PNG" alt="Ritik" />
         </div>
       </div>
     </section>

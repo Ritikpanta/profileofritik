@@ -7,7 +7,7 @@ export default [
     id: "Phool",
     title: "Phool",
     description: "Landing page with smooth scroll & subtle parallax.",
-    cover: "../Public/project/ful - 2.png",
+    cover: "/project/ful - 2.png",
     tags: ["Design"],
     category: "graphics"     
   },
@@ -15,7 +15,7 @@ export default [
     id: "Thakan",
     title: "Tired – Thakan",
     description: "Landing page with smooth scroll & subtle parallax.",
-    cover: "../Public/project/Main Poster - thakan.png",
+    cover: "/project/Main Poster - thakan.png",
     tags: ["Design"],
     category: "graphics"     
   },
@@ -23,7 +23,7 @@ export default [
     id: "Chess Carnival",
     title: "Chess Carnival Poster",
     description: "Landing page with smooth scroll & subtle parallax.",
-    cover: "../Public/project/CHESS CARNIVAL.png",
+    cover: "/project/CHESS CARNIVAL.png",
     tags: ["Design"],
     category: "graphics"     
   },
