@@ -65,24 +65,22 @@ body{
   padding-bottom: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
-
 .about-title {
   margin: 0 0 18px;
   font-size: clamp(28px, 3.2vw, 36px);
 }
 
-
 /* equal-height three columns */
 .about-grid {
   display: grid;
-  min-height: auto;               /* 🔹 minimum height for equal columns */
+  min-height: auto;
   grid-template-columns: 1fr minmax(360px, 420px) 1fr;
   gap: 28px;
-  align-items: stretch;              /* 🔹 all columns same height */
+  align-items: stretch;
 }
 
 .about-card {
-  display: flex;                     /* 🔹 fill column height */
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
@@ -105,15 +103,24 @@ body{
   gap: 10px;
   line-height: 1.6;
   color: var(--muted);
+
+  /* 🔹 keep text from going across too far */
+  max-width: 60ch;
 }
 
-/* center column: photo + short bio, aligned with cards */
+.about-list li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 .about-center {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 100%;                      /* 🔹 match card height */
+  height: 100%;
 }
+
 
 /* portrait box with graceful ratio and no layout jump */
 .about-photo {

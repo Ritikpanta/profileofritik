@@ -51,6 +51,14 @@ export default [
     tags: ["Design"],
     category: "graphics"      
   },
+  {
+    id: "blood-bath",
+    title: "Blood Bath",
+    description: "A mysterious movie poster, I holded a knife and shot some of the pictures and did the rest magic in the photoshop.",
+    cover: "../Public/project/bloodbath.png",
+    tags: ["Design"],
+    category: "graphics"      
+  },
 
   {
     id: "Dukha",
@@ -229,19 +237,53 @@ export default [
   {
     id: "ROADS",
     title: "Road to another land",
-    description: "Grid layout with hover reveal and modal view.",
+    description: "I had my tripod on a distance, saw a light coming from a gate. I sat infront the gate and acted mysterious and boom we have a way to another land.",
     cover: "../photography/another-2.png",
     tags: ["Photography"],
-    category: "photography"   // <— and this
+    category: "photography"   
   },
  {
     id: "Girl on the shore",
     title: "Girl on the shore",
-    description: "Grid layout with hover reveal and modal view.",
+    description: "The frame, the sun glare, it was giving a dreamy feel. I love to go around shores of beaches and one day I saw this girl sitting and I took the picture. Obviously I am sharing this with her permission. ",
     cover: "../photography/image23.png",
     tags: ["Photography"],
-    category: "photography"   // <— and this
+    category: "photography" 
   },
+ {
+    id: "oh my companion",
+    title: "Oh my companion",
+    description: "I was watching the dog and his owner play around from afar, i could resist myself from asking to take a picture. As someone who had a dog as a friend when I was 10y/o, this felt close.",
+    cover: "../photography/dog.png",
+    tags: ["Photography"],
+    category: "photography" 
+  },
+ {
+    id: "I want to be old",
+    title: "Dear old days",
+    description: "Seeing an old couple walking around the park, with their hands wrapping around the shoulder. I can only wish dear old days be like this.",
+    cover: "../photography/dearolddays.jpg",
+    tags: ["Photography"],
+    category: "photography"   
+  },
+ {
+    id: "flower",
+    title: "Dear Arthur",
+    description: "It was beautiful, speaking some words to me",
+    cover: "../photography/flower.JPG",
+    tags: ["Photography"],
+    category: "photography"   
+  },
+  
+ {
+    id: "Me and my memories",
+    title: "Young memories",
+    description: "I am sure the boy gonna remember these moments, I wish my dad was there when I was too young. He had to be outside of the country due to financial conditions. I just cherish these mements.",
+    cover: "../photography/young.jpg",
+    tags: ["Photography"],
+    category: "photography"   
+  },
+
 
   // Poems can be separate items (shown with a different card)
   {
