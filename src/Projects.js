@@ -48,7 +48,7 @@ const projects = [
     id: "boy-hill",
     title: "Boy Above the Hill",
     description: "One of my friend clicked this picture around the hill areas of Nepal, this inspired me to make a really nice story but just ended up making a book poster.",
-    cover: "../Public/project/boyabovethehill.png",
+    cover: "../project/boyabovethehill.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -56,7 +56,7 @@ const projects = [
     id: "blood-bath",
     title: "Blood Bath",
     description: "A mysterious movie poster, I holded a knife and shot some of the pictures and did the rest magic in the photoshop.",
-    cover: "../Public/project/bloodbath.png",
+    cover: "../project/bloodbath.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -65,7 +65,7 @@ const projects = [
     id: "Dukha",
     title: "PAIN",
     description: "Paradox of Phool. The Same eyes which lights up on phool cover, they speak some pain just because of the theme change. I wanted to highlight there would be a pain in happiness as well.",
-    cover: "../Public/project/pain.png",
+    cover: "../project/pain.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -74,7 +74,7 @@ const projects = [
     id: "RED",
     title: "RED",
     description: "Another piece of my movie-poster collection. I made this poster with a red theme and tone of a detective.",
-    cover: "../Public/project/red.png",
+    cover: "../project/red.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -82,7 +82,7 @@ const projects = [
     id: "Fucola",
     title: "Fucola - Poster",
     description: "Name might be sussy but this design is clean",
-    cover: "../Public/project/fucola.png",
+    cover: "../project/fucola.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -91,7 +91,7 @@ const projects = [
     id: "Boy with a guitar",
     title: "Boy with a guitar",
     description: "Boy with a guitar is a movie poster I made for a practice, I clicked myself playing ukelele and titled it a boy with a guitar, irony.",
-    cover: "../Public/project/boywithaguitar.png",
+    cover: "../project/boywithaguitar.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -99,7 +99,7 @@ const projects = [
     id: "MANCHILD",
     title: "MANCHILD",
     description: "One of my early designs, from my movie-poster collection. The Big Manchild is a movie themed around a pshychopath who is there to solve a mystery. idk something like that.",
-    cover: "../Public/project/thebigmanchild.png",
+    cover: "../project/thebigmanchild.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -124,7 +124,7 @@ const projects = [
     id: "Certificate",
     title: "Certificate of Appreciation",
     description: "For the Event I've hosted this is the appreciation of Certificate I got and Ironically I made lol.",
-    cover: "../Public/project/Ritik-panta.png",
+    cover: "../project/Ritik-panta.png",
     tags: ["Design"],
     category: "graphics"      
   },
