@@ -23,7 +23,7 @@ const projects = [
    id: "Kathakar",
    title: "Kathakar",
    description: "A vibrant movie poster for a poetrical film, i titled it kathakar - the subject on the poster is me and the map is of Nepal.",
-   cover: "../project/kathakar.png",
+   cover: "/project/kathakar.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -31,7 +31,7 @@ const projects = [
    id: "Two",
    title: "Two",
    description: "Two was a short film i made all by myself, having two side of me in the screen. This was the thumbnail for the shortfilm, you could scroll down and see it in the videography section",
-   cover: "../project/TWO.png",
+   cover: "/project/TWO.png",
    tags: ["Design", "Videography"],
    category: "graphics"    
  },
@@ -39,7 +39,7 @@ const projects = [
    id: "Coffee",
    title: "Coffee Product Showcase",
    description: "Nepal Coffee, a marketing poster for the coffee that the RR COMPANY makes. This is the poster from my early days of learning and I was happy with the result I made.",
-   cover: "../project/Coffee.png",
+   cover: "/project/Coffee.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -48,7 +48,7 @@ const projects = [
     id: "boy-hill",
     title: "Boy Above the Hill",
     description: "One of my friend clicked this picture around the hill areas of Nepal, this inspired me to make a really nice story but just ended up making a book poster.",
-    cover: "../project/boyabovethehill.png",
+    cover: "/project/boyabovethehill.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -56,7 +56,7 @@ const projects = [
     id: "blood-bath",
     title: "Blood Bath",
     description: "A mysterious movie poster, I holded a knife and shot some of the pictures and did the rest magic in the photoshop.",
-    cover: "../project/bloodbath.png",
+    cover: "/project/bloodbath.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -65,7 +65,7 @@ const projects = [
     id: "Dukha",
     title: "PAIN",
     description: "Paradox of Phool. The Same eyes which lights up on phool cover, they speak some pain just because of the theme change. I wanted to highlight there would be a pain in happiness as well.",
-    cover: "../project/pain.png",
+    cover: "/project/pain.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -74,7 +74,7 @@ const projects = [
     id: "RED",
     title: "RED",
     description: "Another piece of my movie-poster collection. I made this poster with a red theme and tone of a detective.",
-    cover: "../project/red.png",
+    cover: "/project/red.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -82,7 +82,7 @@ const projects = [
     id: "Fucola",
     title: "Fucola - Poster",
     description: "Name might be sussy but this design is clean",
-    cover: "../project/fucola.png",
+    cover: "/project/fucola.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -91,7 +91,7 @@ const projects = [
     id: "Boy with a guitar",
     title: "Boy with a guitar",
     description: "Boy with a guitar is a movie poster I made for a practice, I clicked myself playing ukelele and titled it a boy with a guitar, irony.",
-    cover: "../project/boywithaguitar.png",
+    cover: "/project/boywithaguitar.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -99,7 +99,7 @@ const projects = [
     id: "MANCHILD",
     title: "MANCHILD",
     description: "One of my early designs, from my movie-poster collection. The Big Manchild is a movie themed around a pshychopath who is there to solve a mystery. idk something like that.",
-    cover: "../project/thebigmanchild.png",
+    cover: "/project/thebigmanchild.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -108,7 +108,7 @@ const projects = [
    id: "Brouchure",
    title: "Talent Mela",
    description: "I hosted an event TALENT MELA for my startup - chautari where we annouced a prize of 20,000 Nepali with the motto of promoting passion. Seeing Nepali people so talented yet couldn't possibly follow their passion we did this event to showcase talent and it was hosted in our discord server.",
-   cover: "../project/Brouchure.png",
+   cover: "/project/Brouchure.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -124,7 +124,7 @@ const projects = [
     id: "Certificate",
     title: "Certificate of Appreciation",
     description: "For the Event I've hosted this is the appreciation of Certificate I got and Ironically I made lol.",
-    cover: "../project/Ritik-panta.png",
+    cover: "/project/Ritik-panta.png",
     tags: ["Design"],
     category: "graphics"      
   },
@@ -133,7 +133,7 @@ const projects = [
    id: "Black",
    title: "Murderer of the Blackpath",
    description: "Another Piece of my Movie-poster collection. Murderer of the blackpath, I clicked some of my pictures with eyes open trying to look scary and ended up making this lol.",
-   cover: "../project/black.png",
+   cover: "/project/black.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -141,7 +141,7 @@ const projects = [
    id: "Dream Team",
    title: "Dream Team",
    description: "I made this team annoucement Poster of My Friends futsal team. The Dream Team",
-   cover: "../project/Dreamteam.png",
+   cover: "/project/Dreamteam.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -149,7 +149,7 @@ const projects = [
    id: "Host of the show",
    title: "Host of the Show",
    description: "The person on the poster is me & I hosted this event as well. Made this poster and also hosted a successful event.",
-   cover: "../project/HOST - RITIK.png",
+   cover: "/project/HOST - RITIK.png",
    tags: ["Design"],
    category: "graphics"      
  },
@@ -157,7 +157,7 @@ const projects = [
    id: "Utensils",
    title: "Utensils on Sale",
    description: "Product showcase which are on sale, these were from my early days of photoshop. I experimented lot to highlight the product that were on sales just for the marketing purpose.",
-   cover: "../project/UTENSILS SALE.png",
+   cover: "/project/UTENSILS SALE.png",
    tags: ["Design"],
    category: "graphics"      
  },
