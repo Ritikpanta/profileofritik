@@ -7,7 +7,7 @@ export default function AllProjects() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
 
-  const cat = params.get("cat")?.toLowerCase();  // e.g. graphics, videography
+  const cat = params.get("cat")?.toLowerCase();  
   const q   = params.get("q")?.toLowerCase();    // free-text search
 
   // base list
