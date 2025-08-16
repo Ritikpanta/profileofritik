@@ -268,38 +268,22 @@ main.ui section + section {
 }
 .nav a:hover { color: #4a9eff; }
 
-/* --------------------------
-   HERO
---------------------------- */
-.hero {
-  min-height: auto;
-  padding-bottom: 2rem;
-  margin-bottom: 0;
+/* container */
+.hero-landing { 
+  position: relative; 
 }
-.hero-landing { position: relative; }
-.hero-inner {
+
+/* 2-col on desktop, stack on mobile (you already had this) */
+.hero-inner{
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(320px, 1fr) minmax(420px, 1fr);
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(16px, 4vw, 48px);
 }
-.hero-landing::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background: radial-gradient(85% 70% at 75% 60%, transparent 55%, rgba(0,0,0,.45));
-  mix-blend-mode: multiply;
-}
-.hero-copy{
-  display: grid;
-  row-gap: 14px;
-  align-content: center;
-  justify-items: start;
-}
+
+/* text */
 .brand-typing{
   position: relative;
   display: block;
@@ -311,40 +295,60 @@ main.ui section + section {
   font-weight: 800;
   color: #e9edf6;
 }
-.brand-typing .ghost{ visibility: hidden; pointer-events: none; }
-.brand-typing .type{ position:absolute; left:0; top:0; display:inline-block; }
-.brand-typing .type::after{
-  content:"";
-  display:inline-block;
-  width:2px; height:.9em; margin-left:6px; vertical-align:-.1em;
-  background: currentColor;
-  animation: blink 1s step-end infinite;
-}
-.brand-typing .type:empty::after{ content:none; }
-@keyframes blink { 50% { opacity:0; } }
-
 .intro-line{
-  margin:0;
-  font-size: 45px;
-  color: var(--text);
+  margin: 0;
+  /* was 45px fixed — make it responsive */
+  font-size: clamp(18px, 5.2vw, 40px);
   text-shadow: 0 1px 0 rgba(0,0,0,.35);
 }
-.intro-line.np{ font-size: clamp(16px, 2vw, 28px); }
-.accent{ color: var(--accent); font-weight: 800; }
+.accent{ color: var(--accent); 
+  font-weight: 800; }
 
-.hero-photo { position: relative; z-index: 2; margin: 0; }
-.hero-photo img {
-  height: 50em;
-  width: 50em;
-  object-fit: contain;
-  margin-top: -18px;
-  filter: drop-shadow(0 18px 36px rgba(0,0,0,.45)) contrast(1.05) saturate(1.08);
-  user-select: none; -webkit-user-drag: none;
+/* ********** IMAGE: responsive, no overflow ********** */
+.hero-photo{
+  position: relative;
+  width: min(1300px, 100%);   
+  aspect-ratio: 4 / 5;       /* tune to your photo */
+  border-radius: 20px;
+  overflow: hidden;
+  justify-self: end;         /* aligns to the right on desktop */
+  background: radial-gradient(60% 50% at 65% 40%, rgba(255,255,255,.06), transparent 60%);
 }
+
+/* fill the box; remove fixed 50em sizes */
+.hero-photo img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* or 'cover' if you prefer a crop */
+  object-position: right center;
+  filter: drop-shadow(0 18px 36px rgba(0,0,0,.45)) contrast(1.05) saturate(1.08);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* stack on mobile + give the image a taller box */
 @media (max-width: 900px){
+  .intro-line{
+  margin-left: 80px;
+  
+  
+}
+.brand-typing{
+  margin-left: 80px;
+  margin-top: 40px;
+}
   .hero-inner{ grid-template-columns: 1fr; }
-  .hero-photo{ margin:0; justify-self:center; }
-  .hero-photo img{ height: min(52vh, 520px); }
+  .hero-photo{
+    justify-self: center;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 3 / 4;     /* a bit taller for phones */
+  }
+  .hero-photo img{
+    margin-top: 40px;
+  }
 }
 
 /* --------------------------

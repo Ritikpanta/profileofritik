@@ -25,6 +25,7 @@ export default function Hero() {
     if (del && len === 0) {
       setDel(false);
       setW((w + 1) % words.length);
+      setLen(1);  
       return;
     }
 
