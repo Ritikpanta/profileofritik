@@ -727,6 +727,7 @@ main.ui section + section {
   font-size: .85rem;
 }
 
+
 /* Modal */
 .poetry-reader-backdrop {
   position: fixed; inset: 0;
@@ -763,6 +764,72 @@ main.ui section + section {
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   font-size: 1rem;
 }
+/* FULL-SCREEN OVERLAY */
+.lightbox-backdrop{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  overscroll-behavior: contain; /* prevent rubber-band scroll on iOS */
+}
+
+/* CENTERED CONTAINER */
+.lightbox{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96vw;
+  height: 96vh;                /* fill the viewport */
+  background: transparent;     /* no card chrome around media */
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* IMAGES — fit without scrolling the page */
+.lightbox.is-image .lightbox-img{
+  max-width: 96vw;
+  max-height: 96vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;         /* full screen, no crop */
+  display: block;
+}
+
+/* VIDEOS — keep 16:9 inside the viewport */
+.lightbox.is-video{
+  width: min(1280px, 96vw);
+  height: min(720px, 96vh);
+}
+.lightbox.is-video iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: #000;
+}
+
+/* CLOSE BUTTON */
+.lightbox-close{
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  color: #e9edf6;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-close:hover{ background: rgba(255,255,255,.14); }
+
 
 /* --------------------------
    ACCESSIBILITY / MOTION
