@@ -214,7 +214,7 @@ const projects = [
 },
 {
     id: "Nadhan",
-    title: "YOLO Australia Launch",
+    title: "Naadhan",
     description: "I was trying to make one intro video for one of my projects and When I added nadhaan parinde song to it. It just gave a different meaning to it, a beautiful meaning.",
     cover: "../Tiktokvid/Naadhan.png",
     videoSrc: "/Tiktokvid/Naadhan.mp4",   
