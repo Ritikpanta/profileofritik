@@ -212,9 +212,17 @@ const projects = [
   category: "videography",
   embed: "https://www.youtube.com/embed/65SXbi9ZotE"
 },
+{
+    id: "Nadhan",
+    title: "YOLO Australia Launch",
+    description: "TikTok promo cut, hosted locally for clean playback.",
+    cover: "../Tiktokvid/Naadhan.png",
+    videoSrc: "/Tiktokvid/Naadhan.mp4",   
+    ratio: "16/9",                   
+    tags: ["Videography"],
+    category: "videography"
+  },
 
-
-  
   {
     id: "yolo-tiktok",
     title: "YOLO Australia Launch",

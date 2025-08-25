@@ -1,7 +1,7 @@
 // keep paths absolute from /public
 export const poems = [
   {
-    id: "words",                 // unique
+    id: "words",               
   category: "poetry",
   title: "BAATO",
   author: "Ritik Panta",   // optional
@@ -15,29 +15,107 @@ export const poems = [
 सोचमा डुब्दै छु 
 त्यो पारिको संसारमा 
 म हिड्न सक्छु होला?
-.`, // full text
-  link: "/poetry/words"        // optional (used by modal route)
+.`, 
+  link: "/poetry/words"        
   },
   {
-    id: "silent-shores",
-    title: "Silent Shores",
-    thumbnail: "/poetry/silent-shores.jpg",
-    tags: ["Poetry"],
-    excerpt: "Waves speak in hush tones at dusk...",
-    body: `Waves speak in hush tones at dusk,
-the tide stitching light to sand.
-I keep a pocket full of salt
-for the days I forget the sea.`
+    id: "words",               
+  category: "poetry",
+  title: "RAAT",
+  author: "Ritik Panta",   
+  thumbnail: "/poetry/Raat_Thumb.png", // lives under /public/poetry (lowercase, no spaces)
+  excerpt: "मलाई रात मनपर्छ...",
+  poem:`  मलाई रात मनपर्छ
+  त्यो रातले बोक्ने अन्धकार मनपर्छ 
+  मलाई यो अन्धकारले फैलाउने शान्त मनपर्छ
+  त्यो शान्त भेटिने एकान्त मनपर्छ
+
+  मैले मेरो साथी त्यहि एकान्तमा भेट्अउछु 
+  म सँग बोलिराख्ने मैले म भेट्अउछु 
+  पिर बोकि हिड्ने म बटुवाको छहारी हो यो रात 
+  निराशा लाई त्याग्ने कारद दिन्छ
+  मलाई यहि रातमा 
+  आफै सँग बोल्दै लेख्न मनपर्छ
+  लेखेका हरेक शब्दलाई सङ्गीतमा सुन्न मनपर्छ
+  शान्त यो रातमा आफ्नै बोलिमा रम्न मनपर्छ
+
+  तर
+  शान्त यो रातले मलाई एक्लो महसुस गराउछ
+  एक्लो बनाउने यी भावनाले यो रात कस्तो बिरानो बनाउछ 
+  सोचका जालो हरु बुनेर त्यो जालोमा अन्त्यमा मलाई नै बेर्छ
+  
+  सहारा बन्छ रात, एक्लो पन बन्छ रात 
+  सुख छर्ने रात, दुख पुकार्ने रात 
+  मलाई हसाउने रात 
+  मलाई रुवाउने रात 
+  मलाई 
+  रात मनपर्छ 
+`, 
+  link: "/poetry/words"        
   },
   {
-    id: "city-lights",
-    title: "City Lights",
-    thumbnail: "/poetry/city-lights.jpg",
-    tags: ["Poetry"],
-    excerpt: "Neon spills across wet roads...",
-    body: `Neon spills across wet roads,
-and all our dreams wear raincoats.
-Somewhere a window laughs open,
-and the night lets us in.`
-  }
+    id: "words",               
+  category: "poetry",
+  title: "TIME | समय  ",
+  author: "Ritik Panta",   // optional
+  thumbnail: "/poetry/Samaye_Thumb.png", // lives under /public/poetry (lowercase, no spaces)
+  excerpt: "मलाई पनि हिजो भरखर आमा छेऊ...",
+  poem: `  मलाई पनि हिजो भरखर आमा छेऊ
+  धन्सारमा बस्दै मकै छोडाउदै खाए जस्तो लाग्छ 
+  वा यादहरुमा धमिलै भए पनि अस्ति भरखर मेरी
+  हजुरआमा सँगै गोठालो गए जस्तो लाग्छ 
+  
+  म सानो छदा भन्ने त गर्नुहुन्थ्यो 
+  समय उडीजान्छ कान्छा 
+  समय बितेको पत्तै हुदैन 
+  मलाई सुन्दा अचम्म लाग्थ्यो 
+  ८ ९ कक्षामा पढ्दा यो समय उडिजाने कुरा
+  Social period मा भईदिए नि हुने जस्तो लाग्थ्यो 
+  तर बिडम्बना
+  झुल्दै निदाउदै एक एक सेकेन्ड गन्दै पढ्नुपर्थ्यो
+  
+  १८ वर्ष अघिका त मलाई गाथा गाथा याद छन्
+  किताब बनाउनु भने विस्तारमा हजारौ पानाको बनैदिन्थी 
+  भन्छन नि हरेकको जीवनमा एउटा मोड आउछ रे 
+  मेरो प्लेन चढेर
+  चिल्लो बिशाल घर हरु ले भरिएको 
+  नौलो देशको एरपोर्ट झरे पछि आयो 
+  कम त जोश थियो
+  नयाँ कथा लेख्ने छु
+  नयाँ जीवन बिताउने छु भन्ने 
+  तर
+
+  यो जीवनको किताब भर्ने मसि 
+  पहिलो पाना भरिएपछि नै सकिदो रहेछ 
+  अब
+  जिन्दगीको सैली duplicate भएसी 
+  हिजै बिताएको कुरा आज दोहोराएसी 
+  नया कोर्नको लागि कथा नरहने रहेछ 
+  रमाइलो छैन भन्दिन 
+  रमाउन यहाँ हजारौ चिज छन्
+  तर खै 
+  यो नौलो ठाउको हजार डलर कहिँ खाएपनि 
+  साथीभाई सँगै १० रुपैयामा खाएको चिया 
+  जति आनन्द न आउदो रहेछ 
+  त्यहि साथीभाई सँग बिताएको पल पनि हिजोझैँ लाग्छ 
+  पहिला घर बाहिर निस्की भनिन्थ्यो 
+  आज भोलि 
+  नेपाल कैले आउछस् केटो भनि सोध्नु पर्छ 
+  यही अस्ताउदै गरेको घाम हेर्दै आफैलाई 
+  यी प्रश्नहरु थुपार्न थालेछु
+  खै 
+  कामको हतारले होकि 
+  पढाईको बोजले
+  मैले त दिन गन्नै भुलेछु 
+  पत्तै नपाई यो नौलो देश टेकेको पनि 
+  बर्षौ बितेछ 
+  बल्ल बुज्दै छु
+  साच्चै
+  समय उडेको रहेछ
+`, 
+  link: "/poetry/words"        
+  },
+
+
+  
 ];
