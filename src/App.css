@@ -721,7 +721,7 @@ main.ui section + section {
 .poetry-mini-card .read-btn {
   border: 1px solid rgba(255,255,255,.16);
   background: rgba(255,255,255,.04);
-  color: #e7e7e7;
+  color: #fffdfd;
   padding: 6px 10px;
   border-radius: 999px;
   font-size: .85rem;

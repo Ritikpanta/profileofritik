@@ -186,13 +186,24 @@ const projects = [
   embed: "https://www.youtube.com/embed/9ff56VwL3YU?rel=0"
 },
 {
-  id: "Silent Ink",
-  title: "Silent Ink",
+  id: "Silent Ink ",
+  title: "Silent Ink : Pen",
   description: "Silent ink is the Short Story I wrote and directed. It's about the pshycho love of a lover to the girl, who has no clue about his feeling. It follows a tragic end. It was one of the starting point for my directional journey and also a changing point in my videography journey.",
+  cover: "https://img.youtube.com/vi/zNnoLCIZzkw/mqdefault.jpg",
   tags: ["Videography"],
   category: "videography",
   embed: "https://www.youtube.com/embed/zNnoLCIZzkw"
 },
+{
+  id: "Junkiri : A Conversation",
+  title: "Junkiri : A Conversation",
+  description: "Junkiri is another short film which I wrote, directed and played. It's a natural conversation, where our characters talk about life, home and memories. I learned alot making this and also it is one of those projects which I am proud of",
+  cover: "https://img.youtube.com/vi/Fy-wzPsT4EI/mqdefault.jpg",
+  tags: ["Videography"],
+  category: "videography",
+  embed: "https://www.youtube.com/embed/Fy-wzPsT4EI"
+},
+
 {
   id: "Two",
   title: "Two",
