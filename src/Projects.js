@@ -186,6 +186,14 @@ const projects = [
   embed: "https://www.youtube.com/embed/9ff56VwL3YU?rel=0"
 },
 {
+  id: "Silent Ink",
+  title: "Silent Ink",
+  description: "Silent ink is the Short Story I wrote and directed. It's about the pshycho love of a lover to the girl, who has no clue about his feeling. It follows a tragic end. It was one of the starting point for my directional journey and also a changing point in my videography journey.",
+  tags: ["Videography"],
+  category: "videography",
+  embed: "https://www.youtube.com/embed/zNnoLCIZzkw"
+},
+{
   id: "Two",
   title: "Two",
   description: "A two prepective you have in yourself yet you somehow choose one side of that. I had two faces of me in the screen, edited and colorgraded with davinci resolve",
@@ -193,24 +201,6 @@ const projects = [
   tags: ["Videography"],
   category: "videography",
   embed: "https://www.youtube.com/embed/zVwb1i1Xliw"
-},
-{
-  id: "BISHRAM",
-  title: "BISHRAM",
-  description: "A short film exploring the feeling of exhaustion.",
-  cover: "https://img.youtube.com/vi/2q4DsfPoXgA/maxresdefault.jpg",
-  tags: ["Videography"],
-  category: "videography",
-  embed: "https://www.youtube.com/embed/2q4DsfPoXgA"
-},
-{
-  id: "EVENT HIGHLIGHT",
-  title: "EVENT HIGHLIGHT",
-  description: "A short film exploring the feeling of exhaustion.",
-  cover: "https://img.youtube.com/vi/65SXbi9ZotE/maxresdefault.jpg",
-  tags: ["Videography"],
-  category: "videography",
-  embed: "https://www.youtube.com/embed/65SXbi9ZotE"
 },
 {
     id: "Nadhan",
@@ -223,16 +213,7 @@ const projects = [
     category: "videography"
   },
 
-  {
-    id: "yolo-tiktok",
-    title: "YOLO Australia Launch",
-    description: "TikTok promo cut, hosted locally for clean playback.",
-    cover: "../Tiktokvid/YoloThumb-2.png",
-    videoSrc: "/Tiktokvid/yolo2.mp4",   
-    ratio: "9/16",                   
-    tags: ["Videography"],
-    category: "videography"
-  },
+ 
 
   //photography
   {
