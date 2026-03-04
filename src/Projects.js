@@ -35,6 +35,29 @@ const projects = [
    tags: ["Design", "Videography"],
    category: "graphics"    
  },
+  {
+   id: "Escape",
+   title: "Escaping Reality",
+   description: "Escaping Reality is the concept poster series from my media company - chitrakatha production. I featured myself here, portraying a characther who wants to get free.",
+   cover: "/project/ESCAPING REALITY.png",
+   tags: ["Design"],
+   category: "graphics"    
+ },
+  {
+   id: "Live it fully",
+   title: "You are your Main Character",
+   description: "Another Concept poster, where i've featured my friend Sushil. The concept is about your life where everyone else around you is a mere imagination of your own judgement and meaning that you are your main character, so live it fully.",
+   cover: "/project/Live it fully.png",
+   tags: ["Design"],
+   category: "graphics"    
+ },
+  {
+   id: "Music Sushil",
+   title: "Music is my escape",
+   description: "I feel different when I play, is another concept poster I designed. Highlighting a emotion that I feel different when I play music and get transported to somewhere else, very far. Featuring my friend Sushil.", 
+   tags: ["Design"],
+   category: "graphics"    
+ },
  {
    id: "Coffee",
    title: "Coffee Product Showcase",
