@@ -180,16 +180,26 @@ const projects = [
  
   
   //videography
+  // {
+  //   id: "yolo-tiktok",
+  //   title: "YOLO Australia Launch",
+  //   description: "TikTok promo cut, hosted locally for clean playback.",
+  //   cover: "../Tiktokvid/YoloThumb.png",
+  //   videoSrc: "/Tiktokvid/yolo.mp4",  
+  //   ratio: "9/16",                   
+  //   tags: ["Videography"],
+  //   category: "videography"
+  // },
   {
-    id: "yolo-tiktok",
-    title: "YOLO Australia Launch",
-    description: "TikTok promo cut, hosted locally for clean playback.",
-    cover: "../Tiktokvid/YoloThumb.png",
-    videoSrc: "/Tiktokvid/yolo.mp4",  
-    ratio: "9/16",                   
-    tags: ["Videography"],
-    category: "videography"
-  },
+  id: "Junkiri : A Conversation",
+  title: "Junkiri : A Conversation",
+  description: "Junkiri is another short film which I wrote, directed and played. It's a natural conversation, where our characters talk about life, home and memories. I learned alot making this and also it is one of those projects which I am proud of",
+  cover: "https://img.youtube.com/vi/Fy-wzPsT4EI/mqdefault.jpg",
+  tags: ["Videography"],
+  category: "videography",
+  embed: "https://www.youtube.com/embed/Fy-wzPsT4EI"
+},
+
   {
   id: "tired-thakan",
   title: "Tired – Thakan",
@@ -217,15 +227,6 @@ const projects = [
   category: "videography",
   embed: "https://www.youtube.com/embed/zNnoLCIZzkw"
 },
-{
-  id: "Junkiri : A Conversation",
-  title: "Junkiri : A Conversation",
-  description: "Junkiri is another short film which I wrote, directed and played. It's a natural conversation, where our characters talk about life, home and memories. I learned alot making this and also it is one of those projects which I am proud of",
-  cover: "https://img.youtube.com/vi/Fy-wzPsT4EI/mqdefault.jpg",
-  tags: ["Videography"],
-  category: "videography",
-  embed: "https://www.youtube.com/embed/Fy-wzPsT4EI"
-},
 
 {
   id: "Two",
@@ -235,6 +236,15 @@ const projects = [
   tags: ["Videography"],
   category: "videography",
   embed: "https://www.youtube.com/embed/zVwb1i1Xliw"
+},
+{
+  id: "Salala",
+  title: "Salala",
+  description: "Salala is my first ever directional work for a music video. I directed, edited and colored this music video and most posters to marketing material were also made by my end. It was altogether done by my media company with my cool friends. A experience of a lifetime. ",
+  cover: "https://img.youtube.com/vi/ykYyFdg0uXk/maxresdefault.jpg",
+  tags: ["Videography"],
+  category: "videography",
+  embed: "https://www.youtube.com/embed/ykYyFdg0uXk"
 },
 {
     id: "Nadhan",
