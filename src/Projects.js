@@ -55,6 +55,7 @@ const projects = [
    id: "Music Sushil",
    title: "Music is my escape",
    description: "I feel different when I play, is another concept poster I designed. Highlighting a emotion that I feel different when I play music and get transported to somewhere else, very far. Featuring my friend Sushil.", 
+   cover: "/project/MusicSushil.png",
    tags: ["Design"],
    category: "graphics"    
  },
