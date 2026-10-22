@@ -128,8 +128,9 @@ export default function Hero() {
         </p>
 
         <p className="hero-lede">
-          I write in a notebook everywhere I go. When the words needed pictures, I picked up a
-          camera. Now I run ChitraKatha Production in Sydney, and I still fill notebooks.
+          This all started with words in notebooks, the stories always meant something 
+          to me, When those stories needed pictures, I picked up a camera. 
+          Now I run ChitraKatha Production in Sydney, and I still fill notebooks.
         </p>
 
         <ul className="hero-links">
