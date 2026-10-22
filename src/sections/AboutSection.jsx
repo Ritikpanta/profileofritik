@@ -1,78 +1,64 @@
 // src/sections/AboutSection.jsx
+import { PartHead } from "../components/Heads.jsx";
+import { Ink, Tape } from "../components/Hand.jsx";
+
 const crafts = [
-  {
-    k: "Film & direction",
-    v: "I’m a writer first. My writing needed pictures, and that’s how filmmaking came into my life. Now I write, direct and edit, for my own stories and for clients, in DaVinci Resolve and After Effects.",
-  },
-  {
-    k: "Graphic design",
-    v: "Posters and key art for my own projects and for others. I’m a founding member of Chautari and I’ve made most of its event graphics, plus freelance work.",
-  },
-  {
-    k: "Music",
-    v: "Guitar, flute, harmonica and songwriting. I sing a little too, even if the vocals aren’t singer-perfect.",
-  },
-  {
-    k: "Programming",
-    v: "Part of my studies, and another way to make things. I’m learning web development and machine learning.",
-  },
+  ["Film", "I write, direct and edit, for my own stories and for clients. DaVinci Resolve and After Effects."],
+  ["Design", "Posters and key art. A founding member of Chautari, where I made the event posters."],
+  ["Music", "Guitar, flute, harmonica, songwriting. I sing a little, even if the vocals aren’t singer-perfect."],
+  ["Code", "Part of my studies, and another way to make things. Learning web development and machine learning."],
 ];
 
 const path = [
-  {
-    year: "2020",
-    title: "Finished school",
-    v: "Lots of memories, strong at science and maths, and the year I started exploring design.",
-  },
-  {
-    year: "2022",
-    title: "+2 in Computer Science",
-    v: "Covid hit and I studied mostly from my room. I picked up the guitar, designed a lot, and finished with over 85%.",
-  },
-  {
-    year: "2023",
-    title: "Australia",
-    v: "Studying IT while building ChitraKatha Production and working on film and design projects. A boy with a dream.",
-  },
+  ["2020", "Finished school. Good at science and maths, and started playing with design."],
+  ["2022", "+2 in Computer Science, mostly from my room during Covid. Picked up the guitar. Over 85%."],
+  ["2023", "Studying IT in Australia while running ChitraKatha Production. Still a boy with a dream."],
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section about" aria-labelledby="about-title">
+    <section id="about" className="block about" aria-labelledby="about-title">
+      <PartHead id="about-title" ne="म" en="about me" seed={161} />
+
       <div className="about-grid">
-        <figure className="about-portrait">
-          <img src="/media/misc/about-portrait.webp" alt="Ritik Panta, arms crossed, outdoors" loading="lazy" width="2552" height="3829" />
-          <figcaption lang="ne">नेपालबाट, सिड्नीमा</figcaption>
+        <figure className="polaroid" style={{ "--a": "-2.5deg" }}>
+          <Tape seed={17} w={110} angle={4} className="polaroid-tape" />
+          <img src="/media/misc/about-portrait.webp" alt="Ritik Panta outdoors, arms crossed" loading="lazy" width="2552" height="3829" />
+          <figcaption>
+            <span lang="ne">नेपालबाट, सिड्नीमा</span>
+            <small>from Nepal, in Sydney</small>
+          </figcaption>
         </figure>
 
         <div className="about-copy">
-          <h2 id="about-title" className="section-title">About me</h2>
-          <p className="about-lede">
-            I’m from Nepal and now live in Sydney. I love to capture and create things, and
-            I found designing, writing, filmmaking and coding to be the ways I do that. I run
-            ChitraKatha Production, where we make music videos, event films and content for
-            brands. I also play music.
+          <p className="typed lede">
+            I’m from Nepal and live in Sydney. I love to capture and create things, and I found
+            designing, writing, filmmaking and coding to be the ways I do that. I run ChitraKatha
+            Production, where we make music videos, event films and content for brands. I also
+            play music.
           </p>
 
-          <dl className="crafts">
-            {crafts.map(({ k, v }) => (
-              <div key={k}>
-                <dt>{k}</dt>
-                <dd>{v}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <h3 className="path-title">So far</h3>
-          <ol className="path">
-            {path.map((p) => (
-              <li key={p.year}>
-                <span className="path-year">{p.year}</span>
-                <span className="path-head">{p.title}</span>
-                <span className="path-text">{p.v}</span>
+          <ul className="crafts">
+            {crafts.map(([k, v], i) => (
+              <li key={k}>
+                <Ink kind="tick" w={22} h={20} size={3.4} seed={i + 5} color="var(--marker)" className="craft-tick" />
+                <strong>{k}.</strong> {v}
               </li>
             ))}
-          </ol>
+          </ul>
+
+          <div className="so-far">
+            <p className="hand-label">so far</p>
+            <Ink kind="underline" w={560} h={22} size={3} seed={177} color="var(--ink)" className="so-far-line" />
+            <ol className="so-far-list">
+              {path.map(([y, v]) => (
+                <li key={y}>
+                  <span className="so-far-year">{y}</span>
+                  <span className="typed">{v}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>

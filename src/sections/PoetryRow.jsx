@@ -1,42 +1,45 @@
 // src/sections/PoetryRow.jsx
+// Nepali poems, as pages torn out of a spiral notebook.
 import { useState } from "react";
 import PoetryReader from "../components/PoetryReader.jsx";
+import { SubHead } from "../components/Heads.jsx";
+import { tornTopClip } from "../lib/hand.js";
+
+const firstLines = (text, n = 6) =>
+  (text || "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .slice(0, n);
 
 export default function PoetryRow({ items = [] }) {
   const [active, setActive] = useState(null);
   if (!items.length) return null;
 
   return (
-    <section id="poems" className="poems" aria-labelledby="poems-title">
-      <div className="poems-inner">
-        <header className="section-head">
-          <h2 id="poems-title" className="section-title">
-            Poems <span lang="ne" className="poems-ne">कविता</span>
-          </h2>
-          <p className="section-note">
-            I carry a notebook everywhere. These are a few pages from it, written in Nepali.
-          </p>
-        </header>
+    <section id="poems" className="block poems" aria-labelledby="poems-title">
+      <SubHead id="poems-title" title="nepali poems" width={250} seed={121} note="I write in Nepali. These are a few pages, torn out.">
+        <p className="poems-ne" lang="ne">कविता</p>
+      </SubHead>
 
-        <ul className="poem-list">
-          {items.map((p, i) => (
-            <li key={p.id} style={{ "--tilt": `${[-1.2, 0.8, -0.5][i % 3]}deg` }}>
-              <button type="button" className="poem-card" onClick={() => setActive(p)}>
-                <span className="poem-photo">
-                  <img src={p.thumbnail} alt="" loading="lazy" />
-                </span>
-                <span className="poem-title" lang="ne">{p.titleNe || p.title}</span>
-                <span className="poem-meaning">
-                  {p.title}
-                  {p.meaning ? `, ${p.meaning.toLowerCase()}` : ""}
-                </span>
-                <span className="poem-excerpt" lang="ne">{p.excerpt}</span>
-                <span className="poem-read">Read the poem</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="torn-pages">
+        {items.map((p, i) => (
+          <li key={p.id} style={{ "--a": `${[-2.4, 1.6, -0.8][i % 3]}deg` }}>
+            <button type="button" className="torn-page" style={{ clipPath: tornTopClip(i + 4) }} onClick={() => setActive(p)} aria-label={`Read ${p.title}`}>
+              <span className="torn-page-title" lang="ne">{p.titleNe || p.title}</span>
+              <span className="torn-page-gloss">{p.title}{p.meaning ? `, ${p.meaning.toLowerCase()}` : ""}</span>
+              <span className="torn-page-lines" lang="ne">
+                {firstLines(p.poem || p.body).map((l, k) => (
+                  <span key={k}>{l}</span>
+                ))}
+              </span>
+              <span className="torn-page-more">
+                <span lang="ne">पूरा पढ्नुहोस्</span> (read the whole poem)
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
       {active && <PoetryReader poem={active} onClose={() => setActive(null)} />}
     </section>
   );

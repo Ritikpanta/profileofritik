@@ -1,7 +1,8 @@
 // src/sections/Contact.jsx
+// The contact form is a letter.
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiMail, FiInstagram, FiYoutube, FiLinkedin, FiFacebook } from "react-icons/fi";
+import { PartHead } from "../components/Heads.jsx";
 
 const EMAIL = "letscreatewithritik@gmail.com";
 
@@ -14,7 +15,7 @@ export default function Contact() {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
-      setStatus({ sending: false, ok: false, msg: "Add your name, email and a message, then send again." });
+      setStatus({ sending: false, ok: false, msg: "The letter needs a message, your name and an email to reply to." });
       return;
     }
     try {
@@ -26,61 +27,61 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       if (res.status !== 200) throw new Error("EmailJS returned non-200");
-      setStatus({ sending: false, ok: true, msg: "Message sent. I’ll get back to you soon." });
+      setStatus({ sending: false, ok: true, msg: "Sent. I’ll write back soon." });
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err);
-      setStatus({
-        sending: false,
-        ok: false,
-        msg: `The message didn’t go through. Try again, or email ${EMAIL} directly.`,
-      });
+      setStatus({ sending: false, ok: false, msg: `It didn’t send. Try again, or email ${EMAIL}.` });
     }
   };
 
   return (
-    <section id="contact" className="section contact" aria-labelledby="contact-title">
-      <div className="contact-grid">
-        <div className="contact-copy">
-          <h2 id="contact-title" className="contact-title">Got a story? Let’s make it.</h2>
-          <p className="contact-lede">
-            Films, music videos, posters, or just an idea you want to talk through. Write to me
-            and I’ll reply as soon as I can.
-          </p>
+    <section id="write" className="block write" aria-labelledby="write-title">
+      <PartHead id="write-title" ne="चिठी" en="write to me" seed={181} />
 
-          <a className="contact-email" href={`mailto:${EMAIL}`}>
-            <FiMail aria-hidden="true" />
-            <span>{EMAIL}</span>
-          </a>
-
-          <ul className="socials" aria-label="Social links">
-            <li><a href="https://instagram.com/bagaichaofritik" target="_blank" rel="noreferrer"><FiInstagram aria-hidden="true" />Instagram</a></li>
-            <li><a href="https://www.youtube.com/@Ritikpanta" target="_blank" rel="noreferrer"><FiYoutube aria-hidden="true" />YouTube</a></li>
-            <li><a href="https://www.linkedin.com/in/ritikpanta/" target="_blank" rel="noreferrer"><FiLinkedin aria-hidden="true" />LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/Ritikpantaa/" target="_blank" rel="noreferrer"><FiFacebook aria-hidden="true" />Facebook</a></li>
-          </ul>
-        </div>
-
-        <form className="contact-form" onSubmit={onSubmit} noValidate>
-          <label>
-            <span>Your name</span>
-            <input name="name" type="text" autoComplete="name" value={form.name} onChange={onChange} required />
+      <div className="write-grid">
+        <form className="letter" onSubmit={onSubmit} noValidate>
+          <p className="letter-date" aria-hidden="true">Sydney, today</p>
+          <p className="letter-dear">Dear Ritik,</p>
+          <label className="letter-body">
+            <span className="visually-hidden">Your message</span>
+            <textarea
+              name="message"
+              rows="6"
+              value={form.message}
+              onChange={onChange}
+              placeholder="I've got a film / a song / an idea..."
+              required
+            />
           </label>
-          <label>
-            <span>Your email</span>
-            <input name="email" type="email" autoComplete="email" value={form.email} onChange={onChange} required />
+          <p className="letter-yours">Yours,</p>
+          <label className="letter-line">
+            <span className="visually-hidden">Your name</span>
+            <input name="name" type="text" autoComplete="name" value={form.name} onChange={onChange} placeholder="your name" required />
           </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" value={form.message} onChange={onChange} required />
+          <label className="letter-line">
+            <span className="letter-line-label">write back to</span>
+            <input name="email" type="email" autoComplete="email" value={form.email} onChange={onChange} placeholder="you@email.com" required />
           </label>
-          <button className="btn btn-solid" type="submit" disabled={status.sending}>
-            {status.sending ? "Sending…" : "Send message"}
+          <button className="stamp" type="submit" disabled={status.sending}>
+            <span>{status.sending ? "sending…" : "send"}</span>
+            <small lang="ne">पठाउनुहोस्</small>
           </button>
-          <p className={`flash${status.ok === true ? " ok" : status.ok === false ? " err" : ""}`} role="status" aria-live="polite">
+          <p className={`letter-flash${status.ok === true ? " ok" : status.ok === false ? " err" : ""}`} role="status" aria-live="polite">
             {status.msg}
           </p>
         </form>
+
+        <div className="write-side">
+          <p className="typed">Or skip the form:</p>
+          <a className="write-email" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <ul className="write-links">
+            <li><a href="https://instagram.com/bagaichaofritik" target="_blank" rel="noreferrer">instagram</a></li>
+            <li><a href="https://www.youtube.com/@Ritikpanta" target="_blank" rel="noreferrer">youtube</a></li>
+            <li><a href="https://www.linkedin.com/in/ritikpanta/" target="_blank" rel="noreferrer">linkedin</a></li>
+            <li><a href="https://www.facebook.com/Ritikpantaa/" target="_blank" rel="noreferrer">facebook</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   );

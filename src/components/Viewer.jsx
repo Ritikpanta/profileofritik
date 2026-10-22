@@ -71,19 +71,14 @@ export default function Viewer({ items, index, onClose, onIndex }) {
       </figure>
 
       <aside className="viewer-info">
+        <span className="viewer-tape" aria-hidden="true" />
         {(item.client || item.shoot) && (
           <p className="viewer-client">{item.client || item.shoot}</p>
         )}
         <h2 className="viewer-title">{item.title}</h2>
         {item.titleNe && <p className="viewer-title-ne" lang="ne">{item.titleNe}</p>}
         {item.desc && <p className="viewer-desc">{item.desc}</p>}
-        {item.tags?.length > 0 && (
-          <ul className="tags">
-            {item.tags.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        )}
+        {item.tags?.length > 0 && <p className="viewer-tags">{item.tags.join(", ")}</p>}
         {many && (
           <p className="viewer-count">
             {index + 1} of {items.length}

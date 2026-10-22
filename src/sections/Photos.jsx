@@ -1,46 +1,51 @@
 // src/sections/Photos.jsx
-import { useState } from "react";
+// A contact sheet: strips of frames, portrait shots lying on their side the way
+// they do on a real sheet, and the favourites circled in red.
 import useViewer from "../components/useViewer.jsx";
+import { SubHead } from "../components/Heads.jsx";
+import { Ink } from "../components/Hand.jsx";
 import { photos } from "../data/work.js";
 
-const FIRST = 14;
+const PER_STRIP = 6;
 
-export default function Photos({ showAll = false }) {
-  const [all, setAll] = useState(showAll);
-  const list = all ? photos : photos.slice(0, FIRST);
+export default function Photos() {
   const { open, viewer } = useViewer(photos);
+  const strips = [];
+  for (let i = 0; i < photos.length; i += PER_STRIP) strips.push(photos.slice(i, i + PER_STRIP));
 
   return (
-    <section id="photos" className="section photos" aria-labelledby="photos-title">
-      <header className="section-head">
-        <h2 id="photos-title" className="section-title">Photographs</h2>
-        <p className="section-note">
-          Stills from shoots and events, and the everyday moments I can’t walk past.
-        </p>
-      </header>
+    <section id="photos" className="block photos" aria-labelledby="photos-title">
+      <SubHead
+        id="photos-title"
+        title="photographs"
+        width={250}
+        seed={101}
+        note="Friends, strangers (with permission), the beach, the light. Click any frame to see it properly."
+      />
 
-      <ul className="photo-rows">
-        {list.map((p) => {
-          const r = p.w / p.h;
-          return (
-            <li key={p.id} style={{ "--r": r }}>
-              <button type="button" className="photo" onClick={() => open(p)} aria-label={`Open ${p.title}, ${p.shoot}`}>
-                <i style={{ paddingBottom: `${(1 / r) * 100}%` }} aria-hidden="true" />
-                <img src={p.thumb} alt="" loading="lazy" decoding="async" />
-                <span className="photo-cap">{p.shoot}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-
-      {!all && photos.length > FIRST && (
-        <div className="more">
-          <button type="button" className="btn btn-line" onClick={() => setAll(true)}>
-            Show all {photos.length} photographs
-          </button>
-        </div>
-      )}
+      <div className="sheet">
+        <p className="sheet-note">the circled ones are my favourites</p>
+        {strips.map((strip, s) => (
+          <ol key={s} className="strip" style={{ "--a": `${[-0.5, 0.35, -0.2][s % 3]}deg` }}>
+            {strip.map((p, i) => {
+              const n = s * PER_STRIP + i;
+              const tall = p.h > p.w;
+              return (
+                <li key={p.id}>
+                  <button type="button" className={`frame${tall ? " is-tall" : ""}`} onClick={() => open(p)} aria-label={`Open ${p.title}`}>
+                    <img src={p.thumb} alt="" loading="lazy" decoding="async" />
+                  </button>
+                  <span className="frame-n" aria-hidden="true">
+                    {n + 1}
+                    <small>{n + 1}A</small>
+                  </span>
+                  {p.pick && <Ink kind="circle" w={180} h={128} size={4.5} seed={n + 3} className="frame-pick" />}
+                </li>
+              );
+            })}
+          </ol>
+        ))}
+      </div>
       {viewer}
     </section>
   );
