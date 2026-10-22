@@ -19,3 +19,6 @@ pnpm-debug.log*
 .env
 .env.local
 
+
+# Also ignore a shared dependency directory linked into a local checkout.
+node_modules

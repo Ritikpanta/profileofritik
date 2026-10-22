@@ -110,38 +110,30 @@ export default function Hero() {
           <span className="hero-name-en">Ritik Panta</span>
         </h1>
 
+        <p className="hero-role">Filmmaker. Writer. Director.</p>
+        <p className="hero-founder">Founder of <a href="#chitrakatha">ChitraKatha Production</a></p>
         <p className="hero-make">
-          I make{" "}
-          <Marked seed={2} delay={0.7} animate={!reduced}>films</Marked>,{" "}
-          <Marked seed={5} delay={1.05} animate={!reduced}>posters</Marked>,{" "}
-          <Marked seed={8} delay={1.4} animate={!reduced}>songs</Marked>{" "}
-          <br />
-          <Marked kind="highlight" seed={3} delay={1.8} size={26} color="var(--highlighter)" animate={!reduced}>
-            stories
-          </Marked>
-          .
-          <Note color="biro" angle={-4} className="hero-make-note">
-            <span lang="ne">चित्र</span> + <span lang="ne">कथा</span> = picture stories.
-            <br />
-            That’s where ChitraKatha comes from.
-          </Note>
+          It starts with a <Marked kind="highlight" size={18} color="var(--highlighter)" animate={!reduced}>story</Marked>.
         </p>
-
         <p className="hero-lede">
-          This all started with words in notebooks, the stories always meant something 
-          to me, When those stories needed pictures, I picked up a camera. 
-          Now I run ChitraKatha Production in Sydney, and I still fill notebooks.
+          I’m Ritik, from Nepal, currently in Sydney. I write stories and bring them to life
+          through films. Some start in my notebook, some become songs, and some I get to
+          make with my team at ChitraKatha. This is a little of that journey.
         </p>
+        <Note color="biro" angle={-2} className="hero-make-note">
+          <span lang="ne">चित्र</span> + <span lang="ne">कथा</span> = picture stories.
+          <br />That’s where ChitraKatha comes from.
+        </Note>
 
         <ul className="hero-links">
           <li>
-            <a href="#art">
-              see my own work
+            <a href="#films">
+              watch my films
               <Ink kind="underline" w={150} h={12} size={3.4} seed={21} color="var(--marker)" className="link-ink" />
             </a>
           </li>
           <li>
-            <a href="#work">work for others</a>
+            <a href="#work">commercial work</a>
           </li>
           <li>
             <a href="#write">write to me</a>

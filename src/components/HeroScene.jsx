@@ -142,8 +142,8 @@ async function paintStrip() {
     markerPath(g, [[x + fw - 18, fy + 14], [x + fw * 0.5, fy + fh * 0.52], [x + 4, fy + fh - 8]], r, 3);
   };
   circleAt(4);
-  circleAt(13);
-  crossAt(8);
+  circleAt(Math.min(6, n - 1));
+  crossAt(Math.min(3, n - 1));
 
   // perforations: four per frame, top and bottom
   g.globalCompositeOperation = "destination-out";
@@ -320,7 +320,7 @@ function Rig({ pointer, reduced, children }) {
   const vh = viewport.height;
   const vw = viewport.width;
   const scale = wide ? Math.min(0.92, vh / 5.7) : Math.min(vw / 5.0, vh / 5.15);
-  const x = wide ? vw * 0.22 : 0;
+  const x = 0;
 
   useFrame(() => {
     const tx = reduced ? 0 : pointer.current.x * 0.35;

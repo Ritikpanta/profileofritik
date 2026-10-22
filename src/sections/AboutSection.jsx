@@ -3,16 +3,10 @@ import { PartHead } from "../components/Heads.jsx";
 import { Ink, Tape } from "../components/Hand.jsx";
 
 const crafts = [
-  ["Film", "I write, direct and edit, for my own stories and for clients. DaVinci Resolve and After Effects."],
-  ["Design", "Posters and key art. A founding member of Chautari, where I made the event posters."],
-  ["Music", "Guitar, flute, harmonica, songwriting. I sing a little, even if the vocals aren’t singer-perfect."],
-  ["Code", "Part of my studies, and another way to make things. Learning web development and machine learning."],
-];
-
-const path = [
-  ["2020", "Finished school. Good at science and maths, and started playing with design."],
-  ["2022", "+2 in Computer Science, mostly from my room during Covid. Picked up the guitar. Over 85%."],
-  ["2023", "Studying IT in Australia while running ChitraKatha Production. Still a boy with a dream."],
+  ["Writing and directing", "I write stories, direct them and work on the edit. Short films are where I started, and they are still close to me."],
+  ["ChitraKatha Production", "I am the founder. With our team, I work on music videos, films, promos and event coverage."],
+  ["College marketing", "I work as a Marketing Ambassador at APIC, creating videos about students, campus life and the Dean’s series."],
+  ["Away from the shoot", "I draw, design posters, write poems and make music. A lot of those ideas end up in my films."],
 ];
 
 export default function AboutSection() {
@@ -32,10 +26,10 @@ export default function AboutSection() {
 
         <div className="about-copy">
           <p className="typed lede">
-            I’m from Nepal and live in Sydney. I love to capture and create things, and I found
-            designing, writing, filmmaking and coding to be the ways I do that. I run ChitraKatha
-            Production, where we make music videos, event films and content for brands. I also
-            play music.
+            I’m from Nepal and live in Sydney. Writing was where it started for me. I would
+            imagine a story and want to see how it looked on screen, so I started making films.
+            Now I write, direct and run ChitraKatha Production with a team of people I enjoy
+            creating with. I’m still learning, and every project teaches me something.
           </p>
 
           <ul className="crafts">
@@ -47,18 +41,7 @@ export default function AboutSection() {
             ))}
           </ul>
 
-          <div className="so-far">
-            <p className="hand-label">so far</p>
-            <Ink kind="underline" w={560} h={22} size={3} seed={177} color="var(--ink)" className="so-far-line" />
-            <ol className="so-far-list">
-              {path.map(([y, v]) => (
-                <li key={y}>
-                  <span className="so-far-year">{y}</span>
-                  <span className="typed">{v}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
+
         </div>
       </div>
     </section>

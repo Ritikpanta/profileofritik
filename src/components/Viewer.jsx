@@ -65,6 +65,9 @@ export default function Viewer({ items, index, onClose, onIndex }) {
             allowFullScreen
           />
         )}
+        {item.kind === "drive" && (
+          <iframe key={item.id} src={item.embed} title={item.title} allow="autoplay; fullscreen" allowFullScreen />
+        )}
         {item.kind === "image" && (
           <img key={item.id} src={item.src} alt={item.title} width={item.w} height={item.h} />
         )}
@@ -78,6 +81,7 @@ export default function Viewer({ items, index, onClose, onIndex }) {
         <h2 className="viewer-title">{item.title}</h2>
         {item.titleNe && <p className="viewer-title-ne" lang="ne">{item.titleNe}</p>}
         {item.desc && <p className="viewer-desc">{item.desc}</p>}
+        {item.href && <p><a href={item.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></p>}
         {item.tags?.length > 0 && <p className="viewer-tags">{item.tags.join(", ")}</p>}
         {many && (
           <p className="viewer-count">

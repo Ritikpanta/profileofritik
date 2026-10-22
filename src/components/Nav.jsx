@@ -7,11 +7,11 @@ import { Ink } from "./Hand.jsx";
 
 const LINKS = [
   ["films", "films"],
-  ["sketchbook", "sketchbook"],
+  ["sketchbook", "sketch & animation"],
+  ["work", "commercial work"],
   ["posters", "posters"],
   ["photos", "photos"],
   ["poems", "poems"],
-  ["work", "for others"],
   ["about", "about"],
   ["write", "write to me"],
 ];

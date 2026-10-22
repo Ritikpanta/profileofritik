@@ -1,352 +1,947 @@
-// src/data/work.js
-// Every piece of work on the site lives here. Titles and notes are written in
-// my own voice, so change anything that doesn't sound like me.
-// Media lives in /public/media (web-ready copies made from the originals).
-
-const video = (slug, ratio) => ({
-  kind: "video",
-  src: `/media/video/${slug}.mp4`,
-  loop: `/media/loops/${slug}.mp4`,
-  cover: `/media/covers/${slug}.webp`,
-  ratio,
-});
-
-const youtube = (id, coverSize = "maxresdefault") => ({
-  kind: "youtube",
-  embed: `https://www.youtube.com/embed/${id}`,
-  cover: `https://img.youtube.com/vi/${id}/${coverSize}.jpg`,
-  ratio: "16/9",
-});
-
-const poster = (slug, w, h) => ({
-  kind: "image",
-  src: `/media/posters/${slug}.webp`,
-  thumb: `/media/posters/${slug}-sm.webp`,
-  w,
-  h,
-});
-
-const photo = (slug, w, h) => ({
-  kind: "image",
-  src: `/media/photos/${slug}.webp`,
-  thumb: `/media/photos/${slug}-sm.webp`,
-  w,
-  h,
-});
-
-const sketch = (slug, w, h) => ({
-  kind: "image",
-  src: `/media/sketch/${slug}.webp`,
-  thumb: `/media/sketch/${slug}-sm.webp`,
-  w,
-  h,
-});
-
-const frames = (slug) => [1, 2, 3].map((i) => `/media/frames/${slug}-${i}.webp`);
-
-/* ===================================================== my own work (चित्र) */
+// Portfolio content. Use verified project media, and keep drafts out of the public selection.
 
 export const films = [
   {
-    id: "narujeka-nindra",
-    title: "Narujeka Nindra",
-    titleNe: "नारुजेका निन्द्रा",
-    ...video("narujeka-nindra", "16/9"),
-    frames: frames("narujeka-nindra"),
-    tags: ["animation", "drawn by hand"],
-    desc: "Built from my own drawings, with the words on screen in Nepali. It starts in colour and slowly drains to grey.",
+    "id": "junkiri",
+    "title": "Junkiri: A Conversation",
+    "kind": "youtube",
+    "embed": "https://www.youtube.com/embed/Fy-wzPsT4EI",
+    "cover": "https://img.youtube.com/vi/Fy-wzPsT4EI/hqdefault.jpg",
+    "ratio": "16/9",
+    "tags": [
+      "writer",
+      "director",
+      "actor"
+    ],
+    "desc": "I wrote, directed and acted in Junkiri. It's a conversation about life, home and memories. I learned a lot making this, and it is still one of those projects I am proud of."
   },
   {
-    id: "photo-bhetnuparni",
-    title: "Photo Bhetnuparni",
-    ...video("photo-bhetnuparni", "16/9"),
-    frames: frames("photo-bhetnuparni"),
-    tags: ["short film"],
-    desc: "Sketchbook pages and night footage from around the city, held together by Nepali lines on screen.",
+    "id": "silent-ink",
+    "title": "Silent Ink: Pen",
+    "kind": "youtube",
+    "embed": "https://www.youtube.com/embed/zNnoLCIZzkw",
+    "cover": "https://img.youtube.com/vi/zNnoLCIZzkw/hqdefault.jpg",
+    "ratio": "16/9",
+    "tags": [
+      "writer",
+      "director"
+    ],
+    "desc": "Silent Ink is one of the first stories I wrote and directed. It follows a lover whose feelings turn into an obsession. This was where my directing journey started."
   },
   {
-    id: "gaine-series",
-    title: "Gaine Series",
-    ...video("gaine-series", "16/9"),
-    frames: frames("gaine-series"),
-    tags: ["series", "sketchbook"],
-    desc: "Black and white, straight from the sketchbook: drawings, handwritten Nepali and a few words to camera.",
+    "id": "phool",
+    "title": "Phool",
+    "kind": "youtube",
+    "embed": "https://www.youtube.com/embed/9ff56VwL3YU",
+    "cover": "https://img.youtube.com/vi/9ff56VwL3YU/hqdefault.jpg",
+    "ratio": "16/9",
+    "tags": [
+      "5 chapters",
+      "5 songs",
+      "story in progress"
+    ],
+    "desc": "Phool is a love story I have been writing for a while. It has 5 chapters and 5 songs. This video is a glimpse of the story, and I hope to give the whole thing the visuals I have in my head."
   },
   {
-    id: "batti-putali",
-    title: "Batti Putali",
-    ...video("batti-putali", "9/16"),
-    frames: frames("batti-putali"),
-    tags: ["music", "visual"],
-    desc: "A lantern-lit visual for Batti Putali, a song I've been working on.",
+    "id": "thakan",
+    "title": "Tired - Thakan",
+    "kind": "youtube",
+    "embed": "https://www.youtube.com/embed/k8PAisotcoY",
+    "cover": "https://img.youtube.com/vi/k8PAisotcoY/maxresdefault.jpg",
+    "ratio": "16/9",
+    "tags": [
+      "short film"
+    ],
+    "desc": "After coming to Australia, doing something I didn't enjoy felt tiring. I felt I needed a rest, a long rest. I wrote Bishram during my early days here, and Thakan is a prequel to that."
   },
   {
-    id: "sketchbook",
-    title: "A page a day",
-    ...video("sketchbook", "9/16"),
-    frames: frames("sketchbook"),
-    tags: ["sketchbook", "reel"],
-    desc: "Drawing on location, ink first and red marker after.",
+    "id": "two",
+    "title": "Two",
+    "kind": "youtube",
+    "embed": "https://www.youtube.com/embed/zVwb1i1Xliw",
+    "cover": "https://img.youtube.com/vi/zVwb1i1Xliw/maxresdefault.jpg",
+    "ratio": "16/9",
+    "tags": [
+      "short film",
+      "solo project"
+    ],
+    "desc": "Two is a short film I made by myself, with two sides of me on the screen. I edited and colour graded it in DaVinci Resolve."
   },
   {
-    id: "naadhan",
-    title: "Naadhan",
-    ...video("naadhan", "16/9"),
-    frames: frames("naadhan"),
-    tags: ["edit"],
-    desc: "I was cutting an intro for one of my projects. When I laid the song Naadhan Parinde over it, the footage meant something else entirely.",
-  },
+    "id": "naadhan",
+    "title": "Naadhan",
+    "kind": "video",
+    "src": "/media/video/naadhan.mp4",
+    "loop": "/media/loops/naadhan.mp4",
+    "cover": "/media/covers/naadhan.webp",
+    "ratio": "16/9",
+    "frames": [
+      "/media/frames/naadhan-1.webp",
+      "/media/frames/naadhan-2.webp",
+      "/media/frames/naadhan-3.webp"
+    ],
+    "tags": [
+      "personal edit"
+    ],
+    "desc": "I was making an intro for one of my projects. When I added Naadhan Parinde, it gave the footage a different meaning. I liked how that turned out."
+  }
 ];
 
-// older shorts that live on YouTube
-export const earlierFilms = [
+export const animationProjects = [
   {
-    id: "junkiri",
-    title: "Junkiri: A Conversation",
-    ...youtube("Fy-wzPsT4EI", "hqdefault"),
-    tags: ["short film"],
-    desc: "Wrote it, directed it, acted in it. Two people talk about life, home and memories. I learned a lot making this one, and I'm proud of it.",
+    "id": "narujeka-nindra",
+    "title": "Narujheka Nindra",
+    "kind": "video",
+    "src": "/media/video/narujeka-nindra.mp4",
+    "loop": "/media/loops/narujeka-nindra.mp4",
+    "cover": "/media/covers/narujeka-nindra.webp",
+    "ratio": "16/9",
+    "frames": [
+      "/media/frames/narujeka-nindra-1.webp",
+      "/media/frames/narujeka-nindra-2.webp",
+      "/media/frames/narujeka-nindra-3.webp"
+    ],
+    "tags": [
+      "animation",
+      "drawn by hand"
+    ],
+    "desc": "I made this animation from my own drawings. The words are in Nepali, and the drawings are part of the story too."
   },
   {
-    id: "thakan",
-    title: "Tired - Thakan",
-    ...youtube("k8PAisotcoY"),
-    tags: ["short film"],
-    desc: "After moving to Australia and redoing something I didn't love, I needed a long rest. I wrote Bishram (Rest) in my early days here, and Thakan is the prequel.",
+    "id": "batti-putali",
+    "title": "Batti Putali",
+    "kind": "video",
+    "src": "/media/video/batti-putali.mp4",
+    "loop": "/media/loops/batti-putali.mp4",
+    "cover": "/media/covers/batti-putali.webp",
+    "ratio": "9/16",
+    "frames": [
+      "/media/frames/batti-putali-1.webp",
+      "/media/frames/batti-putali-2.webp",
+      "/media/frames/batti-putali-3.webp"
+    ],
+    "tags": [
+      "sketchbook",
+      "music visual"
+    ],
+    "desc": "Batti Putali is a song I have been working on. This is the visual side of it, alongside my drawings and notebook ideas."
   },
   {
-    id: "phool",
-    title: "Phool",
-    ...youtube("9ff56VwL3YU", "hqdefault"),
-    tags: ["short film"],
-    desc: "A love story I've been writing for a while, eight chapters so far. This is only a glimpse. Without a full team it's hard to shoot the whole thing yet.",
+    "id": "photo-bhetnuparni",
+    "title": "Photo Bhetnuparni",
+    "kind": "video",
+    "src": "/media/video/photo-bhetnuparni.mp4",
+    "loop": "/media/loops/photo-bhetnuparni.mp4",
+    "cover": "/media/covers/photo-bhetnuparni.webp",
+    "ratio": "16/9",
+    "frames": [
+      "/media/frames/photo-bhetnuparni-1.webp",
+      "/media/frames/photo-bhetnuparni-2.webp",
+      "/media/frames/photo-bhetnuparni-3.webp"
+    ],
+    "tags": [
+      "short film"
+    ],
+    "desc": "Sketchbook pages and night footage from around the city, held together by Nepali lines on screen."
   },
   {
-    id: "silent-ink",
-    title: "Silent Ink: Pen",
-    ...youtube("zNnoLCIZzkw", "hqdefault"),
-    tags: ["short film"],
-    desc: "A lover's obsession with a girl who has no idea how he feels. It ends badly. This was where directing started for me.",
+    "id": "gaine-series",
+    "title": "Gaine Series",
+    "kind": "video",
+    "src": "/media/video/gaine-series.mp4",
+    "loop": "/media/loops/gaine-series.mp4",
+    "cover": "/media/covers/gaine-series.webp",
+    "ratio": "16/9",
+    "frames": [
+      "/media/frames/gaine-series-1.webp",
+      "/media/frames/gaine-series-2.webp",
+      "/media/frames/gaine-series-3.webp"
+    ],
+    "tags": [
+      "series",
+      "sketchbook"
+    ],
+    "desc": "Black and white, straight from the sketchbook: drawings, handwritten Nepali and a few words to camera."
   },
   {
-    id: "two",
-    title: "Two",
-    ...youtube("zVwb1i1Xliw"),
-    tags: ["short film"],
-    desc: "Two sides of me on one screen. Shot alone, edited and graded in DaVinci Resolve.",
-  },
-  {
-    id: "salala",
-    title: "Salala",
-    ...youtube("ykYyFdg0uXk"),
-    tags: ["music video"],
-    desc: "My first music video as director. Directed, edited, graded, and most of the posters too. Made with good friends.",
-  },
+    "id": "sketchbook",
+    "title": "A page a day",
+    "kind": "video",
+    "src": "/media/video/sketchbook.mp4",
+    "loop": "/media/loops/sketchbook.mp4",
+    "cover": "/media/covers/sketchbook.webp",
+    "ratio": "9/16",
+    "frames": [
+      "/media/frames/sketchbook-1.webp",
+      "/media/frames/sketchbook-2.webp",
+      "/media/frames/sketchbook-3.webp"
+    ],
+    "tags": [
+      "sketchbook",
+      "reel"
+    ],
+    "desc": "Drawing on location, ink first and red marker after."
+  }
 ];
 
 export const sketches = [
-  { id: "sketch-coffee", title: "Honey, hurry up", ...sketch("sketch-coffee", 1080, 1920), desc: "Ink and red marker." },
-  { id: "sketch-nepali", title: "A page with words", ...sketch("sketch-nepali", 1094, 1080), desc: "From the Gaine series notebook. Drawing on one side, Nepali on the other." },
-  { id: "sketch-boat", title: "Boats and scooters", ...sketch("sketch-boat", 1080, 1920), desc: "Boats and a scooter. Ink and red marker." },
-  { id: "sketch-blossom", title: "Blossom", ...sketch("sketch-blossom", 1920, 1080), desc: "Red ink, from the Photo Bhetnuparni notebook." },
-  { id: "sketch-figures", title: "People in the park", ...sketch("sketch-figures", 1080, 1920), desc: "Quick figures, done on the grass." },
-  { id: "sketch-portrait", title: "Portrait and notes", ...sketch("sketch-portrait", 1095, 1080), desc: "Gaine series." },
-  { id: "sketch-sunny", title: "Very sunny", ...sketch("sketch-sunny", 1080, 1920), desc: "Trees, a bike, a hot day." },
-  { id: "narujeka-nindra-artwork", title: "Narujeka Nindra, a drawing", ...poster("narujeka-nindra-artwork", 1920, 1080), desc: "One of the drawings the animation is built from." },
-  { id: "sketch-redpen", title: "Red pen", ...sketch("sketch-redpen", 1920, 1080), desc: "Notebook page, Photo Bhetnuparni." },
+  {
+    "id": "sketch-coffee",
+    "title": "Honey, hurry up",
+    "kind": "image",
+    "src": "/media/sketch/sketch-coffee.webp",
+    "thumb": "/media/sketch/sketch-coffee-sm.webp",
+    "w": 1080,
+    "h": 1920,
+    "desc": "Ink and red marker."
+  },
+  {
+    "id": "sketch-nepali",
+    "title": "A page with words",
+    "kind": "image",
+    "src": "/media/sketch/sketch-nepali.webp",
+    "thumb": "/media/sketch/sketch-nepali-sm.webp",
+    "w": 1094,
+    "h": 1080,
+    "desc": "From the Gaine series notebook. Drawing on one side, Nepali on the other."
+  },
+  {
+    "id": "sketch-boat",
+    "title": "Boats and scooters",
+    "kind": "image",
+    "src": "/media/sketch/sketch-boat.webp",
+    "thumb": "/media/sketch/sketch-boat-sm.webp",
+    "w": 1080,
+    "h": 1920,
+    "desc": "Boats and a scooter. Ink and red marker."
+  },
+  {
+    "id": "sketch-blossom",
+    "title": "Blossom",
+    "kind": "image",
+    "src": "/media/sketch/sketch-blossom.webp",
+    "thumb": "/media/sketch/sketch-blossom-sm.webp",
+    "w": 1920,
+    "h": 1080,
+    "desc": "Red ink, from the Photo Bhetnuparni notebook."
+  },
+  {
+    "id": "sketch-figures",
+    "title": "People in the park",
+    "kind": "image",
+    "src": "/media/sketch/sketch-figures.webp",
+    "thumb": "/media/sketch/sketch-figures-sm.webp",
+    "w": 1080,
+    "h": 1920,
+    "desc": "Quick figures, done on the grass."
+  },
+  {
+    "id": "sketch-portrait",
+    "title": "Portrait and notes",
+    "kind": "image",
+    "src": "/media/sketch/sketch-portrait.webp",
+    "thumb": "/media/sketch/sketch-portrait-sm.webp",
+    "w": 1095,
+    "h": 1080,
+    "desc": "Gaine series."
+  },
+  {
+    "id": "sketch-sunny",
+    "title": "Very sunny",
+    "kind": "image",
+    "src": "/media/sketch/sketch-sunny.webp",
+    "thumb": "/media/sketch/sketch-sunny-sm.webp",
+    "w": 1080,
+    "h": 1920,
+    "desc": "Trees, a bike, a hot day."
+  },
+  {
+    "id": "narujeka-nindra-artwork",
+    "title": "Narujheka Nindra, a drawing",
+    "kind": "image",
+    "src": "/media/posters/narujeka-nindra-artwork.webp",
+    "thumb": "/media/posters/narujeka-nindra-artwork-sm.webp",
+    "w": 1920,
+    "h": 1080,
+    "desc": "One of the drawings the animation is built from."
+  },
+  {
+    "id": "sketch-redpen",
+    "title": "Red pen",
+    "kind": "image",
+    "src": "/media/sketch/sketch-redpen.webp",
+    "thumb": "/media/sketch/sketch-redpen-sm.webp",
+    "w": 1920,
+    "h": 1080,
+    "desc": "Notebook page, Photo Bhetnuparni."
+  }
 ];
 
 export const posters = [
-  { id: "narujeka-nindra-poster", title: "Narujeka Nindra", ...poster("narujeka-nindra-poster", 767, 1350), desc: "Drawn by hand and lettered in Nepali." },
-  { id: "maya-ko-aasha", title: "Maya ko Aasha", ...poster("maya-ko-aasha", 767, 1350), desc: "Cover art for Maya ko Aasha, one of my songs." },
-  { id: "eh-phool", title: "Eh Phool", ...poster("eh-phool", 2056, 2376), desc: "Collage for Eh Phool, a song I'm writing." },
-  { id: "phool", title: "Phool", ...poster("phool", 1080, 1350), desc: "Phool is close to me. When I write, I picture an ideal character like her. The full short film is written, eight chapters. One day." },
-  { id: "kathakar", title: "Kathakar", ...poster("kathakar", 1080, 1450), desc: "A poster for a poetic film I called Kathakar. That's me, and the map is Nepal." },
-  { id: "averse", title: "aVerse", ...poster("averse", 767, 1350), desc: "A second poster for Narujeka Nindra, in red." },
-  { id: "pain", title: "Pain", ...poster("pain", 1080, 1350), desc: "The paradox of Phool. Same eyes, different theme, and suddenly they speak of pain." },
-  { id: "thakan-poster", title: "Tired - Thakan", ...poster("thakan", 1080, 1350), desc: "Poster for Thakan." },
-  { id: "escaping-reality", title: "Escaping Reality", ...poster("escaping-reality", 1080, 1350), desc: "Concept series from ChitraKatha. I play someone who wants out." },
-  { id: "main-character", title: "You are your main character", ...poster("main-character", 1080, 1350), desc: "Featuring my friend Sushil. Everyone around you is shaped by your own judgement, so live it fully." },
-  { id: "music-escape", title: "Music is my escape", ...poster("music-escape", 1080, 1350), desc: "How I feel when I play: somewhere else, very far away. Sushil again." },
-  { id: "blood-bath", title: "Blood Bath", ...poster("blood-bath", 1080, 1350), desc: "I held a knife, took some pictures, and did the rest in Photoshop." },
-  { id: "red", title: "Red", ...poster("red", 1080, 1350), desc: "From my movie poster collection. Red, with a detective tone." },
-  { id: "two-poster", title: "Two", ...poster("two", 1080, 1350), desc: "Thumbnail for Two." },
-  { id: "blackpath", title: "Murderer of the Blackpath", ...poster("blackpath", 1080, 1350), desc: "Wide-eyed, trying to look scary. This happened." },
-  { id: "boy-with-a-guitar", title: "Boy with a Guitar", ...poster("boy-with-a-guitar", 3240, 4050), desc: "It's a ukulele. Irony." },
-  { id: "manchild", title: "Manchild", ...poster("manchild", 1080, 1350), desc: "An early one, about a psychopath who turns up to solve a mystery." },
-  { id: "narujeka-nindra-title", title: "Narujeka Nindra lettering", ...poster("narujeka-nindra-title", 1080, 1080), desc: "Hand lettering for the title." },
-  { id: "design-thumbnail", title: "I can talk about my design", ...poster("design-thumbnail", 1600, 900), desc: "Thumbnail for a video about my design work." },
+  {
+    "id": "narujeka-nindra-poster",
+    "title": "Narujheka Nindra",
+    "kind": "image",
+    "src": "/media/posters/narujeka-nindra-poster.webp",
+    "thumb": "/media/posters/narujeka-nindra-poster-sm.webp",
+    "w": 767,
+    "h": 1350,
+    "desc": "Drawn by hand and lettered in Nepali."
+  },
+  {
+    "id": "maya-ko-aasha",
+    "title": "Maya ko Aasha",
+    "kind": "image",
+    "src": "/media/posters/maya-ko-aasha.webp",
+    "thumb": "/media/posters/maya-ko-aasha-sm.webp",
+    "w": 767,
+    "h": 1350,
+    "desc": "Cover art for Maya ko Aasha, one of my songs."
+  },
+  {
+    "id": "eh-phool",
+    "title": "Eh Phool",
+    "kind": "image",
+    "src": "/media/posters/eh-phool.webp",
+    "thumb": "/media/posters/eh-phool-sm.webp",
+    "w": 2056,
+    "h": 2376,
+    "desc": "Collage for Eh Phool, a song I'm writing."
+  },
+  {
+    "id": "phool",
+    "title": "Phool",
+    "kind": "image",
+    "src": "/media/posters/phool.webp",
+    "thumb": "/media/posters/phool-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Phool is close to me. It is a love story with 5 chapters and 5 songs. This poster is part of how I picture that story."
+  },
+  {
+    "id": "kathakar",
+    "title": "Kathakar",
+    "kind": "image",
+    "src": "/media/posters/kathakar.webp",
+    "thumb": "/media/posters/kathakar-sm.webp",
+    "w": 1080,
+    "h": 1450,
+    "desc": "A poster for a poetic film I called Kathakar. That's me, and the map is Nepal."
+  },
+  {
+    "id": "averse",
+    "title": "aVerse",
+    "kind": "image",
+    "src": "/media/posters/averse.webp",
+    "thumb": "/media/posters/averse-sm.webp",
+    "w": 767,
+    "h": 1350,
+    "desc": "A second poster for Narujheka Nindra, in red."
+  },
+  {
+    "id": "pain",
+    "title": "Pain",
+    "kind": "image",
+    "src": "/media/posters/pain.webp",
+    "thumb": "/media/posters/pain-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "The paradox of Phool. Same eyes, different theme, and suddenly they speak of pain."
+  },
+  {
+    "id": "thakan-poster",
+    "title": "Tired - Thakan",
+    "kind": "image",
+    "src": "/media/posters/thakan.webp",
+    "thumb": "/media/posters/thakan-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Poster for Thakan."
+  },
+  {
+    "id": "escaping-reality",
+    "title": "Escaping Reality",
+    "kind": "image",
+    "src": "/media/posters/escaping-reality.webp",
+    "thumb": "/media/posters/escaping-reality-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Concept series from ChitraKatha. I play someone who wants out."
+  },
+  {
+    "id": "main-character",
+    "title": "You are your main character",
+    "kind": "image",
+    "src": "/media/posters/main-character.webp",
+    "thumb": "/media/posters/main-character-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Featuring my friend Sushil. Everyone around you is shaped by your own judgement, so live it fully."
+  },
+  {
+    "id": "music-escape",
+    "title": "Music is my escape",
+    "kind": "image",
+    "src": "/media/posters/music-escape.webp",
+    "thumb": "/media/posters/music-escape-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "How I feel when I play: somewhere else, very far away. Sushil again."
+  },
+  {
+    "id": "blood-bath",
+    "title": "Blood Bath",
+    "kind": "image",
+    "src": "/media/posters/blood-bath.webp",
+    "thumb": "/media/posters/blood-bath-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "I held a knife, took some pictures, and did the rest in Photoshop."
+  },
+  {
+    "id": "red",
+    "title": "Red",
+    "kind": "image",
+    "src": "/media/posters/red.webp",
+    "thumb": "/media/posters/red-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "From my movie poster collection. Red, with a detective tone."
+  },
+  {
+    "id": "two-poster",
+    "title": "Two",
+    "kind": "image",
+    "src": "/media/posters/two.webp",
+    "thumb": "/media/posters/two-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Thumbnail for Two."
+  },
+  {
+    "id": "blackpath",
+    "title": "Murderer of the Blackpath",
+    "kind": "image",
+    "src": "/media/posters/blackpath.webp",
+    "thumb": "/media/posters/blackpath-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Wide-eyed, trying to look scary. This happened."
+  },
+  {
+    "id": "boy-with-a-guitar",
+    "title": "Boy with a Guitar",
+    "kind": "image",
+    "src": "/media/posters/boy-with-a-guitar.webp",
+    "thumb": "/media/posters/boy-with-a-guitar-sm.webp",
+    "w": 3240,
+    "h": 4050,
+    "desc": "It's a ukulele. Irony."
+  },
+  {
+    "id": "manchild",
+    "title": "Manchild",
+    "kind": "image",
+    "src": "/media/posters/manchild.webp",
+    "thumb": "/media/posters/manchild-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "An early one, about a psychopath who turns up to solve a mystery."
+  },
+  {
+    "id": "narujeka-nindra-title",
+    "title": "Narujheka Nindra lettering",
+    "kind": "image",
+    "src": "/media/posters/narujeka-nindra-title.webp",
+    "thumb": "/media/posters/narujeka-nindra-title-sm.webp",
+    "w": 1080,
+    "h": 1080,
+    "desc": "Hand lettering for the title."
+  },
+  {
+    "id": "design-thumbnail",
+    "title": "I can talk about my design",
+    "kind": "image",
+    "src": "/media/posters/design-thumbnail.webp",
+    "thumb": "/media/posters/design-thumbnail-sm.webp",
+    "w": 1600,
+    "h": 900,
+    "desc": "Thumbnail for a video about my design work."
+  }
 ];
 
 export const photos = [
-  { id: "werri-1", title: "Werri Beach", ...photo("werri-1", 4000, 6000), desc: "Looking down over the bay.", pick: true },
-  { id: "lovelies-4", title: "Lovelies", ...photo("lovelies-4", 6000, 4000), desc: "Friends at the lookout." },
-  { id: "extra-1", title: "Street light", ...photo("extra-1", 4000, 6000), desc: "A street lamp burning through the trees.", pick: true },
-  { id: "werri-2", title: "Wind", ...photo("werri-2", 4000, 6000), desc: "Hair, wind and the ocean behind." },
-  { id: "girl-on-the-shore", title: "Girl on the shore", ...photo("girl-on-the-shore", 1080, 1350), desc: "The frame and the sun glare felt like a dream. Shared with her permission." },
-  { id: "lovelies-1", title: "Laughing", ...photo("lovelies-1", 4000, 6000), desc: "A candid between takes." },
-  { id: "extra-3", title: "By the water", ...photo("extra-3", 1080, 1350), desc: "Sitting on the rocks, watching the sea.", pick: true },
-  { id: "werri-3", title: "Jump", ...photo("werri-3", 4000, 6000), desc: "On the bench above the sea." },
-  { id: "oh-my-companion", title: "Oh my companion", ...photo("oh-my-companion", 1080, 1350), desc: "I had a dog as a friend when I was ten. I had to ask for this one." },
-  { id: "lovelies-3", title: "Hair in the wind", ...photo("lovelies-3", 4000, 6000), desc: "Caught mid-turn at the lookout." },
-  { id: "extra-2", title: "Road to another land", ...photo("extra-2", 4320, 5400), desc: "Tripod at a distance, light from a gate, me acting mysterious." },
-  { id: "werri-4", title: "Three on a bench", ...photo("werri-4", 6000, 4000), desc: "Friends looking out to sea." },
-  { id: "dear-old-days", title: "Dear old days", ...photo("dear-old-days", 1080, 1350), desc: "An old couple in the park, arms around each other. I hope my old days look like this.", pick: true },
-  { id: "lovelies-2", title: "Afternoon light", ...photo("lovelies-2", 6000, 4000), desc: "Golden hour in the bush." },
-  { id: "extra-4", title: "Last light", ...photo("extra-4", 1080, 1920), desc: "A silhouette against the sunset." },
-  { id: "dear-arthur", title: "Dear Arthur", ...photo("dear-arthur", 4000, 6000), desc: "It seemed to be saying something to me." },
-  { id: "lovelies-5", title: "Profile", ...photo("lovelies-5", 6000, 4000), desc: "Side portrait above the valley." },
-  { id: "young-memories", title: "Young memories", ...photo("young-memories", 1080, 1350), desc: "My dad worked overseas when I was little, so moments like this get to me." },
+  {
+    "id": "girl-on-the-shore",
+    "title": "Girl on the shore",
+    "kind": "image",
+    "src": "/media/photos/girl-on-the-shore.webp",
+    "thumb": "/media/photos/girl-on-the-shore-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "The frame and the sun glare felt like a dream. Shared with her permission."
+  },
+  {
+    "id": "oh-my-companion",
+    "title": "Oh my companion",
+    "kind": "image",
+    "src": "/media/photos/oh-my-companion.webp",
+    "thumb": "/media/photos/oh-my-companion-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "I had a dog as a friend when I was ten. I had to ask for this one."
+  },
+  {
+    "id": "extra-2",
+    "title": "Road to another land",
+    "kind": "image",
+    "src": "/media/photos/extra-2.webp",
+    "thumb": "/media/photos/extra-2-sm.webp",
+    "w": 4320,
+    "h": 5400,
+    "desc": "Tripod at a distance, light from a gate, me acting mysterious."
+  },
+  {
+    "id": "dear-old-days",
+    "title": "Dear old days",
+    "kind": "image",
+    "src": "/media/photos/dear-old-days.webp",
+    "thumb": "/media/photos/dear-old-days-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "An old couple in the park, arms around each other. I hope my old days look like this.",
+    "pick": true
+  },
+  {
+    "id": "dear-arthur",
+    "title": "Dear Arthur",
+    "kind": "image",
+    "src": "/media/photos/dear-arthur.webp",
+    "thumb": "/media/photos/dear-arthur-sm.webp",
+    "w": 4000,
+    "h": 6000,
+    "desc": "It seemed to be saying something to me."
+  },
+  {
+    "id": "young-memories",
+    "title": "Young memories",
+    "kind": "image",
+    "src": "/media/photos/young-memories.webp",
+    "thumb": "/media/photos/young-memories-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "My dad worked overseas when I was little, so moments like this get to me."
+  }
 ];
-
-/* =============================================== work for others (काम) */
 
 export const clientWork = [
   {
-    id: "apic",
-    name: "Asia Pacific International College",
-    short: "APIC",
-    note: "Ongoing video and photo work for the college. The main thing is A Minute with the Dean, a short series where the Dean answers one student question at a time, filmed on campus and cut vertical.",
-    groups: [
+    "id": "apic",
+    "name": "Asia Pacific International College",
+    "short": "My work as a Marketing Ambassador",
+    "note": "I work as a Marketing Ambassador at APIC. I create videos around college life, student stories and events, including A Minute with the Dean. It is a different side of my filmmaking, working with people and stories from the college.",
+    "groups": [
       {
-        label: "A Minute with the Dean",
-        items: [
-          { id: "dean-week-11", title: "Episode 11", ...video("dean-week-11", "9/16"), desc: "One student question, answered in about a minute." },
-          { id: "dean-week-26", title: "Episode 26", ...video("dean-week-26", "9/16"), desc: "What a supportive learning environment looks like, and where to go for extra help." },
-          { id: "dean-week-27", title: "Episode 27", ...video("dean-week-27", "9/16"), desc: "Studies, career opportunities and industry, in a minute." },
-          { id: "ask-the-dean", title: "Ask the Dean", ...video("ask-the-dean", "1/1"), desc: "Opener for the question-and-answer format." },
-          { id: "dean-episode-26", title: "Episode 26 artwork", ...poster("dean-episode-26", 1080, 1350), desc: "Feed artwork for episode 26." },
-          { id: "dean-portrait", title: "On set with the Dean", ...photo("dean-portrait", 4000, 6000), desc: "Portrait from the episode 22 shoot." },
-        ],
+        "label": "A Minute with the Dean",
+        "items": [
+          {
+            "id": "dean-week-11",
+            "title": "Episode 11",
+            "kind": "video",
+            "src": "/media/video/dean-week-11.mp4",
+            "loop": "/media/loops/dean-week-11.mp4",
+            "cover": "/media/covers/dean-week-11.webp",
+            "ratio": "9/16",
+            "desc": "One student question, answered in about a minute."
+          },
+          {
+            "id": "dean-week-26",
+            "title": "Episode 26",
+            "kind": "video",
+            "src": "/media/video/dean-week-26.mp4",
+            "loop": "/media/loops/dean-week-26.mp4",
+            "cover": "/media/covers/dean-week-26.webp",
+            "ratio": "9/16",
+            "desc": "What a supportive learning environment looks like, and where to go for extra help."
+          },
+          {
+            "id": "ask-the-dean",
+            "title": "Ask the Dean",
+            "kind": "video",
+            "src": "/media/video/ask-the-dean.mp4",
+            "loop": "/media/loops/ask-the-dean.mp4",
+            "cover": "/media/covers/ask-the-dean.webp",
+            "ratio": "1/1",
+            "desc": "Opener for the question-and-answer format."
+          },
+          {
+            "id": "dean-episode-26",
+            "title": "Episode 26 artwork",
+            "kind": "image",
+            "src": "/media/posters/dean-episode-26.webp",
+            "thumb": "/media/posters/dean-episode-26-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "Feed artwork for episode 26."
+          },
+          {
+            "id": "dean-portrait",
+            "title": "On set with the Dean",
+            "kind": "image",
+            "src": "/media/photos/dean-portrait.webp",
+            "thumb": "/media/photos/dean-portrait-sm.webp",
+            "w": 4000,
+            "h": 6000,
+            "desc": "Portrait from the episode 22 shoot."
+          }
+        ]
       },
       {
-        label: "Campus",
-        items: [
-          { id: "apic-student-voices", title: "Student voices", ...video("apic-student-voices", "9/16"), desc: "Students on what studying at APIC has been like." },
-          { id: "apic-study-abroad", title: "Study abroad", ...video("apic-study-abroad", "9/16"), desc: "Explainer for the study abroad program." },
-          { id: "apic-snack-chat-play", title: "Snack, Chat & Play", ...video("apic-snack-chat-play", "9/16"), desc: "Recap of a student services day." },
-          { id: "apic-departure", title: "Campus community", ...video("apic-departure", "9/16"), desc: "Students and staff on what makes the place feel friendly." },
-          { id: "apic-visas", title: "Visa changes", ...video("apic-visas", "9/16"), desc: "An update on visa changes and the support available." },
-          { id: "orientation-1", title: "Orientation day", ...photo("orientation-1", 6000, 4000), desc: "New students at orientation in Sydney." },
-          { id: "orientation-2", title: "Peace", ...photo("orientation-2", 6000, 4000), desc: "At the orientation stall." },
-        ],
-      },
+        "label": "Campus",
+        "items": [
+          {
+            "id": "apic-student-voices",
+            "title": "Student voices",
+            "kind": "video",
+            "src": "/media/video/apic-student-voices.mp4",
+            "loop": "/media/loops/apic-student-voices.mp4",
+            "cover": "/media/covers/apic-student-voices.webp",
+            "ratio": "9/16",
+            "desc": "Students on what studying at APIC has been like."
+          },
+          {
+            "id": "apic-study-abroad",
+            "title": "Study abroad",
+            "kind": "video",
+            "src": "/media/video/apic-study-abroad.mp4",
+            "loop": "/media/loops/apic-study-abroad.mp4",
+            "cover": "/media/covers/apic-study-abroad.webp",
+            "ratio": "9/16",
+            "desc": "Explainer for the study abroad program."
+          },
+          {
+            "id": "apic-snack-chat-play",
+            "title": "Snack, Chat & Play",
+            "kind": "video",
+            "src": "/media/video/apic-snack-chat-play.mp4",
+            "loop": "/media/loops/apic-snack-chat-play.mp4",
+            "cover": "/media/covers/apic-snack-chat-play.webp",
+            "ratio": "9/16",
+            "desc": "Recap of a student services day."
+          },
+          {
+            "id": "apic-departure",
+            "title": "Campus community",
+            "kind": "video",
+            "src": "/media/video/apic-departure.mp4",
+            "loop": "/media/loops/apic-departure.mp4",
+            "cover": "/media/covers/apic-departure.webp",
+            "ratio": "9/16",
+            "desc": "Students and staff on what makes the place feel friendly."
+          },
+          {
+            "id": "apic-visas",
+            "title": "Visa changes",
+            "kind": "video",
+            "src": "/media/video/apic-visas.mp4",
+            "loop": "/media/loops/apic-visas.mp4",
+            "cover": "/media/covers/apic-visas.webp",
+            "ratio": "9/16",
+            "desc": "An update on visa changes and the support available."
+          },
+          {
+            "id": "orientation-1",
+            "title": "Orientation day",
+            "kind": "image",
+            "src": "/media/photos/orientation-1.webp",
+            "thumb": "/media/photos/orientation-1-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "New students at orientation in Sydney."
+          },
+          {
+            "id": "orientation-2",
+            "title": "Peace",
+            "kind": "image",
+            "src": "/media/photos/orientation-2.webp",
+            "thumb": "/media/photos/orientation-2-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "At the orientation stall."
+          }
+        ]
+      }
     ],
+    "category": "college"
   },
   {
-    id: "ashok",
-    name: "Ashok Bhusal",
-    short: "Hawaijahaz Ma Sararara",
-    note: "Music video for Ashok's single, plus the key art and stills from the shoot.",
-    groups: [
+    "id": "chitrakatha",
+    "name": "ChitraKatha Production",
+    "short": "Founder, filmmaker and director",
+    "category": "music",
+    "note": "I founded ChitraKatha Production to bring these stories to the screen with a team. We make music videos, films and promos. Salala and Mayalu Timi are part of that journey, from the shoot to the edits and release material.",
+    "groups": [
       {
-        items: [
-          { id: "hawaijahaz-on-set", title: "On set", ...video("hawaijahaz-on-set", "16/9"), desc: "A short cut from the shoot." },
-          { id: "hawaijahaz-poster", title: "Teaser poster", ...poster("hawaijahaz-poster", 1080, 1350), desc: "Teaser poster for the music video." },
-          { id: "hawaijahaz-cover", title: "Single cover", ...poster("hawaijahaz-cover", 1080, 1080), desc: "Streaming cover, with the red car from the video." },
-          { id: "hawaijahaz-title", title: "Title", ...poster("hawaijahaz-title", 1080, 1080), desc: "Title treatment." },
-          { id: "hawaijahaz-red-car", title: "The red car", ...photo("hawaijahaz-red-car", 3876, 2584), desc: "Still from the shoot." },
-          { id: "airport-1", title: "Departures", ...photo("airport-1", 6000, 4000), desc: "The airport scene." },
-          { id: "hawaijahaz-portrait", title: "By the car", ...photo("hawaijahaz-portrait", 4000, 6000), desc: "Portrait from the shoot." },
-        ],
+        "label": "Salala",
+        "items": [
+          {
+            "id": "salala",
+            "title": "Salala",
+            "kind": "youtube",
+            "embed": "https://www.youtube.com/embed/ykYyFdg0uXk",
+            "cover": "https://img.youtube.com/vi/ykYyFdg0uXk/maxresdefault.jpg",
+            "ratio": "16/9",
+            "tags": [
+              "director",
+              "editor",
+              "colourist"
+            ],
+            "desc": "Salala was my first music video as a director. I directed, edited and colour graded it, and made most of the posters and promos too. Made through ChitraKatha with my friends, an experience I still remember."
+          }
+        ]
       },
-    ],
+      {
+        "label": "Mayalu Timi",
+        "items": [
+          {
+            "id": "mayalu-timi-promo",
+            "title": "Mayalu Timi, promo",
+            "kind": "video",
+            "src": "/media/video/mayalu-timi-promo.mp4",
+            "cover": "/media/covers/mayalu-timi-promo.jpg",
+            "href": "https://www.instagram.com/p/DYl3n5zuYd0/",
+            "ratio": "9/16",
+            "tags": [
+              "music video",
+              "promo"
+            ],
+            "desc": "A promo for Mayalu Timi, our music video with Pratik Pandey. Part of the work we made through ChitraKatha for the release."
+          }
+        ]
+      },
+      {
+        "label": "Hawaijahaj Ma Sarara",
+        "items": [
+          {
+            "id": "hawaijahaz-on-set",
+            "title": "On set",
+            "kind": "video",
+            "src": "/media/video/hawaijahaz-on-set.mp4",
+            "loop": "/media/loops/hawaijahaz-on-set.mp4",
+            "cover": "/media/covers/hawaijahaz-on-set.webp",
+            "ratio": "16/9",
+            "desc": "A short cut from the shoot."
+          },
+          {
+            "id": "hawaijahaz-poster",
+            "title": "Teaser poster",
+            "kind": "image",
+            "src": "/media/posters/hawaijahaz-poster.webp",
+            "thumb": "/media/posters/hawaijahaz-poster-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "Teaser poster for the music video."
+          },
+          {
+            "id": "hawaijahaz-cover",
+            "title": "Single cover",
+            "kind": "image",
+            "src": "/media/posters/hawaijahaz-cover.webp",
+            "thumb": "/media/posters/hawaijahaz-cover-sm.webp",
+            "w": 1080,
+            "h": 1080,
+            "desc": "Streaming cover, with the red car from the video."
+          },
+          {
+            "id": "hawaijahaz-title",
+            "title": "Title",
+            "kind": "image",
+            "src": "/media/posters/hawaijahaz-title.webp",
+            "thumb": "/media/posters/hawaijahaz-title-sm.webp",
+            "w": 1080,
+            "h": 1080,
+            "desc": "Title treatment."
+          },
+          {
+            "id": "hawaijahaz-red-car",
+            "title": "The red car",
+            "kind": "image",
+            "src": "/media/photos/hawaijahaz-red-car.webp",
+            "thumb": "/media/photos/hawaijahaz-red-car-sm.webp",
+            "w": 3876,
+            "h": 2584,
+            "desc": "Still from the shoot."
+          },
+          {
+            "id": "airport-1",
+            "title": "Departures",
+            "kind": "image",
+            "src": "/media/photos/airport-1.webp",
+            "thumb": "/media/photos/airport-1-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "The airport scene."
+          },
+          {
+            "id": "hawaijahaz-portrait",
+            "title": "By the car",
+            "kind": "image",
+            "src": "/media/photos/hawaijahaz-portrait.webp",
+            "thumb": "/media/photos/hawaijahaz-portrait-sm.webp",
+            "w": 4000,
+            "h": 6000,
+            "desc": "Portrait from the shoot."
+          }
+        ]
+      }
+    ]
   },
   {
-    id: "unique-wholefood",
-    name: "Unique Wholefood",
-    short: "Crows Nest Festival",
-    note: "Festival coverage for their stall, cut two ways.",
-    groups: [
+    "id": "kirtan",
+    "name": "Kritan Sajh",
+    "short": "Event coverage with ChitraKatha",
+    "note": "ChitraKatha was the media partner for Kritan Sajh. We covered the performances and the people there, then put those moments into highlights from the evening.",
+    "groups": [
       {
-        items: [
-          { id: "unique-wholefood-crows-nest", title: "30-second highlight", ...video("unique-wholefood-crows-nest", "9/16"), desc: "The stall at the Crows Nest festival." },
-          { id: "unique-wholefood-festival", title: "A day at the festival", ...video("unique-wholefood-festival", "9/16"), desc: "A host-led walk around the same day." },
-        ],
-      },
+        "items": [
+          {
+            "id": "kirtan-saanjh",
+            "title": "Event reel",
+            "kind": "video",
+            "src": "/media/video/kirtan-saanjh.mp4",
+            "loop": "/media/loops/kirtan-saanjh.mp4",
+            "cover": "/media/covers/kirtan-saanjh.webp",
+            "ratio": "9/16",
+            "desc": "From the evening."
+          },
+          {
+            "id": "kirtan-saanjh-2",
+            "title": "On stage",
+            "kind": "image",
+            "src": "/media/photos/kirtan-saanjh-2.webp",
+            "thumb": "/media/photos/kirtan-saanjh-2-sm.webp",
+            "w": 2175,
+            "h": 3263,
+            "desc": "From the evening."
+          }
+        ]
+      }
     ],
+    "category": "events"
   },
   {
-    id: "drive2everest",
-    name: "Drive2Everest",
-    short: "Driving school",
-    note: "A promo for their lessons and test preparation classes.",
-    groups: [{ items: [{ id: "drive2everest", title: "Thinking of driving?", ...video("drive2everest", "9/16"), desc: "Promo." }] }],
+    "id": "rockheads",
+    "name": "Rockheads",
+    "category": "events",
+    "short": "Concert coverage",
+    "note": "Our concert coverage with ChitraKatha. The performance, the crowd and a little of what happens behind the camera.",
+    "groups": [
+      {
+        "items": [
+          {
+            "id": "rock-heads",
+            "title": "Rockheads, concert highlight",
+            "kind": "video",
+            "src": "/media/video/rock-heads.mp4",
+            "loop": "/media/loops/rock-heads.mp4",
+            "cover": "/media/covers/rock-heads.webp",
+            "ratio": "16/9",
+            "desc": "Highlight film from the Rockheads concert."
+          },
+          {
+            "id": "behind-the-camera",
+            "title": "Behind the camera",
+            "kind": "video",
+            "src": "/media/video/behind-the-camera.mp4",
+            "loop": "/media/loops/behind-the-camera.mp4",
+            "cover": "/media/covers/behind-the-camera.webp",
+            "ratio": "16/9",
+            "desc": "Our crew at work during a live show, narrated in Nepali."
+          }
+        ]
+      }
+    ]
   },
   {
-    id: "kirtan",
-    name: "Kirtan Saanjh",
-    short: "An evening of kirtan",
-    note: "ChitraKatha was the media partner for the night.",
-    groups: [
-      {
-        items: [
-          { id: "kirtan-saanjh", title: "Event reel", ...video("kirtan-saanjh", "9/16"), desc: "From the evening." },
-          { id: "kirtan-saanjh-2", title: "On stage", ...photo("kirtan-saanjh-2", 2175, 3263), desc: "From the evening." },
-          { id: "kirtan-saanjh-3", title: "The team", ...photo("kirtan-saanjh-3", 6000, 4000), desc: "Group photo, in black and white." },
-          { id: "kirtan-saanjh-1", title: "Two friends", ...photo("kirtan-saanjh-1", 4000, 6000), desc: "Portrait." },
-        ],
-      },
-    ],
+    "id": "sujan-chapagain",
+    "name": "Sujan Chapagain",
+    "category": "events",
+    "short": "Event coverage",
+    "note": "Event coverage from my work with ChitraKatha Production.",
+    "groups": []
   },
   {
-    id: "chitrakatha",
-    name: "ChitraKatha Production",
-    short: "Our own shows and releases",
-    note: "The studio I run. Concert films, our crew, and Sano Chari, our social film with two original songs.",
-    groups: [
+    "id": "unique-wholefood",
+    "name": "Unique Wholefood",
+    "short": "Crows Nest Festival",
+    "note": "Festival coverage for their stall, cut two ways.",
+    "groups": [
       {
-        items: [
-          { id: "rock-heads", title: "Rock Heads", ...video("rock-heads", "16/9"), desc: "Highlight film from the Rock Heads concert." },
-          { id: "behind-the-camera", title: "Behind the camera", ...video("behind-the-camera", "16/9"), desc: "Our crew at work during a live show, narrated in Nepali." },
-          { id: "sano-chari-poster", title: "Sano Chari", ...poster("sano-chari-poster", 1080, 1350), desc: "Release poster for the artist visuals." },
-          { id: "sano-chari-attention", title: "Sano Chari: Attention", ...poster("sano-chari-attention", 3508, 4961), desc: "Campaign poster with a QR code to the theme song." },
-          { id: "sano-chari-thumb", title: "Sano Chari thumbnail", ...poster("sano-chari-thumb", 1600, 900), desc: "YouTube thumbnail." },
-        ],
-      },
+        "items": [
+          {
+            "id": "unique-wholefood-crows-nest",
+            "title": "30-second highlight",
+            "kind": "video",
+            "src": "/media/video/unique-wholefood-crows-nest.mp4",
+            "loop": "/media/loops/unique-wholefood-crows-nest.mp4",
+            "cover": "/media/covers/unique-wholefood-crows-nest.webp",
+            "ratio": "9/16",
+            "desc": "The stall at the Crows Nest festival."
+          },
+          {
+            "id": "unique-wholefood-festival",
+            "title": "A day at the festival",
+            "kind": "video",
+            "src": "/media/video/unique-wholefood-festival.mp4",
+            "loop": "/media/loops/unique-wholefood-festival.mp4",
+            "cover": "/media/covers/unique-wholefood-festival.webp",
+            "ratio": "9/16",
+            "desc": "A host-led walk around the same day."
+          }
+        ]
+      }
     ],
+    "category": "brands"
   },
   {
-    id: "early",
-    name: "Chautari, and early design jobs",
-    short: "Where the design started",
-    note: "Event posters for Chautari, the startup I helped found, and small jobs from my early Photoshop days.",
-    groups: [
+    "id": "drive2everest",
+    "name": "Drive2Everest",
+    "short": "Driving school",
+    "note": "A promo for their lessons and test preparation classes.",
+    "groups": [
       {
-        items: [
-          { id: "chess-carnival", title: "Chess Carnival", ...poster("chess-carnival", 3061, 3827), desc: "Online chess event to promote the game in Nepal. Free entry, 25k prize pool, the first of its kind there." },
-          { id: "talent-mela", title: "Talent Mela", ...poster("talent-mela", 2480, 3508), desc: "Hosted on our Discord, with a 20,000 rupee prize for people following their passion." },
-          { id: "host", title: "Host of the Show", ...poster("host", 3508, 4961), desc: "That's me. I hosted it too." },
-          { id: "dream-team", title: "Dream Team", ...poster("dream-team", 4109, 3008), desc: "Team announcement for my friends' futsal team." },
-          { id: "coffee", title: "Nepal Coffee", ...poster("coffee", 2480, 3508), desc: "For RR Company's coffee. Early days, and I was happy with it." },
-          { id: "utensils", title: "Utensils on Sale", ...poster("utensils", 3674, 4540), desc: "Early Photoshop experiments in making products stand out." },
-          { id: "certificate", title: "Certificate of Appreciation", ...poster("certificate", 3507, 2481), desc: "Given to me for an event I hosted. I designed it myself, which is funny." },
-        ],
-      },
+        "items": [
+          {
+            "id": "drive2everest",
+            "title": "Thinking of driving?",
+            "kind": "video",
+            "src": "/media/video/drive2everest.mp4",
+            "loop": "/media/loops/drive2everest.mp4",
+            "cover": "/media/covers/drive2everest.webp",
+            "ratio": "9/16",
+            "desc": "Promo."
+          }
+        ]
+      }
     ],
-  },
+    "category": "brands"
+  }
 ];
 
-// Frames on the 3D film strip: sketches and posters, mixed the way they are in the notebook.
 export const reelFrames = [
-  "/media/sketch/sketch-coffee-sm.webp",
-  "/media/posters/narujeka-nindra-poster-sm.webp",
   "/media/posters/phool-sm.webp",
-  "/media/sketch/sketch-nepali-sm.webp",
-  "/media/posters/hawaijahaz-poster-sm.webp",
-  "/media/posters/maya-ko-aasha-sm.webp",
-  "/media/sketch/sketch-boat-sm.webp",
-  "/media/posters/kathakar-sm.webp",
-  "/media/posters/eh-phool-sm.webp",
-  "/media/sketch/sketch-blossom-sm.webp",
-  "/media/posters/blood-bath-sm.webp",
-  "/media/posters/averse-sm.webp",
-  "/media/sketch/sketch-figures-sm.webp",
+  "/media/posters/two-sm.webp",
   "/media/posters/sano-chari-poster-sm.webp",
-  "/media/posters/escaping-reality-sm.webp",
-  "/media/sketch/sketch-portrait-sm.webp",
-  "/media/posters/red-sm.webp",
-  "/media/posters/main-character-sm.webp",
+  "/media/covers/rock-heads.webp",
+  "/media/posters/thakan-sm.webp",
+  "/media/covers/narujeka-nindra.webp",
+  "/media/posters/hawaijahaz-poster-sm.webp",
+  "/media/covers/batti-putali.webp"
 ];
 
-export const recentClients = ["APIC", "Unique Wholefood", "Drive2Everest", "Kirtan Saanjh", "Ashok Bhusal"];
+export const recentClients = [
+  "APIC",
+  "ChitraKatha Production",
+  "Kritan Sajh",
+  "Rockheads"
+];

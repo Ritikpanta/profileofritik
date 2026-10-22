@@ -22,14 +22,15 @@ export default function Home() {
           <ArtIntro />
           <Films />
           <Sketchbook />
-          <Posters />
-          <Photos />
-          <PoetryRow items={poems} />
+
         </div>
         <TornEdge seed={7} from="paper" to="dark" />
         <ClientWork />
         <TornEdge seed={19} from="dark" to="paper" flip />
         <div className="wrap">
+          <Posters />
+          <Photos />
+          <PoetryRow items={poems} />
           <AboutSection />
           <Contact />
         </div>

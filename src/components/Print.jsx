@@ -37,16 +37,22 @@ export function useLoopPreview(item) {
 
 export function Media({ item, ratio, preview, rotateSideways = false }) {
   const { vid, armed } = preview || {};
-  const isPlayable = item.kind === "video" || item.kind === "youtube";
+  const isPlayable = ["video", "youtube", "drive"].includes(item.kind);
   return (
     <span className={`media${rotateSideways ? " is-sideways" : ""}`} style={ratio ? { aspectRatio: ratio } : undefined}>
-      <img
+      {!(item.cover || item.thumb) && <span className="media-title-card"><span>ChitraKatha Production</span><strong>{item.title}</strong><small>watch the promo ↗</small></span>}
+      {(item.cover || item.thumb) && <img
         src={item.cover || item.thumb}
         alt=""
         loading="lazy"
         decoding="async"
-        onError={(e) => (e.currentTarget.style.visibility = "hidden")}
-      />
+        onError={(e) => {
+          if (item.kind === "youtube" && !e.currentTarget.dataset.fallback) {
+            e.currentTarget.dataset.fallback = "true";
+            e.currentTarget.src = item.cover.replace(/(?:maxresdefault|hqdefault)/, "mqdefault");
+          }
+        }}
+      />}
       {armed && item.loop && (
         <video ref={vid} className="media-loop" src={item.loop} muted loop playsInline preload="auto" aria-hidden="true" tabIndex={-1} />
       )}
@@ -73,7 +79,7 @@ export default function Print({
   label,
 }) {
   const preview = useLoopPreview(item);
-  const isPlayable = item.kind === "video" || item.kind === "youtube";
+  const isPlayable = ["video", "youtube", "drive"].includes(item.kind);
   return (
     <figure className={`print ${className}${preview.wantPlay ? " is-playing" : ""}`} style={{ "--a": `${angle}deg` }}>
       {tape && <Tape seed={tapeSeed} w={96} angle={(tapeSeed % 2 ? -1 : 1) * (3 + (tapeSeed % 4))} className="print-tape" />}

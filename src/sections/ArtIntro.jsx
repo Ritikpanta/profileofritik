@@ -5,19 +5,19 @@ import { Ink, Note, Tape } from "../components/Hand.jsx";
 export default function ArtIntro() {
   return (
     <section id="art" className="art-intro" aria-labelledby="art-title">
-      <PartHead id="art-title" ne="चित्र" en="things I make for myself" seed={31} />
+      <PartHead id="art-title" ne="चित्र" en="stories I want to tell" seed={31} />
 
       <div className="art-intro-body">
         <div className="art-statement">
           <p>
-            I’m a writer first. I carry a notebook everywhere, and for a long time the stories
-            stayed on paper. When they needed pictures, I learned to draw them, shoot them, cut
-            them and put music under them.
+            I have always liked writing stories. Sometimes I see a character in my head,
+            sometimes it starts with a few lines in a notebook. Making a film is how I try
+            to give those ideas a life outside the page.
           </p>
           <p>
-            This part of the site is that notebook. Films nobody paid for, pages from the
-            sketchbook, posters for films that don’t exist yet, photographs, and poems in
-            Nepali.
+            Here are my short films, along with the drawings, songs and poems I make around
+            them. Some are finished, some are still growing. Phool, for example, has 5 chapters
+            and 5 songs, and there is still a lot I want to do with it.
           </p>
           <p className="art-sign">
             <span>Ritik</span>

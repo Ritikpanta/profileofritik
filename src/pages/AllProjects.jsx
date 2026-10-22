@@ -11,7 +11,12 @@ const MAP = {
   photography: "photos",
   photos: "photos",
   poetry: "poems",
-  dean: "work",
+  animation: "sketchbook",
+  sketchbook: "sketchbook",
+  commercial: "work",
+  music: "music",
+  events: "events",
+  dean: "apic",
   reels: "work",
 };
 

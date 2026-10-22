@@ -7,7 +7,7 @@ export default function ScrollToHash() {
 
   useEffect(() => {
     if (!hash) return;
-    const el = document.querySelector(hash);
+    const el = document.getElementById(decodeURIComponent(hash.slice(1)));
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [hash]);
 
