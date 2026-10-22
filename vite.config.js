@@ -5,6 +5,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    hmr: { overlay: true } // 🔴 show runtime errors instead of blank screen
-  }
+    hmr: { overlay: true }, // show runtime errors instead of a blank screen
+  },
+  build: {
+    // three.js lives in its own lazy chunk (the 3D hero), so a large chunk is expected
+    chunkSizeWarningLimit: 1000,
+  },
 });

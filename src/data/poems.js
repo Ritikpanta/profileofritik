@@ -1,11 +1,13 @@
 // keep paths absolute from /public
 export const poems = [
   {
-    id: "words",               
+    id: "baato",               
   category: "poetry",
-  title: "BAATO",
+  title: "Baato",
+  titleNe: "बाटो",
+  meaning: "The road",
   author: "Ritik Panta",   // optional
-  thumbnail: "/poetry/poetrycover.png", // lives under /public/poetry (lowercase, no spaces)
+  thumbnail: "/media/misc/poem-baato.webp",
   excerpt: "हासी हराए...",
   poem: `हासी हराए
 म एक मरेको शरीर बाट सास फेर्दै छु 
@@ -19,11 +21,13 @@ export const poems = [
   link: "/poetry/words"        
   },
   {
-    id: "words",               
+    id: "raat",               
   category: "poetry",
-  title: "RAAT",
+  title: "Raat",
+  titleNe: "रात",
+  meaning: "Night",
   author: "Ritik Panta",   
-  thumbnail: "/poetry/Raat_Thumb.png", // lives under /public/poetry (lowercase, no spaces)
+  thumbnail: "/media/misc/poem-raat.webp",
   excerpt: "मलाई रात मनपर्छ...",
   poem:`  मलाई रात मनपर्छ
   त्यो रातले बोक्ने अन्धकार मनपर्छ 
@@ -54,11 +58,13 @@ export const poems = [
   link: "/poetry/words"        
   },
   {
-    id: "words",               
+    id: "samaya",               
   category: "poetry",
-  title: "TIME | समय  ",
+  title: "Samaya",
+  titleNe: "समय",
+  meaning: "Time",
   author: "Ritik Panta",   // optional
-  thumbnail: "/poetry/Samaye_Thumb.png", // lives under /public/poetry (lowercase, no spaces)
+  thumbnail: "/media/misc/poem-samaya.webp",
   excerpt: "मलाई पनि हिजो भरखर आमा छेऊ...",
   poem: `  मलाई पनि हिजो भरखर आमा छेऊ
   धन्सारमा बस्दै मकै छोडाउदै खाए जस्तो लाग्छ 

@@ -1,91 +1,80 @@
 // src/sections/AboutSection.jsx
-export default function AboutSection() {
-  const skills = [
-    {
-      k: "Graphics Designing",
-      v: "So Someone who has different startups and also a founding member of Chautari, I love making posters and graphics for my own projects and for others. I also do some freelance work.",
-    },
-    {
-      k: "Programming",
-      v: "Part of my studies;I love to create something and programming is a way to do that in a different way. I am learning ML and Web dev at the moment."
-    },
-    {
-      k: "Videography",
-      v: "I am a writer, i literally take a notebook everywhere I go and I felt my writing need visual justice thats when Videography came into my life. Now I create commercial videos as well. I edit in Davinci Resolve and After Effets."
-    },
-    // {
-    //   k: "Photography",
-    //   v: "A hobby of capturing moments, I love to take photos of nature and people. I use my Sony zv e-10 & 35mm 1.8f lens most of the time."
-    // },
-    {
-      k: "Music",
-      v: "Guitar, Songwriting, flute, harmonica and many more:) I write and sing a little—even if the vocals aren’t ‘singer’ perfect."
-    }
-  ];
-
- const education = [
+const crafts = [
   {
-    k: "2020 — Graduation from School",
-    v: "Completed school with alot of memories and lil knowledge about social studies but was an expert at science & mathematics around that time. I also started exploring design."
+    k: "Film & direction",
+    v: "I’m a writer first. My writing needed pictures, and that’s how filmmaking came into my life. Now I write, direct and edit, for my own stories and for clients, in DaVinci Resolve and After Effects.",
   },
   {
-    k: "2022 — Graduation in C.S. major at +2",
-    v: "This was time when Covid hit, I almost completed my High School studying inside my room. I explored lots of designing and Started playing guitar as well. I scored more than 85% in my high school with Comp Sci Major."
+    k: "Graphic design",
+    v: "Posters and key art for my own projects and for others. I’m a founding member of Chautari and I’ve made most of its event graphics, plus freelance work.",
   },
-  // {
-  //   k: "2022 — Basic Web Class",
-  //   v: "A lil before AI started to boom, I was fasinated about the idea of creating something just with lines of codes. I did alot of studies through online and did some basic web dev class as well."
-  // },
   {
-    k: "2023 — current",
-    v: "Currently studying in Australia, I am doing my IT. I am also working on different videography and design projects. A boy with a dream:)."
-  }
+    k: "Music",
+    v: "Guitar, flute, harmonica and songwriting. I sing a little too, even if the vocals aren’t singer-perfect.",
+  },
+  {
+    k: "Programming",
+    v: "Part of my studies, and another way to make things. I’m learning web development and machine learning.",
+  },
 ];
 
+const path = [
+  {
+    year: "2020",
+    title: "Finished school",
+    v: "Lots of memories, strong at science and maths, and the year I started exploring design.",
+  },
+  {
+    year: "2022",
+    title: "+2 in Computer Science",
+    v: "Covid hit and I studied mostly from my room. I picked up the guitar, designed a lot, and finished with over 85%.",
+  },
+  {
+    year: "2023",
+    title: "Australia",
+    v: "Studying IT while building ChitraKatha Production and working on film and design projects. A boy with a dream.",
+  },
+];
 
-  const bio =
-    "Hi, I'm Ritik panta. I am from Nepal, currently studying in Australia. I love to capture and create things, and I found designing, coding, writing, videomaking to be those way to do that. I also play music:)";
-
+export default function AboutSection() {
   return (
-    <div className="about">
-      <h2 className="about-title">About Me</h2>
-
+    <section id="about" className="section about" aria-labelledby="about-title">
       <div className="about-grid">
-        {/* Left: Skills */}
-        <div className="about-card">
-          <h3>Skills</h3>
-          <ul className="about-list">
-            {skills.map(({ k, v }) => (
-              <li key={k}>
-                <strong>{k}</strong> — {v}
+        <figure className="about-portrait">
+          <img src="/media/misc/about-portrait.webp" alt="Ritik Panta, arms crossed, outdoors" loading="lazy" width="2552" height="3829" />
+          <figcaption lang="ne">नेपालबाट, सिड्नीमा</figcaption>
+        </figure>
+
+        <div className="about-copy">
+          <h2 id="about-title" className="section-title">About me</h2>
+          <p className="about-lede">
+            I’m from Nepal and now live in Sydney. I love to capture and create things, and
+            I found designing, writing, filmmaking and coding to be the ways I do that. I run
+            ChitraKatha Production, where we make music videos, event films and content for
+            brands. I also play music.
+          </p>
+
+          <dl className="crafts">
+            {crafts.map(({ k, v }) => (
+              <div key={k}>
+                <dt>{k}</dt>
+                <dd>{v}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <h3 className="path-title">So far</h3>
+          <ol className="path">
+            {path.map((p) => (
+              <li key={p.year}>
+                <span className="path-year">{p.year}</span>
+                <span className="path-head">{p.title}</span>
+                <span className="path-text">{p.v}</span>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
-        
-        
-
-        {/* Center: Photo + short bio (same column height) */}
-        <div className="about-center">
-          <div className="about-photo">
-            <img src="/hero/Profileofritik.png" alt="Ritik" />
-          </div>
-          <p className="about-bio">{bio}</p>
-        </div>
-
-        {/* Right: Education as a tidy timeline */}
-        <div className="about-card">
-            <h3>Education</h3>
-            <ul className="about-list">
-              {education.map(({ k, v }) => (
-                <li key={k}>
-                  <strong>{k}</strong> — {v}
-                </li>
-              ))}
-            </ul>
-          </div>
-
       </div>
-    </div>
+    </section>
   );
 }

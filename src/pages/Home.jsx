@@ -1,51 +1,31 @@
 // src/pages/Home.jsx
 import Hero from "../components/Hero.jsx";
-import Row from "../components/Row.jsx";
+import Films from "../sections/Films.jsx";
+import DeanSeries from "../sections/DeanSeries.jsx";
+import Reels from "../sections/Reels.jsx";
+import Posters from "../sections/Posters.jsx";
+import Photos from "../sections/Photos.jsx";
+import PoetryRow from "../sections/PoetryRow.jsx";
 import AboutSection from "../sections/AboutSection.jsx";
-import PoetryRow from "../sections/PoetryRow.jsx";   // ⟵ new compact poetry row
-import projects from "../Projects.js";
-
-import Contact from "../sections/Contact";
-
-// helper: works with either `category` or `categories`
-const pick = (cat) =>
-  projects.filter((p) =>
-    (typeof p.category === "string" && p.category.toLowerCase() === cat) ||
-    (Array.isArray(p.categories) && p.categories.map((c) => c.toLowerCase()).includes(cat))
-  );
+import Contact from "../sections/Contact.jsx";
+import Footer from "../components/Footer.jsx";
+import { poems } from "../data/poems.js";
 
 export default function Home() {
-  const graphics    = pick("graphics");
-  const video       = pick("videography");
-  const photo       = pick("photography");
-  // const programming = pick("programming");
-  const poems       = pick("poetry"); // poetry items live in Projects.js
-
   return (
     <>
-      <section id="hero" className="hero-landing">
-        <Hero />
-      </section>
-
-      <section id="about" className="ui">
-        <AboutSection />
-      </section>
-
-      <main className="ui">
-        <section id="works">
-          <Row title="Graphics"     items={graphics}    seeAllTo="/work?cat=graphics" />
-          <Row title="Videography"  items={video}       seeAllTo="/work?cat=videography" />
-          <Row title="Photography"  items={photo}       seeAllTo="/work?cat=photography" />
-          {/* <Row title="Programming"  items={programming} seeAllTo="/work?cat=programming" I'll fix it after making programming chart. /> */} 
-        </section>
-
-        {/* Compact poetry cards + modal reader */}
+      <Hero />
+      <main id="main">
+        <Films />
+        <DeanSeries />
+        <Reels />
+        <Posters />
+        <Photos />
         <PoetryRow items={poems} />
-
-              <section id="contact">
-        <Contact/>
-      </section>
+        <AboutSection />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
