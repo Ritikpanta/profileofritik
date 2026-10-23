@@ -41,13 +41,10 @@ export const films = [
     "cover": "/media/covers/how-are-you-mister.webp",
     "ratio": "16/9",
     "tags": [
-      "wrote",
-      "shot",
-      "directed",
-      "edited",
-      "only me on screen"
+      "solo film",
+      "wrote, shot, directed and edited by me"
     ],
-    "desc": "A quiet night and too many thoughts. I made this one completely by myself, and I'm the only one on screen. Grave of Lies, the song in it, is mine too.",
+    "desc": "A quiet night and too many thoughts. Grave of Lies, the song in it, is mine too.",
     "solo": true
   },
   {
@@ -60,13 +57,10 @@ export const films = [
     "cover": "/media/covers/film-dfpe.webp",
     "ratio": "9/16",
     "tags": [
-      "wrote",
-      "shot",
-      "directed",
-      "edited",
-      "only me on screen"
+      "solo film",
+      "wrote, shot, directed and edited by me"
     ],
-    "desc": "Rin means debt. A late night in the kitchen and one phone call. I wrote, shot, directed and edited it, and I'm the only one in it.",
+    "desc": "Rin means debt. A late night in the kitchen and one phone call.",
     "solo": true
   },
   {
@@ -90,13 +84,10 @@ export const films = [
     "cover": "https://img.youtube.com/vi/9ff56VwL3YU/hqdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "wrote",
-      "shot",
-      "directed",
-      "edited",
-      "only me on screen"
+      "solo film",
+      "wrote, shot, directed and edited by me"
     ],
-    "desc": "A love story I've been writing for a long time, 5 chapters and 5 songs. I wrote, shot, directed and edited this glimpse myself, and it's only me in it. One day I want to make all of it the way I see it in my head.",
+    "desc": "A love story I've been writing for a long time, 5 chapters and 5 songs. This is only a glimpse. One day I want to make all of it the way I see it in my head.",
     "solo": true
   },
   {
@@ -107,13 +98,10 @@ export const films = [
     "cover": "https://img.youtube.com/vi/k8PAisotcoY/maxresdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "wrote",
-      "shot",
-      "directed",
-      "edited",
-      "only me on screen"
+      "solo film",
+      "wrote, shot, directed and edited by me"
     ],
-    "desc": "After coming to Australia, doing something I didn't enjoy made me tired. I needed a rest, a long one. I wrote Bishram in my early days here, and Thakan is the story before it. I made it alone, start to finish.",
+    "desc": "After coming to Australia, doing something I didn't enjoy made me tired. I needed a rest, a long one. I wrote Bishram in my early days here, and Thakan is the story before it.",
     "solo": true
   },
   {
@@ -124,13 +112,10 @@ export const films = [
     "cover": "https://img.youtube.com/vi/zVwb1i1Xliw/maxresdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "wrote",
-      "shot",
-      "directed",
-      "edited",
-      "only me on screen"
+      "solo film",
+      "wrote, shot, directed and edited by me"
     ],
-    "desc": "Just me, two times. I wrote it, shot it alone, played both of me, then edited and coloured it in DaVinci Resolve.",
+    "desc": "Just me, two times. I shot it alone, then edited and coloured it in DaVinci Resolve.",
     "solo": true
   },
   {

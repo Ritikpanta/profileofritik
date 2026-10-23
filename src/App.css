@@ -2278,16 +2278,3 @@ button {
   .hero-hint-arrow { margin: 2px 18px 0 0; transform: rotate(100deg); }
 }
 .letter-flash a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-
-/* films I made completely alone */
-.solo-mark {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 10px;
-  font-family: var(--hand);
-  font-size: 1.45rem;
-  line-height: 1;
-  color: var(--marker);
-  transform: rotate(-2.5deg);
-}
-.solo-mark-ink { position: absolute; left: -8px; bottom: -14px; pointer-events: none; }

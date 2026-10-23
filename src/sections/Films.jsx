@@ -3,7 +3,6 @@
 import Print from "../components/Print.jsx";
 import useViewer from "../components/useViewer.jsx";
 import { SubHead } from "../components/Heads.jsx";
-import { Ink } from "../components/Hand.jsx";
 import { directorReels, films, sliceOfLife } from "../data/work.js";
 
 const all = [...films, ...sliceOfLife, ...directorReels];
@@ -32,12 +31,6 @@ export default function Films() {
               ratio={film.ratio === "9/16" ? "4/5" : film.ratio}
             />
             <div className="selected-film-copy">
-              {film.solo && (
-                <p className="solo-mark">
-                  made all by myself
-                  <Ink kind="underline" w={170} h={12} size={3} seed={i + 61} className="solo-mark-ink" />
-                </p>
-              )}
               <p className="film-credit">{film.tags.join(" · ")}</p>
               <h3 className="hand-title">{film.title}</h3>
               <p>{film.desc}</p>
