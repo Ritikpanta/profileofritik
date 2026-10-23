@@ -16,6 +16,23 @@ export const films = [
     "desc": "I wrote, directed and acted in Junkiri. It's a conversation about life, home and memories. I learned a lot making this, and it is still one of those projects I am proud of."
   },
   {
+    "id": "juhi",
+    "title": "Juhi",
+    "titleNe": "जुही",
+    "kind": "video",
+    "src": "/media/video/juhi.mp4",
+    "loop": "/media/loops/juhi.mp4",
+    "cover": "/media/covers/juhi.webp",
+    "ratio": "9/16",
+    "tags": [
+      "story",
+      "director",
+      "editor",
+      "actor"
+    ],
+    "desc": "Juhi is a short film we shot at night around Sydney. I wrote it, directed it, edited it and acted in it with my ChitraKatha team, and we made it with Ananta Events."
+  },
+  {
     "id": "silent-ink",
     "title": "Silent Ink: Pen",
     "kind": "youtube",
@@ -101,7 +118,7 @@ export const sliceOfLife = [
       "slice of life",
       "song"
     ],
-    "desc": "A small piece from the middle of Phool. Just me and a guitar at a lookout by the sea."
+    "desc": "A small piece from Phool. Just me and my guitar, singing at a lookout by the sea."
   },
   {
     "id": "talking-about-design",
@@ -114,7 +131,7 @@ export const sliceOfLife = [
     "tags": [
       "slice of life"
     ],
-    "desc": "Filmed on a trip to Brisbane. A short one about the designs I make, like the ChitraKatha hoodie, with music I made on the harmonica."
+    "desc": "I made this on my trip to Brisbane. I talk a little about my designs, like the ChitraKatha hoodie, and the music in it is something I made on the harmonica."
   },
   {
     "id": "timi-basne-sansar",
@@ -129,7 +146,7 @@ export const sliceOfLife = [
       "slice of life",
       "sketchbook"
     ],
-    "desc": "A sketchbook page and the lines I wrote beside it. Timi basne sansar, the world where you live."
+    "desc": "A page from my sketchbook and the lines I wrote next to it. Timi basne sansar means the world you live in."
   }
 ];
 
@@ -188,7 +205,7 @@ export const animationProjects = [
     "tags": [
       "short film"
     ],
-    "desc": "Sketchbook pages and night footage from around the city, held together by Nepali lines on screen."
+    "desc": "Pages from my sketchbook and some night shots from around the city, with Nepali lines on the screen."
   },
   {
     "id": "gaine-series",
@@ -207,7 +224,7 @@ export const animationProjects = [
       "series",
       "sketchbook"
     ],
-    "desc": "Black and white, straight from the sketchbook: drawings, handwritten Nepali and a few words to camera."
+    "desc": "Black and white, straight from my sketchbook. Drawings, my handwriting in Nepali and a few words to the camera."
   },
   {
     "id": "sketchbook",
@@ -226,7 +243,7 @@ export const animationProjects = [
       "sketchbook",
       "reel"
     ],
-    "desc": "Drawing on location, ink first and red marker after."
+    "desc": "I drew on the spot, ink first and then red marker."
   }
 ];
 
@@ -249,7 +266,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-nepali-sm.webp",
     "w": 1094,
     "h": 1080,
-    "desc": "From the Gaine series notebook. Drawing on one side, Nepali on the other."
+    "desc": "A page from my Gaine series notebook. A drawing on one side and Nepali words on the other."
   },
   {
     "id": "sketch-boat",
@@ -259,7 +276,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-boat-sm.webp",
     "w": 1080,
     "h": 1920,
-    "desc": "Boats and a scooter. Ink and red marker."
+    "desc": "Boats and a scooter, in ink and red marker."
   },
   {
     "id": "sketch-blossom",
@@ -279,7 +296,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-figures-sm.webp",
     "w": 1080,
     "h": 1920,
-    "desc": "Quick figures, done on the grass."
+    "desc": "Quick drawings of people, done sitting on the grass."
   },
   {
     "id": "sketch-portrait",
@@ -299,7 +316,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-sunny-sm.webp",
     "w": 1080,
     "h": 1920,
-    "desc": "Trees, a bike, a hot day."
+    "desc": "Trees, a bike and a really hot day."
   },
   {
     "id": "narujeka-nindra-artwork",
@@ -513,6 +530,46 @@ export const posters = [
     "w": 1600,
     "h": 900,
     "desc": "Thumbnail for a video about my design work."
+  },
+  {
+    "id": "phool-design",
+    "title": "Phool tee",
+    "kind": "image",
+    "src": "/media/posters/phool-design.webp",
+    "thumb": "/media/posters/phool-design-sm.webp",
+    "w": 4864,
+    "h": 3242,
+    "desc": "A t-shirt design for Phool."
+  },
+  {
+    "id": "design-another",
+    "title": "Another tee",
+    "kind": "image",
+    "src": "/media/posters/design-another.webp",
+    "thumb": "/media/posters/design-another-sm.webp",
+    "w": 4864,
+    "h": 3242,
+    "desc": "A t-shirt design of mine."
+  },
+  {
+    "id": "design-mockup",
+    "title": "ChitraKatha hoodies",
+    "kind": "image",
+    "src": "/media/posters/design-mockup.webp",
+    "thumb": "/media/posters/design-mockup-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "Hoodie designs for ChitraKatha."
+  },
+  {
+    "id": "launch-poster",
+    "title": "App launch poster",
+    "kind": "image",
+    "src": "/media/posters/launch-poster.webp",
+    "thumb": "/media/posters/launch-poster-sm.webp",
+    "w": 1122,
+    "h": 1402,
+    "desc": "A launch poster I designed."
   }
 ];
 
@@ -633,6 +690,15 @@ export const photos = [
     "thumb": "/media/photos/portrait-3423-sm.webp",
     "w": 3368,
     "h": 4210
+  },
+  {
+    "id": "still-0806",
+    "title": "A still from Juhi",
+    "kind": "image",
+    "src": "/media/photos/still-0806.webp",
+    "thumb": "/media/photos/still-0806-sm.webp",
+    "w": 1080,
+    "h": 1920
   }
 ];
 
@@ -649,7 +715,7 @@ export const poemFilms = [
     "tags": [
       "poetry film"
     ],
-    "desc": "A love letter, read as a poem and filmed by the sea. The first verse of Patra ko Bagaicha."
+    "desc": "Prem ko Patra means a love letter. It is one of my poems, and I filmed it by the sea. This is the first verse of Patra ko Bagaicha."
   }
 ];
 
@@ -671,7 +737,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-world-cup.mp4",
             "cover": "/media/covers/dean-world-cup.webp",
             "ratio": "9/16",
-            "desc": "The Dean in green and gold for the World Cup, and students on the pride they carry for home."
+            "desc": "Our World Cup special. The Dean in green and gold, and students talking about home."
           },
           {
             "id": "dean-confidence",
@@ -681,7 +747,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-confidence.mp4",
             "cover": "/media/covers/dean-confidence.webp",
             "ratio": "9/16",
-            "desc": "On students who struggle quietly, and why confidence matters as much as the degree."
+            "desc": "About students who struggle quietly, and why confidence matters."
           },
           {
             "id": "dean-graduates",
@@ -691,7 +757,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-graduates.mp4",
             "cover": "/media/covers/dean-graduates.webp",
             "ratio": "1/1",
-            "desc": "A message from the Dean to the graduating class."
+            "desc": "The Dean's message for our graduates."
           },
           {
             "id": "dean-week-11",
@@ -714,16 +780,6 @@ export const clientWork = [
             "desc": "What a supportive learning environment looks like, and where to go for extra help."
           },
           {
-            "id": "ask-the-dean",
-            "title": "Ask the Dean",
-            "kind": "video",
-            "src": "/media/video/ask-the-dean.mp4",
-            "loop": "/media/loops/ask-the-dean.mp4",
-            "cover": "/media/covers/ask-the-dean.webp",
-            "ratio": "1/1",
-            "desc": "Opener for the question-and-answer format."
-          },
-          {
             "id": "dean-episode-26",
             "title": "Episode 26 artwork",
             "kind": "image",
@@ -731,17 +787,7 @@ export const clientWork = [
             "thumb": "/media/posters/dean-episode-26-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "Feed artwork for episode 26."
-          },
-          {
-            "id": "dean-portrait",
-            "title": "On set with the Dean",
-            "kind": "image",
-            "src": "/media/photos/dean-portrait.webp",
-            "thumb": "/media/photos/dean-portrait-sm.webp",
-            "w": 4000,
-            "h": 6000,
-            "desc": "Portrait from the episode 22 shoot."
+            "desc": "The post artwork for episode 26."
           }
         ]
       },
@@ -766,7 +812,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-study-abroad.mp4",
             "cover": "/media/covers/apic-study-abroad.webp",
             "ratio": "9/16",
-            "desc": "Explainer for the study abroad program."
+            "desc": "A video about the study abroad program."
           },
           {
             "id": "apic-snack-chat-play-final",
@@ -776,7 +822,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-snack-chat-play-final.mp4",
             "cover": "/media/covers/apic-snack-chat-play-final.webp",
             "ratio": "9/16",
-            "desc": "Recap of a student services day."
+            "desc": "From a student services day on campus."
           },
           {
             "id": "apic-departure-final",
@@ -811,7 +857,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-ai-event.mp4",
             "cover": "/media/covers/apic-ai-event.webp",
             "ratio": "9/16",
-            "desc": "Highlights from the AI event at the college."
+            "desc": "Highlights from the AI event at APIC."
           },
           {
             "id": "apic-ai",
@@ -821,7 +867,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-ai.mp4",
             "cover": "/media/covers/apic-ai.webp",
             "ratio": "9/16",
-            "desc": "Students and staff on using AI to learn, and to teach."
+            "desc": "Students and staff talking about learning with AI."
           }
         ]
       },
@@ -918,7 +964,7 @@ export const clientWork = [
     "name": "ChitraKatha Production",
     "short": "Founder, filmmaker and director",
     "category": "music",
-    "note": "I founded ChitraKatha Production to bring these stories to the screen with a team. We make music videos, films and promos. Salala and Mayalu Timi are part of that journey, from the shoot to the edits and release material.",
+    "note": "I started ChitraKatha Production so I could make stories with a team. These are the songs we have done so far. Salala was my first music video as a director. Mayalu Timi is our music video with Pratik Pandey. Sano Chari is the story of Aashuk, an international student far from home. And for Hawaijahaz Ma Sarara, Ashok Bhusal's song, we did the shoot and the posters.",
     "groups": [
       {
         "label": "Salala",
@@ -943,6 +989,19 @@ export const clientWork = [
         "label": "Mayalu Timi",
         "items": [
           {
+            "id": "mayalu-timi",
+            "title": "Mayalu Timi",
+            "kind": "youtube",
+            "embed": "https://www.youtube.com/embed/YkFlSBCFOdY",
+            "cover": "https://img.youtube.com/vi/YkFlSBCFOdY/maxresdefault.jpg",
+            "ratio": "16/9",
+            "href": "https://www.youtube.com/watch?v=YkFlSBCFOdY",
+            "tags": [
+              "music video"
+            ],
+            "desc": "Mayalu Timi, our music video with Pratik Pandey, made through ChitraKatha."
+          },
+          {
             "id": "mayalu-timi-promo",
             "title": "Mayalu Timi, promo",
             "kind": "video",
@@ -959,18 +1018,59 @@ export const clientWork = [
         ]
       },
       {
-        "label": "Hawaijahaj Ma Sarara",
+        "label": "Sano Chari",
         "items": [
           {
-            "id": "hawaijahaz-on-set",
-            "title": "On set",
+            "id": "sano-chari-artist",
+            "title": "Sano Chari, artist version",
             "kind": "video",
-            "src": "/media/video/hawaijahaz-on-set.mp4",
-            "loop": "/media/loops/hawaijahaz-on-set.mp4",
-            "cover": "/media/covers/hawaijahaz-on-set.webp",
+            "src": "/media/video/sano-chari-artist.mp4",
+            "loop": "/media/loops/sano-chari-artist.mp4",
+            "cover": "/media/covers/sano-chari-artist.webp",
             "ratio": "16/9",
-            "desc": "A short cut from the shoot."
+            "href": "https://www.youtube.com/watch?v=cvS8oNuc7-I",
+            "tags": [
+              "story",
+              "lyrics",
+              "director"
+            ],
+            "desc": "Sano Chari is the story of Aashuk, an international student living far from home. He is trying to manage his studies, work and bills, and he can't bring himself to tell his family back home what he is going through. I wrote the story and the lyrics and directed it. Tapendra Tikhatari sang it, and this artist version is our thank you to him."
           },
+          {
+            "id": "sano-chari-lyrics",
+            "title": "Sano Chari, lyrical video",
+            "kind": "youtube",
+            "embed": "https://www.youtube.com/embed/UR6QIZ_8P6k",
+            "cover": "https://img.youtube.com/vi/UR6QIZ_8P6k/maxresdefault.jpg",
+            "ratio": "16/9",
+            "href": "https://www.youtube.com/watch?v=UR6QIZ_8P6k",
+            "desc": "The lyrical video for Sano Chari, out on the ChitraKatha Production YouTube channel."
+          },
+          {
+            "id": "sano-chari-promo",
+            "title": "Sano Chari, promo",
+            "kind": "video",
+            "src": "/media/video/sano-chari-promo.mp4",
+            "loop": "/media/loops/sano-chari-promo.mp4",
+            "cover": "/media/covers/sano-chari-promo.webp",
+            "ratio": "16/9",
+            "desc": "A promo we made for Sano Chari. I talk a bit about how we make our films."
+          },
+          {
+            "id": "sano-chari-main-poster",
+            "title": "Sano Chari, poster",
+            "kind": "image",
+            "src": "/media/posters/sano-chari-main-poster.webp",
+            "thumb": "/media/posters/sano-chari-main-poster-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "The main poster for Sano Chari."
+          }
+        ]
+      },
+      {
+        "label": "Hawaijahaz Ma Sarara",
+        "items": [
           {
             "id": "hawaijahaz-poster",
             "title": "Teaser poster",
@@ -982,54 +1082,14 @@ export const clientWork = [
             "desc": "Teaser poster for the music video."
           },
           {
-            "id": "hawaijahaz-cover",
-            "title": "Single cover",
-            "kind": "image",
-            "src": "/media/posters/hawaijahaz-cover.webp",
-            "thumb": "/media/posters/hawaijahaz-cover-sm.webp",
-            "w": 1080,
-            "h": 1080,
-            "desc": "Streaming cover, with the red car from the video."
-          },
-          {
-            "id": "hawaijahaz-title",
-            "title": "Title",
-            "kind": "image",
-            "src": "/media/posters/hawaijahaz-title.webp",
-            "thumb": "/media/posters/hawaijahaz-title-sm.webp",
-            "w": 1080,
-            "h": 1080,
-            "desc": "Title treatment."
-          },
-          {
-            "id": "hawaijahaz-red-car",
-            "title": "The red car",
-            "kind": "image",
-            "src": "/media/photos/hawaijahaz-red-car.webp",
-            "thumb": "/media/photos/hawaijahaz-red-car-sm.webp",
-            "w": 3876,
-            "h": 2584,
-            "desc": "Still from the shoot."
-          },
-          {
-            "id": "airport-1",
-            "title": "Departures",
-            "kind": "image",
-            "src": "/media/photos/airport-1.webp",
-            "thumb": "/media/photos/airport-1-sm.webp",
-            "w": 6000,
-            "h": 4000,
-            "desc": "The airport scene."
-          },
-          {
-            "id": "hawaijahaz-portrait",
-            "title": "By the car",
-            "kind": "image",
-            "src": "/media/photos/hawaijahaz-portrait.webp",
-            "thumb": "/media/photos/hawaijahaz-portrait-sm.webp",
-            "w": 4000,
-            "h": 6000,
-            "desc": "Portrait from the shoot."
+            "id": "hawaijahaz-on-set",
+            "title": "On set",
+            "kind": "video",
+            "src": "/media/video/hawaijahaz-on-set.mp4",
+            "loop": "/media/loops/hawaijahaz-on-set.mp4",
+            "cover": "/media/covers/hawaijahaz-on-set.webp",
+            "ratio": "16/9",
+            "desc": "A short cut from the shoot."
           }
         ]
       }
@@ -1073,19 +1133,29 @@ export const clientWork = [
     "name": "Rockheads",
     "category": "events",
     "short": "Concert coverage",
-    "note": "Our concert coverage with ChitraKatha. The performance, the crowd, a little of what happens behind the camera, and the posters that went out after the show.",
+    "note": "We covered the Rockheads concert in Sydney with ChitraKatha. The show, the crowd, a bit of what happens behind the camera, and the posters we made after.",
     "groups": [
       {
         "items": [
           {
-            "id": "rock-heads",
-            "title": "Rockheads, concert highlight",
+            "id": "rockheads-highlight",
+            "title": "Concert highlight",
             "kind": "video",
-            "src": "/media/video/rock-heads.mp4",
-            "loop": "/media/loops/rock-heads.mp4",
-            "cover": "/media/covers/rock-heads.webp",
+            "src": "/media/video/rockheads-highlight.mp4",
+            "loop": "/media/loops/rockheads-highlight.mp4",
+            "cover": "/media/covers/rockheads-highlight.webp",
             "ratio": "16/9",
-            "desc": "Highlight film from the Rockheads concert."
+            "desc": "Our highlight film from the Rockheads concert in Sydney."
+          },
+          {
+            "id": "rockheads-teaser",
+            "title": "Short teaser",
+            "kind": "video",
+            "src": "/media/video/rockheads-teaser.mp4",
+            "loop": "/media/loops/rockheads-teaser.mp4",
+            "cover": "/media/covers/rockheads-teaser.webp",
+            "ratio": "16/9",
+            "desc": "A short teaser from the night."
           },
           {
             "id": "behind-the-camera",
@@ -1098,120 +1168,131 @@ export const clientWork = [
             "desc": "Our crew at work during a live show, narrated in Nepali."
           }
         ],
-        "label": "Highlight films"
+        "label": "Videos"
       },
       {
         "label": "Posters",
         "items": [
           {
             "id": "rockheads-01",
-            "title": "Poster 1",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-01.webp",
             "thumb": "/media/posters/rockheads-01-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-02",
-            "title": "Poster 2",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-02.webp",
             "thumb": "/media/posters/rockheads-02-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-03",
-            "title": "Poster 3",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-03.webp",
             "thumb": "/media/posters/rockheads-03-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-04",
-            "title": "Poster 4",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-04.webp",
             "thumb": "/media/posters/rockheads-04-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-05",
-            "title": "Poster 5",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-05.webp",
             "thumb": "/media/posters/rockheads-05-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-06",
-            "title": "Poster 6",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-06.webp",
             "thumb": "/media/posters/rockheads-06-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-07",
-            "title": "Poster 7",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-07.webp",
             "thumb": "/media/posters/rockheads-07-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-08",
-            "title": "Poster 8",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-08.webp",
             "thumb": "/media/posters/rockheads-08-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-09",
-            "title": "Poster 9",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-09.webp",
             "thumb": "/media/posters/rockheads-09-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-10",
-            "title": "Poster 10",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-10.webp",
             "thumb": "/media/posters/rockheads-10-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           },
           {
             "id": "rockheads-11",
-            "title": "Poster 11",
+            "title": "Rockheads in Sydney",
             "kind": "image",
             "src": "/media/posters/rockheads-11.webp",
             "thumb": "/media/posters/rockheads-11-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "From the Rockheads show in Sydney."
+            "desc": "One of the posters we made after the show.",
+            "cap": false
           }
         ]
       }
@@ -1221,21 +1302,37 @@ export const clientWork = [
     "id": "sujan-chapagain",
     "name": "Sujan Chapagain",
     "category": "events",
-    "short": "Event coverage",
-    "note": "Event coverage from my work with ChitraKatha Production.",
-    "groups": []
+    "short": "Concert coverage",
+    "note": "Sujan Chapagain live, filmed by our ChitraKatha team with Ananta Events.",
+    "groups": [
+      {
+        "items": [
+          {
+            "id": "sujan-chapagain-live",
+            "title": "Concert video",
+            "kind": "video",
+            "src": "/media/video/sujan-chapagain.mp4",
+            "loop": "/media/loops/sujan-chapagain.mp4",
+            "cover": "/media/covers/sujan-chapagain.webp",
+            "ratio": "16/9",
+            "desc": "Sujan Chapagain live, filmed by our ChitraKatha team."
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "unique-wholefood",
-    "name": "Unique Wholefood",
-    "short": "Ads and festival coverage",
-    "note": "An ad for the brand, and coverage of their stall at the Crows Nest Festival.",
+    "id": "promotional",
+    "name": "Promotional content",
+    "category": "brands",
+    "short": "Ads and promos",
+    "note": "Ads and promos we made for local businesses and events.",
     "groups": [
       {
         "items": [
           {
             "id": "unique-ad",
-            "title": "The ad",
+            "title": "Unique Wholefood, ad",
             "kind": "video",
             "src": "/media/video/unique-ad.mp4",
             "loop": "/media/loops/unique-ad.mp4",
@@ -1245,13 +1342,13 @@ export const clientWork = [
           },
           {
             "id": "uw-crowsnest",
-            "title": "30-second highlight",
+            "title": "Unique Wholefood, Crows Nest",
             "kind": "video",
             "src": "/media/video/uw-crowsnest.mp4",
             "loop": "/media/loops/uw-crowsnest.mp4",
             "cover": "/media/covers/uw-crowsnest.webp",
             "ratio": "9/16",
-            "desc": "The stall at the Crows Nest festival."
+            "desc": "Their stall at the Crows Nest Festival, in 30 seconds."
           },
           {
             "id": "unique-wholefood-festival",
@@ -1261,35 +1358,41 @@ export const clientWork = [
             "loop": "/media/loops/unique-wholefood-festival.mp4",
             "cover": "/media/covers/unique-wholefood-festival.webp",
             "ratio": "9/16",
-            "desc": "A host-led walk around the same day."
-          }
-        ]
-      }
-    ],
-    "category": "brands"
-  },
-  {
-    "id": "drive2everest",
-    "name": "Drive2Everest",
-    "short": "Driving school",
-    "note": "A promo for their lessons and test preparation classes.",
-    "groups": [
-      {
-        "items": [
+            "desc": "A walk around the Crows Nest Festival with Unique Wholefood."
+          },
           {
             "id": "drive2everest-promo",
-            "title": "Thinking of driving?",
+            "title": "Drive2Everest",
             "kind": "video",
             "src": "/media/video/drive2everest-promo.mp4",
             "loop": "/media/loops/drive2everest-promo.mp4",
             "cover": "/media/covers/drive2everest-promo.webp",
             "ratio": "9/16",
-            "desc": "Promo for their lessons and test preparation classes."
+            "desc": "A promo for Drive2Everest's driving lessons and test preparation classes."
+          },
+          {
+            "id": "mojito-momo",
+            "title": "8848, Mojito & Momo",
+            "kind": "video",
+            "src": "/media/video/mojito-momo.mp4",
+            "loop": "/media/loops/mojito-momo.mp4",
+            "cover": "/media/covers/mojito-momo.webp",
+            "ratio": "16/9",
+            "desc": "A short promo for 8848's mojito and momo."
+          },
+          {
+            "id": "moonlight-cruise",
+            "title": "Moonlight cruise party",
+            "kind": "video",
+            "src": "/media/video/moonlight-cruise.mp4",
+            "loop": "/media/loops/moonlight-cruise.mp4",
+            "cover": "/media/covers/moonlight-cruise.webp",
+            "ratio": "9/16",
+            "desc": "Highlights from the Moonlight Group cruise party."
           }
         ]
       }
-    ],
-    "category": "brands"
+    ]
   }
 ];
 
@@ -1297,7 +1400,7 @@ export const reelFrames = [
   "/media/posters/phool-sm.webp",
   "/media/posters/two-sm.webp",
   "/media/posters/sano-chari-poster-sm.webp",
-  "/media/covers/rock-heads.webp",
+  "/media/covers/rockheads-highlight.webp",
   "/media/posters/thakan-sm.webp",
   "/media/covers/narujeka-nindra.webp",
   "/media/posters/hawaijahaz-poster-sm.webp",

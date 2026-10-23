@@ -29,7 +29,7 @@ export default function Posters({ showAll = false }) {
         title="posters"
         width={150}
         seed={81}
-        note="For my films and songs, and for films that only exist in my head (so far)."
+        note="Posters for my films and songs, some for films that are still in my head, and a few designs I made."
       />
 
       <div className="wall cols" ref={ref}>
@@ -51,7 +51,7 @@ export default function Posters({ showAll = false }) {
       {!all && posters.length > FIRST && (
         <p className="more">
           <button type="button" className="hand-btn" onClick={() => setAll(true)}>
-            {posters.length - FIRST} more on the wall
+            see more posters
             <Ink kind="underline" w={190} h={12} size={3.4} seed={88} className="hand-btn-under" />
           </button>
         </p>

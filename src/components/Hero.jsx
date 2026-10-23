@@ -1,7 +1,6 @@
 // src/components/Hero.jsx
 // The page is torn open and the film comes out of it.
 import { Suspense, lazy, useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { recentClients } from "../data/work.js";
 import { hasWebGL, useInView, useReducedMotion } from "../hooks.js";
 import { tornBlob } from "../lib/hand.js";
 import { Ink, Note } from "./Hand.jsx";
@@ -152,9 +151,6 @@ export default function Hero() {
         </ul>
       </div>
 
-      <p className="hero-tape">
-        <span>recently for {recentClients.slice(0, -1).join(", ")} and {recentClients.at(-1)}</span>
-      </p>
     </section>
   );
 }

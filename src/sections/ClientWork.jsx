@@ -11,7 +11,7 @@ const CATEGORIES = [
   ["college", "College marketing"],
   ["music", "ChitraKatha, music videos & promos"],
   ["events", "Event coverage"],
-  ["brands", "Brand work"],
+  ["brands", "Promotional content"],
 ];
 
 const hasWork = (c) => c.groups?.some((g) => g.items?.length);
@@ -32,7 +32,7 @@ function Thumb({ item, onOpen }) {
       >
         <Media item={item} ratio={r} preview={preview} />
       </button>
-      <span className="thumb-cap">{item.title}</span>
+      {item.cap !== false && <span className="thumb-cap">{item.title}</span>}
     </li>
   );
 }
@@ -119,7 +119,6 @@ function Client({ client }) {
               onClick={() => setTab(i)}
             >
               {g.label || "work"}
-              <span className="client-tab-n">{g.items.length}</span>
             </button>
           ))}
         </div>

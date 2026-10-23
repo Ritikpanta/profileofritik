@@ -22,7 +22,7 @@ export default function PoetryRow({ items = [] }) {
 
   return (
     <section id="poems" className="block poems" aria-labelledby="poems-title">
-      <SubHead id="poems-title" title="nepali poems" width={250} seed={121} note="I write in Nepali. These are a few pages, torn out.">
+      <SubHead id="poems-title" title="nepali poems" width={250} seed={121} note="I write my poems in Nepali. Here are a few of them.">
         <p className="poems-ne" lang="ne">कविता</p>
       </SubHead>
 

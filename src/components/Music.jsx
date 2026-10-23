@@ -178,13 +178,13 @@ export function ListenPrompt() {
     >
       {thanks ? (
         <p className="listen-q" role="status">
-          Playing <em>{SONG.title}</em>. Pause it here any time.
+          Playing <em>{SONG.title}</em>. You can pause it here.
         </p>
       ) : (
         <>
-          <p className="listen-q">Music while you look around?</p>
+          <p className="listen-q">Want some music while you look around?</p>
           <p className="listen-sub">
-            <em>{SONG.title}</em>, a tune I made.
+            It’s <em>{SONG.title}</em>, I made it.
           </p>
           <div className="listen-actions">
             <button

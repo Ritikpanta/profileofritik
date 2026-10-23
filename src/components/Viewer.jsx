@@ -90,7 +90,13 @@ export default function Viewer({ items, index, onClose, onIndex }) {
         <h2 className="viewer-title">{item.title}</h2>
         {item.titleNe && <p className="viewer-title-ne" lang="ne">{item.titleNe}</p>}
         {item.desc && <p className="viewer-desc">{item.desc}</p>}
-        {item.href && <p><a href={item.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></p>}
+        {item.href && (
+          <p className="viewer-link">
+            <a href={item.href} target="_blank" rel="noreferrer">
+              {/youtu/.test(item.href) ? "Watch on YouTube" : /instagram/.test(item.href) ? "Watch on Instagram" : "Open the link"}
+            </a>
+          </p>
+        )}
         {item.tags?.length > 0 && <p className="viewer-tags">{item.tags.join(", ")}</p>}
         {many && (
           <p className="viewer-count">

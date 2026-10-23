@@ -20,7 +20,7 @@ export default function Photos() {
         title="photographs"
         width={250}
         seed={101}
-        note="Friends, strangers (with permission), the beach, the light. Click any frame to see it properly."
+        note="Photos I took of friends, strangers (I asked first) and places I liked. Click any one to see it bigger."
       />
 
       <div className="sheet">

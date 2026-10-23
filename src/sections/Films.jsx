@@ -22,7 +22,14 @@ export default function Films() {
       <div className="selected-films">
         {films.map((film, i) => (
           <article key={film.id} className={i === 0 ? "selected-film selected-film--lead" : "selected-film"}>
-            <Print item={film} onOpen={open} angle={i === 0 ? -0.6 : 0} tape={i === 0} tapeSeed={i + 3} />
+            <Print
+              item={film}
+              onOpen={open}
+              angle={i === 0 ? -0.6 : 0}
+              tape={i === 0}
+              tapeSeed={i + 3}
+              ratio={film.ratio === "9/16" ? "4/5" : film.ratio}
+            />
             <div className="selected-film-copy">
               <p className="film-credit">{film.tags.join(" · ")}</p>
               <h3 className="hand-title">{film.title}</h3>
@@ -39,7 +46,7 @@ export default function Films() {
         <div className="slice">
           <header className="slice-head">
             <h3 className="slice-title">slice of life</h3>
-            <p className="slice-note">Small films from ordinary days. A song at a lookout, a sketchbook page, a trip.</p>
+            <p className="slice-note">Some small videos from my everyday life. Nothing big, just moments I wanted to keep.</p>
           </header>
           <div className="slice-grid">
             {sliceOfLife.map((f) => (

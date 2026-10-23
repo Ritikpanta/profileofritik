@@ -2145,3 +2145,8 @@ button {
 @media (max-width: 400px) {
   .wordmark-en { display: none; }
 }
+
+/* Always the white page, even when a phone or computer is set to dark.
+   "only light" also stops browsers (Chrome, Samsung Internet) from
+   auto-darkening the page and turning the colours muddy. */
+:root { color-scheme: only light; }
