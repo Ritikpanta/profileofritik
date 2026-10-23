@@ -1037,8 +1037,8 @@ export const poemFilms = [
   },
   {
     "id": "sunset-poem",
-    "title": "Ek Din",
-    "titleNe": "एक दिन",
+    "title": "Raange Barsat",
+    "titleNe": "रंगे बर्सात",
     "kind": "video",
     "src": "/media/video/poem-dbqg.mp4",
     "loop": "/media/loops/poem-dbqg.mp4",
@@ -1047,7 +1047,7 @@ export const poemFilms = [
     "tags": [
       "poetry film"
     ],
-    "desc": "A poem from my sketchbook, read by the water while the sun went down."
+    "desc": "Raange Barsat, a rain of colours. A poem from my sketchbook, read by the water while the sun went down."
   }
 ];
 
