@@ -3,6 +3,7 @@
 import Print from "../components/Print.jsx";
 import useViewer from "../components/useViewer.jsx";
 import { SubHead } from "../components/Heads.jsx";
+import { Ink } from "../components/Hand.jsx";
 import { directorReels, films, sliceOfLife } from "../data/work.js";
 
 const all = [...films, ...sliceOfLife, ...directorReels];
@@ -16,7 +17,7 @@ export default function Films() {
         title="films & stories"
         width={300}
         seed={41}
-        note="Stories I have written, directed and made into films. Click a film to watch it and read a little about it."
+        note="Stories I wrote, directed and turned into films. Click any of them to watch."
       />
 
       <div className="selected-films">
@@ -31,6 +32,12 @@ export default function Films() {
               ratio={film.ratio === "9/16" ? "4/5" : film.ratio}
             />
             <div className="selected-film-copy">
+              {film.solo && (
+                <p className="solo-mark">
+                  made all by myself
+                  <Ink kind="underline" w={170} h={12} size={3} seed={i + 61} className="solo-mark-ink" />
+                </p>
+              )}
               <p className="film-credit">{film.tags.join(" · ")}</p>
               <h3 className="hand-title">{film.title}</h3>
               <p>{film.desc}</p>
@@ -63,7 +70,7 @@ export default function Films() {
         <div className="slice slice--director">
           <header className="slice-head">
             <h3 className="slice-title">behind the camera</h3>
-            <p className="slice-note">Me as a director. How we plan, shoot and talk about our films.</p>
+            <p className="slice-note">Me behind the camera. How we plan, shoot and talk about our films.</p>
           </header>
           <div className="slice-grid slice-grid--four">
             {directorReels.map((f) => (

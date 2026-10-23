@@ -13,7 +13,7 @@ export const films = [
       "director",
       "actor"
     ],
-    "desc": "I wrote, directed and acted in Junkiri. It's a conversation about life, home and memories. I learned a lot making this, and it is still one of those projects I am proud of."
+    "desc": "I wrote it, directed it and acted in it. Two people talking about life, home and the things we remember. I'm still proud of this one."
   },
   {
     "id": "juhi",
@@ -30,7 +30,7 @@ export const films = [
       "editor",
       "actor"
     ],
-    "desc": "Juhi is a short film we shot at night around Sydney. I wrote it, directed it, edited it and acted in it with my ChitraKatha team, and we made it with Ananta Events."
+    "desc": "We shot this one at night around Sydney. I wrote, directed, edited and acted in it, and my ChitraKatha team made it happen. Made with Ananta Events."
   },
   {
     "id": "how-are-you-mister",
@@ -41,10 +41,14 @@ export const films = [
     "cover": "/media/covers/how-are-you-mister.webp",
     "ratio": "16/9",
     "tags": [
-      "story",
-      "director"
+      "wrote",
+      "shot",
+      "directed",
+      "edited",
+      "only me on screen"
     ],
-    "desc": "A short film I made about a quiet night and a lot of thoughts. The song in it, Grave of Lies, is mine too."
+    "desc": "A quiet night and too many thoughts. I made this one completely by myself, and I'm the only one on screen. Grave of Lies, the song in it, is mine too.",
+    "solo": true
   },
   {
     "id": "rin",
@@ -56,9 +60,14 @@ export const films = [
     "cover": "/media/covers/film-dfpe.webp",
     "ratio": "9/16",
     "tags": [
-      "short film"
+      "wrote",
+      "shot",
+      "directed",
+      "edited",
+      "only me on screen"
     ],
-    "desc": "Rin means debt. A short one, a phone call late at night in the kitchen."
+    "desc": "Rin means debt. A late night in the kitchen and one phone call. I wrote, shot, directed and edited it, and I'm the only one in it.",
+    "solo": true
   },
   {
     "id": "silent-ink",
@@ -71,7 +80,7 @@ export const films = [
       "writer",
       "director"
     ],
-    "desc": "Silent Ink is one of the first stories I wrote and directed. It follows a lover whose feelings turn into an obsession. This was where my directing journey started."
+    "desc": "One of the first stories I wrote and directed. A lover whose feelings slowly turn into an obsession. This is where directing started for me."
   },
   {
     "id": "phool",
@@ -81,11 +90,14 @@ export const films = [
     "cover": "https://img.youtube.com/vi/9ff56VwL3YU/hqdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "5 chapters",
-      "5 songs",
-      "story in progress"
+      "wrote",
+      "shot",
+      "directed",
+      "edited",
+      "only me on screen"
     ],
-    "desc": "Phool is a love story I have been writing for a while. It has 5 chapters and 5 songs. This video is a glimpse of the story, and I hope to give the whole thing the visuals I have in my head."
+    "desc": "A love story I've been writing for a long time, 5 chapters and 5 songs. I wrote, shot, directed and edited this glimpse myself, and it's only me in it. One day I want to make all of it the way I see it in my head.",
+    "solo": true
   },
   {
     "id": "thakan",
@@ -95,9 +107,14 @@ export const films = [
     "cover": "https://img.youtube.com/vi/k8PAisotcoY/maxresdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "short film"
+      "wrote",
+      "shot",
+      "directed",
+      "edited",
+      "only me on screen"
     ],
-    "desc": "After coming to Australia, doing something I didn't enjoy felt tiring. I felt I needed a rest, a long rest. I wrote Bishram during my early days here, and Thakan is a prequel to that."
+    "desc": "After coming to Australia, doing something I didn't enjoy made me tired. I needed a rest, a long one. I wrote Bishram in my early days here, and Thakan is the story before it. I made it alone, start to finish.",
+    "solo": true
   },
   {
     "id": "two",
@@ -107,10 +124,14 @@ export const films = [
     "cover": "https://img.youtube.com/vi/zVwb1i1Xliw/maxresdefault.jpg",
     "ratio": "16/9",
     "tags": [
-      "short film",
-      "solo project"
+      "wrote",
+      "shot",
+      "directed",
+      "edited",
+      "only me on screen"
     ],
-    "desc": "Two is a short film I made by myself, with two sides of me on the screen. I edited and colour graded it in DaVinci Resolve."
+    "desc": "Just me, two times. I wrote it, shot it alone, played both of me, then edited and coloured it in DaVinci Resolve.",
+    "solo": true
   },
   {
     "id": "naadhan",
@@ -128,7 +149,7 @@ export const films = [
     "tags": [
       "personal edit"
     ],
-    "desc": "I was making an intro for one of my projects. When I added Naadhan Parinde, it gave the footage a different meaning. I liked how that turned out."
+    "desc": "I was making an intro for another project. Then I put Naadhan Parinde under it and the footage meant something else. So I kept it."
   }
 ];
 
@@ -146,7 +167,7 @@ export const sliceOfLife = [
       "slice of life",
       "song"
     ],
-    "desc": "A small piece from Phool. Just me and my guitar, singing at a lookout by the sea."
+    "desc": "Me, my guitar and a lookout by the sea. A small piece from the middle of Phool."
   },
   {
     "id": "talking-about-design",
@@ -159,7 +180,7 @@ export const sliceOfLife = [
     "tags": [
       "slice of life"
     ],
-    "desc": "I made this on my trip to Brisbane. I talk a little about my designs, like the ChitraKatha hoodie, and the music in it is something I made on the harmonica."
+    "desc": "Filmed on my trip to Brisbane. I talk about the things I design, like the ChitraKatha hoodie. The harmonica in it is me too."
   },
   {
     "id": "timi-basne-sansar",
@@ -174,7 +195,7 @@ export const sliceOfLife = [
       "slice of life",
       "sketchbook"
     ],
-    "desc": "A page from my sketchbook and the lines I wrote next to it. Timi basne sansar means the world you live in."
+    "desc": "A page from my sketchbook and the lines I wrote beside it. Timi basne sansar, the world you live in."
   },
   {
     "id": "play-phool",
@@ -184,7 +205,7 @@ export const sliceOfLife = [
     "loop": "/media/loops/slice-play-phool.mp4",
     "cover": "/media/covers/slice-play-phool.webp",
     "ratio": "16/9",
-    "desc": "Harmonica, a sunset and my sketchbook."
+    "desc": "A harmonica, a sunset and my sketchbook. I'll keep playing Phool until I find it."
   },
   {
     "id": "australia-chapter",
@@ -194,7 +215,7 @@ export const sliceOfLife = [
     "loop": "/media/loops/slice-dzkh.mp4",
     "cover": "/media/covers/slice-dzkh.webp",
     "ratio": "16/9",
-    "desc": "My time in Australia so far. Learning, starting things and singing out loud."
+    "desc": "My Australia chapter so far. Learning, starting over and singing out loud."
   },
   {
     "id": "night-shoot",
@@ -204,17 +225,17 @@ export const sliceOfLife = [
     "loop": "/media/loops/slice-dyh5.mp4",
     "cover": "/media/covers/slice-dyh5.webp",
     "ratio": "16/9",
-    "desc": "A night shoot with ChitraKatha at Olympic Park. Guitar, harmonica and city lights."
+    "desc": "A night at Olympic Park with the ChitraKatha team. Guitar, harmonica and the city lights."
   },
   {
     "id": "on-the-train",
-    "title": "On the train",
+    "title": "Jo Bhi Main",
     "kind": "video",
     "src": "/media/video/slice-dt8c.mp4",
     "loop": "/media/loops/slice-dt8c.mp4",
     "cover": "/media/covers/slice-dt8c.webp",
     "ratio": "16/9",
-    "desc": "The sea, a train ride and drawing in my notebook on the way."
+    "desc": "The sea, a long train ride and my notebook open on my lap."
   },
   {
     "id": "a-day-drawing",
@@ -224,7 +245,7 @@ export const sliceOfLife = [
     "loop": "/media/loops/slice-dzxt.mp4",
     "cover": "/media/covers/slice-dzxt.webp",
     "ratio": "16/9",
-    "desc": "Drawing, editing and eating. A normal day for me."
+    "desc": "Drawing, editing, eating. Pretty much what a normal day looks like for me."
   },
   {
     "id": "nindra-sketches",
@@ -234,7 +255,7 @@ export const sliceOfLife = [
     "loop": "/media/loops/slice-dep4.mp4",
     "cover": "/media/covers/slice-dep4.webp",
     "ratio": "16/9",
-    "desc": "The sketchbook pages that became Narujheka Nindra."
+    "desc": "Before Narujheka Nindra moved, it lived in these pages."
   }
 ];
 
@@ -256,26 +277,22 @@ export const animationProjects = [
       "animation",
       "drawn by hand"
     ],
-    "desc": "I made this animation from my own drawings. The words are in Nepali, and the drawings are part of the story too."
+    "desc": "I made this animation from my own drawings. The words are in Nepali, and the drawings tell half the story."
   },
   {
     "id": "batti-putali",
     "title": "Batti Putali",
     "kind": "video",
-    "src": "/media/video/batti-putali.mp4",
-    "loop": "/media/loops/batti-putali.mp4",
-    "cover": "/media/covers/batti-putali.webp",
+    "src": "/media/video/batti-putali-new.mp4",
+    "loop": "/media/loops/batti-putali-new.mp4",
+    "cover": "/media/covers/batti-putali-new.webp",
     "ratio": "9/16",
-    "frames": [
-      "/media/frames/batti-putali-1.webp",
-      "/media/frames/batti-putali-2.webp",
-      "/media/frames/batti-putali-3.webp"
-    ],
     "tags": [
-      "sketchbook",
-      "music visual"
+      "my song",
+      "title card",
+      "animation"
     ],
-    "desc": "Batti Putali is a song I have been working on. This is the visual side of it, alongside my drawings and notebook ideas."
+    "desc": "Batti Putali is my song. I made the raw title card and the animation myself. A moth and a light, that's the feeling of this song, and it means something to me."
   },
   {
     "id": "photo-bhetnuparni",
@@ -293,7 +310,7 @@ export const animationProjects = [
     "tags": [
       "short film"
     ],
-    "desc": "Pages from my sketchbook and some night shots from around the city, with Nepali lines on the screen."
+    "desc": "Sketchbook pages and night shots from around the city, with Nepali lines on the screen."
   },
   {
     "id": "gaine-series",
@@ -312,7 +329,7 @@ export const animationProjects = [
       "series",
       "sketchbook"
     ],
-    "desc": "Black and white, straight from my sketchbook. Drawings, my handwriting in Nepali and a few words to the camera."
+    "desc": "Black and white, straight from my sketchbook. My drawings, my Nepali handwriting and a few words to the camera."
   },
   {
     "id": "sketchbook",
@@ -331,7 +348,7 @@ export const animationProjects = [
       "sketchbook",
       "reel"
     ],
-    "desc": "I drew on the spot, ink first and then red marker."
+    "desc": "I drew it right there on the spot. Ink first, red marker after."
   },
   {
     "id": "sketch-by-the-water",
@@ -344,7 +361,7 @@ export const animationProjects = [
     "tags": [
       "sketchbook"
     ],
-    "desc": "Drawing a boat at the wharf, then looking up at the real thing."
+    "desc": "I sat at the wharf and drew the boat in front of me."
   },
   {
     "id": "sketch-red-page",
@@ -357,7 +374,7 @@ export const animationProjects = [
     "tags": [
       "sketchbook"
     ],
-    "desc": "One of my red pen pages, filled with drawings and Nepali notes."
+    "desc": "One of my red pen pages, full of drawings and little notes in Nepali."
   }
 ];
 
@@ -420,7 +437,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-portrait-sm.webp",
     "w": 1095,
     "h": 1080,
-    "desc": "Gaine series."
+    "desc": "A face and some notes from my Gaine series notebook."
   },
   {
     "id": "sketch-sunny",
@@ -440,7 +457,7 @@ export const sketches = [
     "thumb": "/media/posters/narujeka-nindra-artwork-sm.webp",
     "w": 1920,
     "h": 1080,
-    "desc": "One of the drawings the animation is built from."
+    "desc": "One of the drawings the animation is made from."
   },
   {
     "id": "sketch-redpen",
@@ -450,7 +467,7 @@ export const sketches = [
     "thumb": "/media/sketch/sketch-redpen-sm.webp",
     "w": 1920,
     "h": 1080,
-    "desc": "Notebook page, Photo Bhetnuparni."
+    "desc": "A Photo Bhetnuparni page, all in red pen."
   }
 ];
 
@@ -476,6 +493,16 @@ export const posters = [
     "desc": "Cover art for Maya ko Aasha, one of my songs."
   },
   {
+    "id": "batti-putali-poster",
+    "title": "Batti Putali",
+    "kind": "image",
+    "src": "/media/posters/batti-putali-poster.webp",
+    "thumb": "/media/posters/batti-putali-poster-sm.webp",
+    "w": 767,
+    "h": 1350,
+    "desc": "The poster for Batti Putali, my song."
+  },
+  {
     "id": "phool",
     "title": "Phool",
     "kind": "image",
@@ -483,7 +510,7 @@ export const posters = [
     "thumb": "/media/posters/phool-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "Phool is close to me. It is a love story with 5 chapters and 5 songs. This poster is part of how I picture that story."
+    "desc": "A love story I've been writing for a long time, 5 chapters and 5 songs. This is only a glimpse. One day I want to make all of it the way I see it in my head."
   },
   {
     "id": "kathakar",
@@ -503,7 +530,7 @@ export const posters = [
     "thumb": "/media/posters/rockheads-04-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "One of the posters I made after the Rockheads show."
+    "desc": "A poster I made after the Rockheads show in Sydney."
   },
   {
     "id": "averse",
@@ -533,7 +560,7 @@ export const posters = [
     "thumb": "/media/posters/rockheads-10-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "One of the posters I made after the Rockheads show."
+    "desc": "A poster I made after the Rockheads show in Sydney."
   },
   {
     "id": "thakan-poster",
@@ -543,7 +570,7 @@ export const posters = [
     "thumb": "/media/posters/thakan-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "Poster for Thakan."
+    "desc": "The poster for Thakan."
   },
   {
     "id": "escaping-reality",
@@ -563,7 +590,7 @@ export const posters = [
     "thumb": "/media/posters/rockheads-03-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "One of the posters I made after the Rockheads show."
+    "desc": "A poster I made after the Rockheads show in Sydney."
   },
   {
     "id": "main-character",
@@ -593,7 +620,7 @@ export const posters = [
     "thumb": "/media/posters/rockheads-06-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "One of the posters I made after the Rockheads show."
+    "desc": "A poster I made after the Rockheads show in Sydney."
   },
   {
     "id": "blood-bath",
@@ -623,7 +650,7 @@ export const posters = [
     "thumb": "/media/posters/two-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "Thumbnail for Two."
+    "desc": "The thumbnail for Two."
   },
   {
     "id": "blackpath",
@@ -683,7 +710,7 @@ export const posters = [
     "thumb": "/media/posters/phool-design-sm.webp",
     "w": 4864,
     "h": 3242,
-    "desc": "A t-shirt design for Phool."
+    "desc": "A t-shirt I designed for Phool."
   },
   {
     "id": "design-another",
@@ -693,7 +720,7 @@ export const posters = [
     "thumb": "/media/posters/design-another-sm.webp",
     "w": 4864,
     "h": 3242,
-    "desc": "A t-shirt design of mine."
+    "desc": "Another t-shirt idea of mine."
   },
   {
     "id": "design-mockup",
@@ -703,7 +730,7 @@ export const posters = [
     "thumb": "/media/posters/design-mockup-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "Hoodie designs for ChitraKatha."
+    "desc": "Hoodies I designed for ChitraKatha."
   },
   {
     "id": "launch-poster",
@@ -713,7 +740,7 @@ export const posters = [
     "thumb": "/media/posters/launch-poster-sm.webp",
     "w": 1122,
     "h": 1402,
-    "desc": "A launch poster I designed."
+    "desc": "I made this one for an app launch."
   },
   {
     "id": "talent-mela-poster",
@@ -723,7 +750,7 @@ export const posters = [
     "thumb": "/media/posters/talent-mela-sm.webp",
     "w": 2480,
     "h": 3508,
-    "desc": "A poster for an online talent show we ran."
+    "desc": "For an online talent show we ran."
   },
   {
     "id": "host-poster",
@@ -733,7 +760,7 @@ export const posters = [
     "thumb": "/media/posters/host-sm.webp",
     "w": 3508,
     "h": 4961,
-    "desc": "I hosted the talent show, so I made this one for myself."
+    "desc": "I was hosting the show, so I made my own poster."
   },
   {
     "id": "chess-carnival-poster",
@@ -743,7 +770,7 @@ export const posters = [
     "thumb": "/media/posters/chess-carnival-sm.webp",
     "w": 3061,
     "h": 3827,
-    "desc": "An online chess event I organised with my team, free to enter."
+    "desc": "An online chess event my team and I put together. Free to join."
   },
   {
     "id": "dream-team-poster",
@@ -753,7 +780,7 @@ export const posters = [
     "thumb": "/media/posters/dream-team-sm.webp",
     "w": 4109,
     "h": 3008,
-    "desc": "Our team, together since 2021."
+    "desc": "My team, together since 2021."
   },
   {
     "id": "iced-tea",
@@ -763,7 +790,7 @@ export const posters = [
     "thumb": "/media/posters/iced-tea-sm.webp",
     "w": 5400,
     "h": 7200,
-    "desc": "A drink poster for a cafe."
+    "desc": "A drink poster I made for a cafe."
   },
   {
     "id": "nepal-coffee",
@@ -793,7 +820,7 @@ export const posters = [
     "thumb": "/media/posters/fadebay-sm.webp",
     "w": 1080,
     "h": 1350,
-    "desc": "A poster for a barber."
+    "desc": "A poster for a barber shop."
   },
   {
     "id": "boy-above-the-hill",
@@ -945,7 +972,7 @@ export const directorReels = [
     "loop": "/media/loops/dir-reel-1.mp4",
     "cover": "/media/covers/dir-reel-1.webp",
     "ratio": "9/16",
-    "desc": "Behind the scenes of Juhi. What it looks like when I'm directing at night."
+    "desc": "Behind the scenes of Juhi. This is me directing at night."
   },
   {
     "id": "mayalu-timi-bts",
@@ -955,7 +982,7 @@ export const directorReels = [
     "loop": "/media/loops/dir-reel-3.mp4",
     "cover": "/media/covers/dir-reel-3.webp",
     "ratio": "16/9",
-    "desc": "From the storyboard in my notebook to the shoot for Mayalu Timi."
+    "desc": "It started as a storyboard in my notebook. This is how it became the Mayalu Timi shoot."
   },
   {
     "id": "whats-in-salala",
@@ -965,7 +992,7 @@ export const directorReels = [
     "loop": "/media/loops/whats-in-salala.mp4",
     "cover": "/media/covers/whats-in-salala.webp",
     "ratio": "1/1",
-    "desc": "I talk about Salala, why it's different and the moments behind it."
+    "desc": "I talk about what makes Salala different, and the moments that made it."
   },
   {
     "id": "talking-films",
@@ -975,7 +1002,7 @@ export const directorReels = [
     "loop": "/media/loops/dir-reel-2.mp4",
     "cover": "/media/covers/dir-reel-2.webp",
     "ratio": "16/9",
-    "desc": "Me talking about how we take an idea and make it into a film."
+    "desc": "How we take a small idea and turn it into a film."
   }
 ];
 
@@ -1007,7 +1034,7 @@ export const poemFilms = [
     "tags": [
       "poetry film"
     ],
-    "desc": "Prem ko Patra means a love letter. It is one of my poems, and I filmed it by the sea. This is the first verse of Patra ko Bagaicha."
+    "desc": "Prem ko Patra means a love letter. It's one of my poems, filmed by the sea, and the first verse of Patra ko Bagaicha."
   },
   {
     "id": "andhyaro-ko-saathi",
@@ -1021,7 +1048,7 @@ export const poemFilms = [
     "tags": [
       "poetry film"
     ],
-    "desc": "Andhyaro ko Saathi means a friend in the dark. One of my poems, read at night."
+    "desc": "Andhyaro ko Saathi, a friend in the dark. One of my poems, read at night."
   },
   {
     "id": "sunset-poem",
@@ -1035,7 +1062,7 @@ export const poemFilms = [
     "tags": [
       "poetry film"
     ],
-    "desc": "A poem from my sketchbook, filmed by the water at sunset."
+    "desc": "A poem from my sketchbook, read by the water while the sun went down."
   }
 ];
 
@@ -1044,7 +1071,7 @@ export const clientWork = [
     "id": "apic",
     "name": "Asia Pacific International College",
     "short": "My work as a Marketing Ambassador",
-    "note": "I work as a Marketing Ambassador at APIC. I create videos around college life, student stories and events, including A Minute with the Dean. It is a different side of my filmmaking, working with people and stories from the college.",
+    "note": "I'm a Marketing Ambassador at APIC. I make videos about college life, students and events, and A Minute with the Dean. It's a different side of my filmmaking, working with real people and their stories.",
     "groups": [
       {
         "label": "A Minute with the Dean",
@@ -1067,7 +1094,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-confidence.mp4",
             "cover": "/media/covers/dean-confidence.webp",
             "ratio": "9/16",
-            "desc": "About students who struggle quietly, and why confidence matters."
+            "desc": "For the students who struggle quietly. Confidence matters as much as the degree."
           },
           {
             "id": "dean-graduates",
@@ -1077,7 +1104,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-graduates.mp4?v=2",
             "cover": "/media/covers/dean-graduates.webp?v=2",
             "ratio": "1/1",
-            "desc": "The Dean's message for our graduates."
+            "desc": "The Dean's message to our graduates."
           },
           {
             "id": "dean-week-11",
@@ -1087,7 +1114,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-week-11.mp4",
             "cover": "/media/covers/dean-week-11.webp",
             "ratio": "9/16",
-            "desc": "One student question, answered in about a minute."
+            "desc": "One question from a student, answered in about a minute."
           },
           {
             "id": "dean-week-26",
@@ -1097,7 +1124,7 @@ export const clientWork = [
             "loop": "/media/loops/dean-week-26.mp4",
             "cover": "/media/covers/dean-week-26.webp",
             "ratio": "9/16",
-            "desc": "What a supportive learning environment looks like, and where to go for extra help."
+            "desc": "What a supportive place to learn looks like, and where to go when you need help."
           },
           {
             "id": "dean-episode-26",
@@ -1107,7 +1134,7 @@ export const clientWork = [
             "thumb": "/media/posters/dean-episode-26-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "The post artwork for episode 26."
+            "desc": "The post we made for episode 26."
           }
         ]
       },
@@ -1122,7 +1149,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-highlight.mp4",
             "cover": "/media/covers/apic-highlight.webp",
             "ratio": "9/16",
-            "desc": "Highlights from the 2026 graduation."
+            "desc": "Graduation day 2026. Happy faces everywhere."
           },
           {
             "id": "apic-orientation-teaser",
@@ -1132,7 +1159,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-orientation-coming.mp4",
             "cover": "/media/covers/apic-orientation-coming.webp",
             "ratio": "9/16",
-            "desc": "A teaser we made before orientation."
+            "desc": "A little teaser before orientation. Something is coming."
           },
           {
             "id": "apic-student-voices",
@@ -1142,7 +1169,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-student-voices.mp4",
             "cover": "/media/covers/apic-student-voices.webp",
             "ratio": "9/16",
-            "desc": "Students on what studying at APIC has been like."
+            "desc": "Students talking about what studying at APIC has been like for them."
           },
           {
             "id": "apic-study-abroad",
@@ -1152,7 +1179,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-study-abroad.mp4",
             "cover": "/media/covers/apic-study-abroad.webp",
             "ratio": "9/16",
-            "desc": "A video about the study abroad program."
+            "desc": "The study abroad program, explained in one short video."
           },
           {
             "id": "apic-snack-chat-play-final",
@@ -1162,7 +1189,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-snack-chat-play-final.mp4",
             "cover": "/media/covers/apic-snack-chat-play-final.webp",
             "ratio": "9/16",
-            "desc": "From a student services day on campus."
+            "desc": "A fun day on campus with snacks, chats and games."
           },
           {
             "id": "apic-departure-final",
@@ -1172,7 +1199,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-departure-final.mp4",
             "cover": "/media/covers/apic-departure-final.webp",
             "ratio": "9/16",
-            "desc": "Students and staff on what makes the place feel friendly."
+            "desc": "Students and staff on why the place feels friendly."
           },
           {
             "id": "apic-visas",
@@ -1182,7 +1209,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-visas.mp4",
             "cover": "/media/covers/apic-visas.webp",
             "ratio": "9/16",
-            "desc": "An update on visa changes and the support available."
+            "desc": "What changed with visas, and where students can get help."
           }
         ]
       },
@@ -1197,7 +1224,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-ai-event.mp4",
             "cover": "/media/covers/apic-ai-event.webp",
             "ratio": "9/16",
-            "desc": "Highlights from the AI event at APIC."
+            "desc": "The AI event at APIC, cut into a short highlight."
           },
           {
             "id": "apic-ai",
@@ -1207,7 +1234,7 @@ export const clientWork = [
             "loop": "/media/loops/apic-ai.mp4",
             "cover": "/media/covers/apic-ai.webp",
             "ratio": "9/16",
-            "desc": "Students and staff talking about learning with AI."
+            "desc": "Students and staff on learning, and teaching, with AI."
           }
         ]
       },
@@ -1304,7 +1331,7 @@ export const clientWork = [
     "name": "ChitraKatha Production",
     "short": "Founder, filmmaker and director",
     "category": "music",
-    "note": "I started ChitraKatha Production so I could make stories with a team. Our short films come from here, like Junkiri, Silent Ink and Juhi. So do the songs we have done so far. Salala was my first music video as a director. Mayalu Timi is our music video with Pratik Pandey. Sano Chari is the story of Aashuk, an international student far from home. And for Hawaijahaz Ma Sarara, Ashok Bhusal's song, we did the shoot and the posters.",
+    "note": "I started ChitraKatha Production because I wanted to make stories with a team, not alone. Our short films like Junkiri, Silent Ink and Juhi came from here, and so did our songs. Salala was my first music video as a director. Mayalu Timi is our music video with Pratik Pandey. Sano Chari is about Aashuk, an international student far from home. And for Ashok Bhusal's Hawaijahaz Ma Sarara, we did the shoot and the posters.",
     "groups": [
       {
         "label": "Short films",
@@ -1324,7 +1351,7 @@ export const clientWork = [
               "editor",
               "actor"
             ],
-            "desc": "Juhi is a short film we shot at night around Sydney. I wrote it, directed it, edited it and acted in it with my ChitraKatha team, and we made it with Ananta Events."
+            "desc": "We shot this one at night around Sydney. I wrote, directed, edited and acted in it, and my ChitraKatha team made it happen. Made with Ananta Events."
           },
           {
             "id": "junkiri",
@@ -1338,7 +1365,7 @@ export const clientWork = [
               "director",
               "actor"
             ],
-            "desc": "I wrote, directed and acted in Junkiri. It's a conversation about life, home and memories. I learned a lot making this, and it is still one of those projects I am proud of."
+            "desc": "I wrote it, directed it and acted in it. Two people talking about life, home and the things we remember. I'm still proud of this one."
           },
           {
             "id": "silent-ink",
@@ -1351,7 +1378,7 @@ export const clientWork = [
               "writer",
               "director"
             ],
-            "desc": "Silent Ink is one of the first stories I wrote and directed. It follows a lover whose feelings turn into an obsession. This was where my directing journey started."
+            "desc": "One of the first stories I wrote and directed. A lover whose feelings slowly turn into an obsession. This is where directing started for me."
           }
         ]
       },
@@ -1370,7 +1397,7 @@ export const clientWork = [
               "editor",
               "colourist"
             ],
-            "desc": "Salala was my first music video as a director. I directed, edited and colour graded it, and made most of the posters and promos too. Made through ChitraKatha with my friends, an experience I still remember."
+            "desc": "My first music video as a director. I directed, edited and coloured it, and made most of the posters and promos too. Made with my friends through ChitraKatha, and I still remember every bit of it."
           },
           {
             "id": "whats-in-salala",
@@ -1380,7 +1407,7 @@ export const clientWork = [
             "loop": "/media/loops/whats-in-salala.mp4",
             "cover": "/media/covers/whats-in-salala.webp",
             "ratio": "1/1",
-            "desc": "I talk about Salala, why it's different and the moments behind it."
+            "desc": "I talk about what makes Salala different, and the moments that made it."
           }
         ]
       },
@@ -1398,7 +1425,7 @@ export const clientWork = [
             "tags": [
               "music video"
             ],
-            "desc": "Mayalu Timi, our music video with Pratik Pandey, made through ChitraKatha."
+            "desc": "Our music video with Pratik Pandey, made through ChitraKatha."
           },
           {
             "id": "mayalu-timi-promo",
@@ -1412,7 +1439,7 @@ export const clientWork = [
               "music video",
               "promo"
             ],
-            "desc": "A promo for Mayalu Timi, our music video with Pratik Pandey. Part of the work we made through ChitraKatha for the release."
+            "desc": "A short promo we made for the Mayalu Timi release."
           },
           {
             "id": "mayalu-timi-bts",
@@ -1422,7 +1449,7 @@ export const clientWork = [
             "loop": "/media/loops/dir-reel-3.mp4",
             "cover": "/media/covers/dir-reel-3.webp",
             "ratio": "16/9",
-            "desc": "From the storyboard in my notebook to the shoot for Mayalu Timi."
+            "desc": "It started as a storyboard in my notebook. This is how it became the Mayalu Timi shoot."
           }
         ]
       },
@@ -1443,7 +1470,7 @@ export const clientWork = [
               "lyrics",
               "director"
             ],
-            "desc": "Sano Chari is the story of Aashuk, an international student living far from home. He is trying to manage his studies, work and bills, and he can't bring himself to tell his family back home what he is going through. I wrote the story and the lyrics and directed it. Tapendra Tikhatari sang it, and this artist version is our thank you to him."
+            "desc": "Sano Chari is about Aashuk, an international student far from home. He's juggling study, work and bills, and he can't tell his family back home how hard it is. I wrote the story and the lyrics and directed it. This artist version is our thank you to Tapendra Tikhatari, who sang it."
           },
           {
             "id": "sano-chari-lyrics",
@@ -1453,7 +1480,7 @@ export const clientWork = [
             "cover": "https://img.youtube.com/vi/UR6QIZ_8P6k/maxresdefault.jpg",
             "ratio": "16/9",
             "href": "https://www.youtube.com/watch?v=UR6QIZ_8P6k",
-            "desc": "The lyrical video for Sano Chari, out on the ChitraKatha Production YouTube channel."
+            "desc": "The lyrical video for Sano Chari, on the ChitraKatha Production YouTube."
           },
           {
             "id": "sano-chari-promo",
@@ -1463,7 +1490,7 @@ export const clientWork = [
             "loop": "/media/loops/sano-chari-promo.mp4",
             "cover": "/media/covers/sano-chari-promo.webp",
             "ratio": "16/9",
-            "desc": "A promo we made for Sano Chari. I talk a bit about how we make our films."
+            "desc": "Our promo for Sano Chari, where I talk a bit about how we make our films."
           },
           {
             "id": "sano-chari-main-poster",
@@ -1488,7 +1515,7 @@ export const clientWork = [
             "thumb": "/media/posters/hawaijahaz-poster-sm.webp",
             "w": 1080,
             "h": 1350,
-            "desc": "Teaser poster for the music video."
+            "desc": "The teaser poster for the music video."
           },
           {
             "id": "hawaijahaz-on-set",
@@ -1508,7 +1535,7 @@ export const clientWork = [
             "loop": "/media/loops/hawaijahaz-highlights.mp4",
             "cover": "/media/covers/hawaijahaz-highlights.webp",
             "ratio": "16/9",
-            "desc": "A day on the Hawaijahaz Ma Sarara shoot, from early morning to the airport."
+            "desc": "A full day on the Hawaijahaz Ma Sarara shoot, from 5am all the way to the airport."
           },
           {
             "id": "hawaijahaz-3",
@@ -1518,7 +1545,7 @@ export const clientWork = [
             "loop": "/media/loops/hawaijahaz-3.mp4",
             "cover": "/media/covers/hawaijahaz-3.webp",
             "ratio": "16/9",
-            "desc": "More from the shoot, out in the bush at night with the camera."
+            "desc": "Out in the bush at night with the camera, still shooting."
           }
         ]
       }
@@ -1528,7 +1555,7 @@ export const clientWork = [
     "id": "kirtan",
     "name": "Kritan Sajh",
     "short": "Event coverage with ChitraKatha",
-    "note": "ChitraKatha was the media partner for Kritan Sajh. We covered the performances and the people there, then put those moments into highlights from the evening.",
+    "note": "ChitraKatha was the media partner for Kritan Sajh. We filmed the music and the people, then cut the best moments of the evening.",
     "groups": [
       {
         "items": [
@@ -1540,7 +1567,7 @@ export const clientWork = [
             "loop": "/media/loops/kirtan-saanjh.mp4",
             "cover": "/media/covers/kirtan-saanjh.webp",
             "ratio": "9/16",
-            "desc": "From the evening."
+            "desc": "The evening, in one short reel."
           },
           {
             "id": "kirtan-feedback",
@@ -1550,7 +1577,7 @@ export const clientWork = [
             "loop": "/media/loops/kirtan-feedback.mp4",
             "cover": "/media/covers/kirtan-feedback.webp",
             "ratio": "9/16",
-            "desc": "People sharing how they felt at Kirtan Saanjh."
+            "desc": "People telling us how the night felt."
           },
           {
             "id": "kirtan-saanjh-2",
@@ -1560,7 +1587,7 @@ export const clientWork = [
             "thumb": "/media/photos/kirtan-saanjh-2-sm.webp",
             "w": 2175,
             "h": 3263,
-            "desc": "From the evening."
+            "desc": "On stage that night."
           }
         ]
       }
@@ -1572,7 +1599,7 @@ export const clientWork = [
     "name": "Rockheads",
     "category": "events",
     "short": "Concert coverage",
-    "note": "We covered the Rockheads concert in Sydney with ChitraKatha. The show, the crowd, a bit of what happens behind the camera, and the posters we made after.",
+    "note": "We filmed the Rockheads concert in Sydney with ChitraKatha. The show, the crowd, a little of what happens behind the camera, and the posters we made after.",
     "groups": [
       {
         "items": [
@@ -1584,7 +1611,7 @@ export const clientWork = [
             "loop": "/media/loops/rockheads-highlight.mp4",
             "cover": "/media/covers/rockheads-highlight.webp",
             "ratio": "16/9",
-            "desc": "Our highlight film from the Rockheads concert in Sydney."
+            "desc": "The whole night, cut into one highlight film."
           },
           {
             "id": "rockheads-teaser",
@@ -1594,7 +1621,7 @@ export const clientWork = [
             "loop": "/media/loops/rockheads-teaser.mp4",
             "cover": "/media/covers/rockheads-teaser.webp",
             "ratio": "16/9",
-            "desc": "A short teaser from the night."
+            "desc": "A short teaser from the show."
           },
           {
             "id": "behind-the-camera",
@@ -1604,7 +1631,7 @@ export const clientWork = [
             "loop": "/media/loops/behind-the-camera.mp4",
             "cover": "/media/covers/behind-the-camera.webp",
             "ratio": "16/9",
-            "desc": "Our crew at work during a live show, narrated in Nepali."
+            "desc": "Our crew at work during a live show, with me talking in Nepali."
           }
         ],
         "label": "Videos"
@@ -1754,7 +1781,7 @@ export const clientWork = [
             "loop": "/media/loops/sujan-chapagain.mp4",
             "cover": "/media/covers/sujan-chapagain.webp",
             "ratio": "16/9",
-            "desc": "Sujan Chapagain live, filmed by our ChitraKatha team."
+            "desc": "Sujan Chapagain live, shot by our team."
           }
         ]
       }
@@ -1765,7 +1792,7 @@ export const clientWork = [
     "name": "Promotional content",
     "category": "brands",
     "short": "Ads and promos",
-    "note": "Ads and promos we made for local businesses and events.",
+    "note": "Ads and promos we made for local businesses and events around Sydney.",
     "groups": [
       {
         "items": [
@@ -1777,7 +1804,7 @@ export const clientWork = [
             "loop": "/media/loops/momo-house-1.mp4",
             "cover": "/media/covers/momo-house-1.webp",
             "ratio": "9/16",
-            "desc": "An ad for 8848 Momo House in Town Hall. Every bite takes you back home."
+            "desc": "For 8848 Momo House in Town Hall. Missing Nepal? Every bite takes you back home."
           },
           {
             "id": "momo-house-talk",
@@ -1787,7 +1814,7 @@ export const clientWork = [
             "loop": "/media/loops/momo-house-2.mp4",
             "cover": "/media/covers/momo-house-2.webp",
             "ratio": "9/16",
-            "desc": "Another one for 8848 Momo House."
+            "desc": "Another ad for 8848 Momo House."
           },
           {
             "id": "unique-ad",
@@ -1797,7 +1824,7 @@ export const clientWork = [
             "loop": "/media/loops/unique-ad.mp4",
             "cover": "/media/covers/unique-ad.webp",
             "ratio": "9/16",
-            "desc": "An ad for Unique Wholefood."
+            "desc": "An ad we shot for Unique Wholefood."
           },
           {
             "id": "uw-crowsnest",
@@ -1817,7 +1844,7 @@ export const clientWork = [
             "loop": "/media/loops/unique-wholefood-festival.mp4",
             "cover": "/media/covers/unique-wholefood-festival.webp",
             "ratio": "9/16",
-            "desc": "A walk around the Crows Nest Festival with Unique Wholefood."
+            "desc": "Walking around the Crows Nest Festival with the Unique Wholefood team."
           },
           {
             "id": "drive2everest-promo",
@@ -1827,7 +1854,7 @@ export const clientWork = [
             "loop": "/media/loops/drive2everest-promo.mp4",
             "cover": "/media/covers/drive2everest-promo.webp",
             "ratio": "9/16",
-            "desc": "A promo for Drive2Everest's driving lessons and test preparation classes."
+            "desc": "A promo for Drive2Everest's lessons and test prep classes."
           },
           {
             "id": "mojito-momo",
@@ -1837,7 +1864,7 @@ export const clientWork = [
             "loop": "/media/loops/mojito-momo.mp4",
             "cover": "/media/covers/mojito-momo.webp",
             "ratio": "16/9",
-            "desc": "A short promo for 8848's mojito and momo."
+            "desc": "A quick one for 8848's mojito and momo."
           },
           {
             "id": "moonlight-cruise",
@@ -1847,23 +1874,12 @@ export const clientWork = [
             "loop": "/media/loops/moonlight-cruise.mp4",
             "cover": "/media/covers/moonlight-cruise.webp",
             "ratio": "9/16",
-            "desc": "Highlights from the Moonlight Group cruise party."
+            "desc": "The Moonlight Group cruise party, in a short highlight."
           }
         ]
       }
     ]
   }
-];
-
-export const reelFrames = [
-  "/media/posters/phool-sm.webp",
-  "/media/posters/two-sm.webp",
-  "/media/posters/sano-chari-poster-sm.webp",
-  "/media/covers/rockheads-highlight.webp",
-  "/media/posters/thakan-sm.webp",
-  "/media/covers/narujeka-nindra.webp",
-  "/media/posters/hawaijahaz-poster-sm.webp",
-  "/media/covers/batti-putali.webp"
 ];
 
 export const recentClients = [
