@@ -15,6 +15,8 @@ const CATEGORIES = [
 ];
 
 const hasWork = (c) => c.groups?.some((g) => g.items?.length);
+const PAIRED = new Set(["events"]);
+const isBig = (c) => c.groups.filter((g) => g.items?.length).length > 1;
 
 function Thumb({ item, onOpen }) {
   const preview = useLoopPreview(item);
@@ -83,7 +85,7 @@ function Shelf({ children, label, id }) {
   );
 }
 
-function Client({ client }) {
+function Client({ client, wide }) {
   const groups = useMemo(() => client.groups.filter((g) => g.items?.length), [client]);
   const [tab, setTab] = useState(0);
   const group = groups[Math.min(tab, groups.length - 1)];
@@ -96,7 +98,7 @@ function Client({ client }) {
   const tabsId = `tabs-${client.id}`;
 
   return (
-    <article id={client.id} className="client" aria-labelledby={`c-${client.id}`}>
+    <article id={client.id} className={`client${wide ? " is-wide" : ""}`} aria-labelledby={`c-${client.id}`}>
       <header className="client-head">
         <div className="client-who">
           <h3 id={`c-${client.id}`} className="client-name">{client.name}</h3>
@@ -164,9 +166,16 @@ export default function ClientWork() {
             <h2 id={`${id}-title`} className="work-category-title">
               <span>0{i + 1}</span> {label}
             </h2>
-            {list.map((c) => (
-              <Client key={c.id} client={c} />
-            ))}
+            {PAIRED.has(id) ? (
+              // smaller clients sit side by side, the bigger ones take the full width
+              <div className="client-pairs">
+                {[...list.filter(isBig), ...list.filter((c) => !isBig(c))].map((c) => (
+                  <Client key={c.id} client={c} wide={isBig(c)} />
+                ))}
+              </div>
+            ) : (
+              list.map((c) => <Client key={c.id} client={c} />)
+            )}
           </section>
         ))}
       </div>

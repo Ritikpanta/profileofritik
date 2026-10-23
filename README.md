@@ -36,9 +36,10 @@ The page reads like a notebook, and it leads with the films.
   - `animationProjects`, `sketches`, `posters`, `photos` - set `pick: true` on a photo to circle it on the contact sheet.
   - `poemFilms` - poetry films, shown above the poem pages.
   - `clientWork` - one entry per client. Each `group` becomes a tab (the Dean series is a group inside APIC). A client with no items is hidden.
-  - `reelFrames` - the pictures printed on the 3D film loop.
+  - `reel` - the films printed on the 3D film roll on the landing page, by id. Visitors can click a frame to play that film, so only use films with a local cover.
+  - `directorReels` - the "behind the camera" row under the films.
 - `src/data/poems.js` - the poems.
-- `src/components/Music.jsx` - the music question and the small player in the top bar. The song pauses by itself while a film is playing and comes back after. To change the song, replace `public/media/audio/phool-harmonica.mp3` or edit `SONG` at the top of the file.
+- `src/components/Music.jsx` - the music question and the small player in the top bar. The songs are listed in `SONGS` at the top of the file (Phool Harmonica and Grave of Lies), they play one after the other, and they pause by themselves while a film is playing.
 - `src/components/HeroScene.jsx` - the 3D film loop on the landing page.
 - `src/lib/hand.js` and `src/components/Hand.jsx` - the hand-drawn bits: pen circles, strike-throughs, arrows, torn edges and tape. Every mark is seeded, so it looks the same on every visit.
 - `src/sections/` - one file per part of the page.

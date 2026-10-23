@@ -3,9 +3,9 @@
 import Print from "../components/Print.jsx";
 import useViewer from "../components/useViewer.jsx";
 import { SubHead } from "../components/Heads.jsx";
-import { films, sliceOfLife } from "../data/work.js";
+import { directorReels, films, sliceOfLife } from "../data/work.js";
 
-const all = [...films, ...sliceOfLife];
+const all = [...films, ...sliceOfLife, ...directorReels];
 
 export default function Films() {
   const { open, viewer } = useViewer(all);
@@ -53,6 +53,22 @@ export default function Films() {
               <Print key={f.id} item={f} onOpen={open} tape={false}>
                 <span className="slice-name">{f.title}</span>
                 {f.titleNe && <span className="slice-ne" lang="ne">{f.titleNe}</span>}
+                <span className="typed">{f.desc}</span>
+              </Print>
+            ))}
+          </div>
+        </div>
+      )}
+      {directorReels.length > 0 && (
+        <div className="slice slice--director">
+          <header className="slice-head">
+            <h3 className="slice-title">behind the camera</h3>
+            <p className="slice-note">Me as a director. How we plan, shoot and talk about our films.</p>
+          </header>
+          <div className="slice-grid slice-grid--four">
+            {directorReels.map((f) => (
+              <Print key={f.id} item={f} onOpen={open} tape={false} ratio="4/5">
+                <span className="slice-name">{f.title}</span>
                 <span className="typed">{f.desc}</span>
               </Print>
             ))}

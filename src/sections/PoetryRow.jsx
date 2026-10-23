@@ -26,7 +26,7 @@ export default function PoetryRow({ items = [] }) {
         <p className="poems-ne" lang="ne">कविता</p>
       </SubHead>
 
-      {poemFilms.map((f) => (
+      {poemFilms.slice(0, 1).map((f) => (
         <article key={f.id} className="poem-film">
           <Print item={f} onOpen={open} angle={-0.5} tapeSeed={7} />
           <div className="poem-film-copy">
@@ -40,6 +40,17 @@ export default function PoetryRow({ items = [] }) {
           </div>
         </article>
       ))}
+      {poemFilms.length > 1 && (
+        <div className="poem-films-more">
+          {poemFilms.slice(1).map((f) => (
+            <Print key={f.id} item={f} onOpen={open} tape={false}>
+              <span className="poem-film-ne poem-film-ne--small" lang="ne">{f.titleNe}</span>
+              <span className="slice-name">{f.title}</span>
+              <span className="typed">{f.desc}</span>
+            </Print>
+          ))}
+        </div>
+      )}
 
       <ul className="torn-pages">
         {items.map((p, i) => (

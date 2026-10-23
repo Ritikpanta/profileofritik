@@ -4,8 +4,23 @@ import { Suspense, lazy, useCallback, useLayoutEffect, useMemo, useRef, useState
 import { hasWebGL, useInView, useReducedMotion } from "../hooks.js";
 import { tornBlob } from "../lib/hand.js";
 import { Ink, Note } from "./Hand.jsx";
+import useViewer from "./useViewer.jsx";
+import { animationProjects, clientWork, directorReels, films, poemFilms, reel, sliceOfLife } from "../data/work.js";
 
 const HeroScene = lazy(() => import("./HeroScene.jsx"));
+
+// the films printed on the roll, in the order they sit on it
+const everything = [
+  ...films,
+  ...sliceOfLife,
+  ...animationProjects,
+  ...poemFilms,
+  ...directorReels,
+  ...clientWork.flatMap((c) => c.groups.flatMap((g) => g.items)),
+];
+const reelItems = reel
+  .map((id) => everything.find((i) => i.id === id))
+  .filter((i) => i && (i.kind === "video" || i.kind === "youtube") && i.cover && i.cover.startsWith("/"));
 
 // A word that gets crossed out (or highlighted) with a real-looking pen stroke.
 function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(--marker)", size = 5, animate }) {
@@ -55,6 +70,21 @@ export default function Hero() {
   const [webgl] = useState(() => hasWebGL());
   const [ready, setReady] = useState(false);
   const onReady = useCallback(() => setReady(true), []);
+  const { open, viewer } = useViewer(reelItems);
+  const tag = useRef(null);
+  const [hoverItem, setHoverItem] = useState(null);
+  const onHover = useCallback((item, x, y) => {
+    setHoverItem((prev) => (prev?.id === item?.id ? prev : item));
+    const el = tag.current;
+    if (el && item && x !== undefined) el.style.transform = `translate(${x + 16}px, ${y + 14}px)`;
+  }, []);
+  const onPick = useCallback(
+    (item) => {
+      setHoverItem(null);
+      if (item) open(item);
+    },
+    [open]
+  );
   const hole = useMemo(
     () => ({
       rim: tornBlob(1000, 1000, { seed: 4, jag: 26, wobble: 0.09 }),
@@ -94,14 +124,38 @@ export default function Hero() {
         />
         {webgl && (
           <Suspense fallback={null}>
-            <HeroScene active={inView} reduced={reduced} onReady={onReady} />
+            <HeroScene
+              active={inView}
+              reduced={reduced}
+              onReady={onReady}
+              items={reelItems}
+              onHover={onHover}
+              onPick={onPick}
+            />
           </Suspense>
+        )}
+        {webgl && (
+          <span className="hero-hint">
+            <Ink kind="arrow" w={60} h={40} size={3} seed={14} color="var(--biro)" className="hero-hint-arrow" />
+            <span className="hint-hover">every frame is a film, click one to watch it</span>
+            <span className="hint-touch">every frame is a film, tap one to watch it</span>
+          </span>
         )}
         <span className="hero-me">
           <span lang="ne">म</span> (that’s me)
           <Ink kind="arrow" w={74} h={46} size={3.2} seed={9} color="var(--biro)" className="hero-me-arrow" />
         </span>
       </div>
+
+      <div ref={tag} className={`reel-tag${hoverItem ? " is-on" : ""}`} aria-hidden="true">
+        {hoverItem && (
+          <>
+            <span className="reel-tag-play">▶</span>
+            <span className="reel-tag-title">{hoverItem.title}</span>
+          </>
+        )}
+      </div>
+      {viewer}
 
       <div className="hero-copy">
         <p className="hero-hello">Namaskar, I’m</p>

@@ -1,13 +1,13 @@
 // src/components/Music.jsx
-// Phool Harmonica, offered to visitors when they arrive. Nothing plays until
-// someone says yes (browsers won't allow it anyway), and the song steps aside
-// whenever a film with its own sound is opened.
+// My songs, offered to visitors when they arrive. Nothing plays until someone
+// picks one (browsers won't allow it anyway). The songs play one after the
+// other, and step aside whenever a film with its own sound is opened.
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 
-export const SONG = {
-  title: "Phool Harmonica",
-  src: "/media/audio/phool-harmonica.mp3",
-};
+export const SONGS = [
+  { id: "phool-harmonica", title: "Phool Harmonica", src: "/media/audio/phool-harmonica.mp3" },
+  { id: "grave-of-lies", title: "Grave of Lies", from: "How Are You, Mister?", src: "/media/audio/grave-of-lies.mp3" },
+];
 
 const KEY = "ritik-music";
 const VOLUME = 0.65;
@@ -36,25 +36,13 @@ export function MusicProvider({ children }) {
   const audio = useRef(null);
   const ramp = useRef(0);
   const resume = useRef(false);
+  const trackRef = useRef(0);
+  const [track, setTrack] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [answer, setAnswer] = useState(read);
 
-  const el = () => {
-    if (!audio.current) {
-      const a = new Audio();
-      a.src = SONG.src;
-      a.loop = true;
-      a.preload = "none";
-      a.volume = 0;
-      a.addEventListener("play", () => setPlaying(true));
-      a.addEventListener("pause", () => setPlaying(false));
-      audio.current = a;
-    }
-    return audio.current;
-  };
-
-  // gentle fades, so the song never starts or stops with a jolt
-  const fadeTo = (target, ms, done) => {
+  // gentle fades, so a song never starts or stops with a jolt
+  const fadeTo = useCallback((target, ms, done) => {
     const a = audio.current;
     if (!a) return;
     cancelAnimationFrame(ramp.current);
@@ -71,20 +59,57 @@ export function MusicProvider({ children }) {
       else done?.();
     };
     ramp.current = requestAnimationFrame(step);
-  };
-
-  const play = useCallback(() => {
-    const a = el();
-    a.play()
-      .then(() => fadeTo(VOLUME, 1600))
-      .catch(() => {});
   }, []);
+
+  const start = useCallback(
+    (i) => {
+      const a = audio.current;
+      if (!a) return;
+      const song = SONGS[i];
+      if (!a.src.endsWith(song.src)) {
+        a.src = song.src;
+        a.volume = 0;
+      }
+      trackRef.current = i;
+      setTrack(i);
+      a.play()
+        .then(() => fadeTo(VOLUME, 1400))
+        .catch(() => {});
+    },
+    [fadeTo]
+  );
+
+  const el = useCallback(() => {
+    if (!audio.current) {
+      const a = new Audio();
+      a.preload = "none";
+      a.volume = 0;
+      a.addEventListener("play", () => setPlaying(true));
+      a.addEventListener("pause", () => setPlaying(false));
+      a.addEventListener("ended", () => start((trackRef.current + 1) % SONGS.length));
+      audio.current = a;
+    }
+    return audio.current;
+  }, [start]);
+
+  const play = useCallback(
+    (i = trackRef.current) => {
+      el();
+      const a = audio.current;
+      if (i !== trackRef.current && !a.paused) {
+        fadeTo(0, 350, () => start(i));
+      } else {
+        start(i);
+      }
+    },
+    [el, fadeTo, start]
+  );
 
   const pause = useCallback(() => {
     const a = audio.current;
     if (!a || a.paused) return;
     fadeTo(0, 450, () => a.pause());
-  }, []);
+  }, [fadeTo]);
 
   const toggle = useCallback(() => {
     const a = audio.current;
@@ -92,11 +117,13 @@ export function MusicProvider({ children }) {
     else pause();
   }, [play, pause]);
 
+  const next = useCallback(() => play((trackRef.current + 1) % SONGS.length), [play]);
+
   const choose = useCallback(
-    (v) => {
+    (v, i = 0) => {
       setAnswer(v);
       if (v === "no") write("no");
-      if (v === "yes") play();
+      if (v === "yes") play(i);
     },
     [play]
   );
@@ -126,7 +153,7 @@ export function MusicProvider({ children }) {
   useEffect(() => () => cancelAnimationFrame(ramp.current), []);
 
   return (
-    <MusicCtx.Provider value={{ playing, play, pause, toggle, answer, choose }}>
+    <MusicCtx.Provider value={{ playing, play, pause, toggle, next, track, song: SONGS[track], answer, choose }}>
       {children}
     </MusicCtx.Provider>
   );
@@ -169,6 +196,7 @@ export function ListenPrompt() {
 
   if (!music || gone || music.answer === "no") return null;
   if (music.answer === "yes" && !thanks) return null;
+  const tab = atTop ? undefined : -1;
 
   return (
     <aside
@@ -178,58 +206,71 @@ export function ListenPrompt() {
     >
       {thanks ? (
         <p className="listen-q" role="status">
-          Playing <em>{SONG.title}</em>. You can pause it here.
+          Playing <em>{music.song.title}</em>. You can pause or skip it here.
         </p>
       ) : (
         <>
           <p className="listen-q">Want some music while you look around?</p>
-          <p className="listen-sub">
-            It’s <em>{SONG.title}</em>, I made it.
-          </p>
-          <div className="listen-actions">
-            <button
-              type="button"
-              className="listen-yes"
-              tabIndex={atTop ? undefined : -1}
-              onClick={() => {
-                music.choose("yes");
-                setThanks(true);
-              }}
-            >
-              <span aria-hidden="true">▶</span> play
-            </button>
-            <button type="button" className="listen-no" tabIndex={atTop ? undefined : -1} onClick={() => music.choose("no")}>
-              no thanks
-            </button>
-          </div>
+          <p className="listen-sub">Both of these are mine. Pick one.</p>
+          <ul className="listen-songs">
+            {SONGS.map((s, i) => (
+              <li key={s.id}>
+                <button
+                  type="button"
+                  className="listen-song"
+                  tabIndex={tab}
+                  onClick={() => {
+                    music.choose("yes", i);
+                    setThanks(true);
+                  }}
+                >
+                  <span className="listen-song-play" aria-hidden="true">▶</span>
+                  <span className="listen-song-title">{s.title}</span>
+                  {s.from && <span className="listen-song-from">from {s.from}</span>}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <button type="button" className="listen-no" tabIndex={tab} onClick={() => music.choose("no")}>
+            no thanks
+          </button>
         </>
       )}
     </aside>
   );
 }
 
-// The small player that stays in the top bar.
+// The small player that stays in the top bar: play or pause, and skip to the other song.
 export function MusicButton() {
   const music = useMusic();
   if (!music) return null;
+  const { song } = music;
   return (
-    <button
-      type="button"
-      className={`music-btn${music.playing ? " is-playing" : ""}`}
-      onClick={music.toggle}
-      aria-pressed={music.playing}
-      aria-label={music.playing ? `Pause ${SONG.title}` : `Play ${SONG.title}`}
-    >
-      <Disc spinning={music.playing} />
-      <span className="music-btn-text">
-        <span className="music-btn-title">{SONG.title}</span>
-        <span className="music-btn-state">{music.playing ? "pause" : "play"}</span>
-      </span>
-      <span className="music-bars" aria-hidden="true">
-        <i />
-        <i />
-        <i />
-      </span>
-    </button>
+    <div className={`music-player${music.playing ? " is-playing" : ""}`}>
+      <button
+        type="button"
+        className="music-btn"
+        onClick={music.toggle}
+        aria-pressed={music.playing}
+        aria-label={music.playing ? `Pause ${song.title}` : `Play ${song.title}`}
+      >
+        <Disc spinning={music.playing} />
+        <span className="music-btn-text">
+          <span className="music-btn-title">{song.title}</span>
+          <span className="music-btn-state">{music.playing ? "pause" : "play"}</span>
+        </span>
+        <span className="music-bars" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+      </button>
+      <button type="button" className="music-next" onClick={music.next} aria-label="Play the other song" title="Play the other song">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l8 6-8 6z" />
+          <path d="M17 6v12" />
+        </svg>
+      </button>
+    </div>
   );
 }
