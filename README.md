@@ -20,22 +20,25 @@ VITE_EMAILJS_PUBLIC_KEY=...
 
 ## How the page is laid out
 
-The page reads like a notebook. The top half is my own work, the bottom half is work for others.
+The page reads like a notebook, and it leads with the films.
 
-- Landing: a torn hole in the page with the film loop (three.js) and the cut-out portrait.
-- चित्र, my own work: films, sketchbook, posters, photographs (a contact sheet) and Nepali poems.
-- काम, work for others: one block per client (APIC with A Minute with the Dean, Ashok Bhusal, Unique Wholefood, Drive2Everest, Kirtan Saanjh, ChitraKatha, and the early Chautari jobs).
-- म, about me, then चिठी, the contact letter.
+- Landing: a question at the very top offers visitors Phool Harmonica while they look around. Below it, the torn hole in the page with the film loop (three.js) and the cut-out portrait.
+- Films & stories: the films I wrote and directed, then "slice of life", the small personal pieces.
+- Sketchbook & animation: the animated pieces, then pages from the notebook.
+- काम, commercial work: college marketing (APIC and A Minute with the Dean), ChitraKatha music videos, event coverage (Kritan Sajh, Rockheads) and brand work. Each client shows one set at a time, with tabs to switch, so the page stays calm.
+- Posters, photographs (a contact sheet), Nepali poems (with the poetry film Prem ko Patra), about, and the contact letter.
 
 ## Where things live
 
 - `src/data/work.js` - every piece of work, with titles and notes. Edit text here.
-  - `films` - my own films. The first one is the big one at the top, with three storyboard frames.
-  - `earlierFilms` - the older YouTube films.
-  - `sketches`, `posters`, `photos` - images. Set `pick: true` on a photo to circle it on the contact sheet.
-  - `clientWork` - one entry per client, with `groups` of items (the Dean series is a group inside APIC).
+  - `films` - the films I wrote and directed. The first one is the big one at the top.
+  - `sliceOfLife` - the small personal films under "slice of life".
+  - `animationProjects`, `sketches`, `posters`, `photos` - set `pick: true` on a photo to circle it on the contact sheet.
+  - `poemFilms` - poetry films, shown above the poem pages.
+  - `clientWork` - one entry per client. Each `group` becomes a tab (the Dean series is a group inside APIC). A client with no items is hidden.
   - `reelFrames` - the pictures printed on the 3D film loop.
 - `src/data/poems.js` - the poems.
+- `src/components/Music.jsx` - the music question and the small player in the top bar. The song pauses by itself while a film is playing and comes back after. To change the song, replace `public/media/audio/phool-harmonica.mp3` or edit `SONG` at the top of the file.
 - `src/components/HeroScene.jsx` - the 3D film loop on the landing page.
 - `src/lib/hand.js` and `src/components/Hand.jsx` - the hand-drawn bits: pen circles, strike-throughs, arrows, torn edges and tape. Every mark is seeded, so it looks the same on every visit.
 - `src/sections/` - one file per part of the page.
@@ -45,6 +48,7 @@ The page reads like a notebook. The top half is my own work, the bottom half is 
   - `video/` - 720p MP4s that play in the viewer
   - `loops/` - 6-second muted previews that play on hover
   - `covers/` - still frames used before a video plays
+  - `audio/` - the background song
   - `misc/` - the hero cut-out, paper and film grain, about portrait, poem covers
 
 The old folders (`public/project`, `public/photography`, `public/hero`, `public/poetry`, `public/Tiktokvid`) hold the original full-size files. The site no longer loads them, so they can be removed once you're happy.
@@ -65,9 +69,19 @@ The old folders (`public/project`, `public/photography`, `public/hero`, `public/
 2. Add an entry to the matching list in `src/data/work.js`, for example:
 
    ```js
-   { id: "my-film", title: "My Film", ...video("my-film", "16/9"), tags: ["short film"], desc: "One or two lines about it." },
+   {
+     "id": "my-film",
+     "title": "My Film",
+     "kind": "video",
+     "src": "/media/video/my-film.mp4",
+     "loop": "/media/loops/my-film.mp4",
+     "cover": "/media/covers/my-film.webp",
+     "ratio": "16/9",
+     "tags": ["short film"],
+     "desc": "One or two lines about it."
+   },
    ```
 
-   If it goes first in `films`, it becomes the big one at the top. Give it `frames: frames("my-film")` and put three stills in `public/media/frames/` for the storyboard.
+   If it goes first in `films`, it becomes the big one at the top.
 
 The site uses client-side routing, so the host needs to send unknown paths to `index.html` (Vercel and Netlify do this with a rewrite rule).

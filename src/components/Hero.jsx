@@ -26,7 +26,8 @@ function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(-
       {children}
       {box && box.w > 0 && (() => {
         const hl = kind === "highlight";
-        const ih = Math.round(hl ? box.h * 0.42 : box.h * 0.62);
+        const one = kind === "strike1";
+        const ih = Math.round(hl ? box.h * 0.42 : one ? box.h * 0.46 : box.h * 0.62);
         const pad = size * 2;
         return (
           <Ink
@@ -40,7 +41,7 @@ function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(-
             delay={delay}
             duration={hl ? 0.55 : 0.45}
             className="marked-ink"
-            style={{ left: -5 - pad, top: Math.round((hl ? box.h * 0.5 : box.h * 0.2) - pad) }}
+            style={{ left: -5 - pad, top: Math.round((hl ? box.h * 0.5 : one ? box.h * 0.27 : box.h * 0.2) - pad) }}
           />
         );
       })()}
@@ -112,18 +113,28 @@ export default function Hero() {
 
         <p className="hero-role">Filmmaker. Writer. Director.</p>
         <p className="hero-founder">Founder of <a href="#chitrakatha">ChitraKatha Production</a></p>
+
         <p className="hero-make">
-          It starts with a <Marked kind="highlight" size={18} color="var(--highlighter)" animate={!reduced}>story</Marked>.
+          I make{" "}
+          <Marked kind="strike1" seed={2} size={3.6} delay={0.9} animate={!reduced}>films</Marked>,{" "}
+          <Marked kind="strike1" seed={5} size={3.6} delay={1.3} animate={!reduced}>posters</Marked>,{" "}
+          <Marked kind="strike1" seed={8} size={3.6} delay={1.7} animate={!reduced}>songs</Marked>{" "}
+          <Marked kind="highlight" seed={3} size={22} delay={2.15} color="var(--highlighter)" animate={!reduced}>
+            stories
+          </Marked>
+          .
         </p>
+        <Note color="biro" angle={-2} className="hero-make-note">
+          <span lang="ne">चित्र</span> + <span lang="ne">कथा</span> = picture stories.
+          <br />
+          That’s where ChitraKatha comes from.
+        </Note>
+
         <p className="hero-lede">
           I’m Ritik, from Nepal, currently in Sydney. I write stories and bring them to life
           through films. Some start in my notebook, some become songs, and some I get to
           make with my team at ChitraKatha. This is a little of that journey.
         </p>
-        <Note color="biro" angle={-2} className="hero-make-note">
-          <span lang="ne">चित्र</span> + <span lang="ne">कथा</span> = picture stories.
-          <br />That’s where ChitraKatha comes from.
-        </Note>
 
         <ul className="hero-links">
           <li>

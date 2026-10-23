@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLockScroll } from "../hooks.js";
 import { Ink } from "./Hand.jsx";
+import { ListenPrompt, MusicButton } from "./Music.jsx";
 
 const LINKS = [
   ["films", "films"],
-  ["sketchbook", "sketch & animation"],
-  ["work", "commercial work"],
+  ["sketchbook", "sketchbook"],
+  ["work", "commercial"],
   ["posters", "posters"],
   ["photos", "photos"],
   ["poems", "poems"],
@@ -111,6 +112,9 @@ export default function Nav() {
             {LINKS.map(item)}
           </nav>
 
+          <div className="nav-end">
+          <MusicButton />
+          {onHome && <ListenPrompt />}
           <button
             type="button"
             className="nav-toggle"
@@ -120,6 +124,7 @@ export default function Nav() {
           >
             {open ? "close" : "menu"}
           </button>
+          </div>
         </div>
       </header>
 

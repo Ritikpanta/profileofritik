@@ -68,6 +68,22 @@ function lines(kind, w, h, r) {
       }
       break;
     }
+    case "strike1": {
+      // one confident pass of the marker, the word still readable underneath
+      const n = 14;
+      const y0 = h * (0.52 + jit(r, 0.05));
+      const slope = jit(r, 0.18) * h;
+      const phase = r() * 6.28;
+      for (let i = 0; i <= n; i++) {
+        const t = i / n;
+        pts.push([
+          t * w,
+          y0 + (t - 0.5) * slope + Math.sin(t * 5 + phase) * h * 0.035,
+          0.55 + 0.45 * Math.sin(Math.PI * t),
+        ]);
+      }
+      break;
+    }
     case "circle": {
       const cx = w / 2;
       const cy = h / 2;

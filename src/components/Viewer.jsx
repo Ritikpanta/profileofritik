@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useLockScroll } from "../hooks.js";
+import { announceFilm } from "./Music.jsx";
 
 function ratioOf(item) {
   if (item.kind === "image" && item.w && item.h) return item.w / item.h;
@@ -33,6 +34,14 @@ export default function Viewer({ items, index, onClose, onIndex }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, index, items.length, onClose, onIndex]);
+
+  // a film with its own sound asks the background song to wait
+  const hasSound = !!open && ["video", "youtube", "drive"].includes(items[index]?.kind);
+  useEffect(() => {
+    if (!hasSound) return;
+    announceFilm(true);
+    return () => announceFilm(false);
+  }, [hasSound]);
 
   if (!open) return null;
   const item = items[index];

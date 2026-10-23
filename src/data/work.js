@@ -87,6 +87,52 @@ export const films = [
   }
 ];
 
+export const sliceOfLife = [
+  {
+    "id": "phool-ko-bich-ko-tukra",
+    "title": "Phool ko Bich ko Tukra",
+    "titleNe": "फूलको बीचको टुक्रा",
+    "kind": "video",
+    "src": "/media/video/phool-ko-bich-ko-tukra.mp4",
+    "loop": "/media/loops/phool-ko-bich-ko-tukra.mp4",
+    "cover": "/media/covers/phool-ko-bich-ko-tukra.webp",
+    "ratio": "16/9",
+    "tags": [
+      "slice of life",
+      "song"
+    ],
+    "desc": "A small piece from the middle of Phool. Just me and a guitar at a lookout by the sea."
+  },
+  {
+    "id": "talking-about-design",
+    "title": "Talking About Design",
+    "kind": "video",
+    "src": "/media/video/talking-about-design.mp4",
+    "loop": "/media/loops/talking-about-design.mp4",
+    "cover": "/media/covers/talking-about-design.webp",
+    "ratio": "16/9",
+    "tags": [
+      "slice of life"
+    ],
+    "desc": "Filmed on a trip to Brisbane. A short one about the designs I make, like the ChitraKatha hoodie, with music I made on the harmonica."
+  },
+  {
+    "id": "timi-basne-sansar",
+    "title": "Timi Basne Sansar",
+    "titleNe": "तिमी बस्ने संसार",
+    "kind": "video",
+    "src": "/media/video/timi-basne-sansar.mp4",
+    "loop": "/media/loops/timi-basne-sansar.mp4",
+    "cover": "/media/covers/timi-basne-sansar.webp",
+    "ratio": "16/9",
+    "tags": [
+      "slice of life",
+      "sketchbook"
+    ],
+    "desc": "A sketchbook page and the lines I wrote beside it. Timi basne sansar, the world where you live."
+  }
+];
+
 export const animationProjects = [
   {
     "id": "narujeka-nindra",
@@ -531,6 +577,79 @@ export const photos = [
     "w": 1080,
     "h": 1350,
     "desc": "My dad worked overseas when I was little, so moments like this get to me."
+  },
+  {
+    "id": "sushil-dada",
+    "title": "Sushil dada",
+    "kind": "image",
+    "src": "/media/photos/sushil-dada.webp",
+    "thumb": "/media/photos/sushil-dada-sm.webp",
+    "w": 6000,
+    "h": 4000,
+    "pick": true
+  },
+  {
+    "id": "werri-5",
+    "title": "Werri Beach",
+    "kind": "image",
+    "src": "/media/photos/werri-5.webp",
+    "thumb": "/media/photos/werri-5-sm.webp",
+    "w": 6000,
+    "h": 4000,
+    "pick": true
+  },
+  {
+    "id": "glass",
+    "title": "Cheers",
+    "kind": "image",
+    "src": "/media/photos/glass.webp",
+    "thumb": "/media/photos/glass-sm.webp",
+    "w": 6000,
+    "h": 4000
+  },
+  {
+    "id": "sydney-grad",
+    "title": "Graduation selfie",
+    "kind": "image",
+    "src": "/media/photos/sydney-grad.webp",
+    "thumb": "/media/photos/sydney-grad-sm.webp",
+    "w": 4000,
+    "h": 5000
+  },
+  {
+    "id": "still-10",
+    "title": "Before the ceremony",
+    "kind": "image",
+    "src": "/media/photos/still-10.webp",
+    "thumb": "/media/photos/still-10-sm.webp",
+    "w": 6000,
+    "h": 4000
+  },
+  {
+    "id": "portrait-3423",
+    "title": "Setting the table",
+    "kind": "image",
+    "src": "/media/photos/portrait-3423.webp",
+    "thumb": "/media/photos/portrait-3423-sm.webp",
+    "w": 3368,
+    "h": 4210
+  }
+];
+
+export const poemFilms = [
+  {
+    "id": "prem-ko-patra",
+    "title": "Prem ko Patra",
+    "titleNe": "प्रेमको पत्र",
+    "kind": "video",
+    "src": "/media/video/prem-ko-patra.mp4",
+    "loop": "/media/loops/prem-ko-patra.mp4",
+    "cover": "/media/covers/prem-ko-patra.webp",
+    "ratio": "16/9",
+    "tags": [
+      "poetry film"
+    ],
+    "desc": "A love letter, read as a poem and filmed by the sea. The first verse of Patra ko Bagaicha."
   }
 ];
 
@@ -544,6 +663,36 @@ export const clientWork = [
       {
         "label": "A Minute with the Dean",
         "items": [
+          {
+            "id": "dean-world-cup",
+            "title": "World Cup special",
+            "kind": "video",
+            "src": "/media/video/dean-world-cup.mp4",
+            "loop": "/media/loops/dean-world-cup.mp4",
+            "cover": "/media/covers/dean-world-cup.webp",
+            "ratio": "9/16",
+            "desc": "The Dean in green and gold for the World Cup, and students on the pride they carry for home."
+          },
+          {
+            "id": "dean-confidence",
+            "title": "Confidence matters",
+            "kind": "video",
+            "src": "/media/video/dean-confidence.mp4",
+            "loop": "/media/loops/dean-confidence.mp4",
+            "cover": "/media/covers/dean-confidence.webp",
+            "ratio": "9/16",
+            "desc": "On students who struggle quietly, and why confidence matters as much as the degree."
+          },
+          {
+            "id": "dean-graduates",
+            "title": "To our graduates",
+            "kind": "video",
+            "src": "/media/video/dean-graduates.mp4",
+            "loop": "/media/loops/dean-graduates.mp4",
+            "cover": "/media/covers/dean-graduates.webp",
+            "ratio": "1/1",
+            "desc": "A message from the Dean to the graduating class."
+          },
           {
             "id": "dean-week-11",
             "title": "Episode 11",
@@ -597,7 +746,7 @@ export const clientWork = [
         ]
       },
       {
-        "label": "Campus",
+        "label": "Campus life",
         "items": [
           {
             "id": "apic-student-voices",
@@ -620,22 +769,22 @@ export const clientWork = [
             "desc": "Explainer for the study abroad program."
           },
           {
-            "id": "apic-snack-chat-play",
+            "id": "apic-snack-chat-play-final",
             "title": "Snack, Chat & Play",
             "kind": "video",
-            "src": "/media/video/apic-snack-chat-play.mp4",
-            "loop": "/media/loops/apic-snack-chat-play.mp4",
-            "cover": "/media/covers/apic-snack-chat-play.webp",
+            "src": "/media/video/apic-snack-chat-play-final.mp4",
+            "loop": "/media/loops/apic-snack-chat-play-final.mp4",
+            "cover": "/media/covers/apic-snack-chat-play-final.webp",
             "ratio": "9/16",
             "desc": "Recap of a student services day."
           },
           {
-            "id": "apic-departure",
+            "id": "apic-departure-final",
             "title": "Campus community",
             "kind": "video",
-            "src": "/media/video/apic-departure.mp4",
-            "loop": "/media/loops/apic-departure.mp4",
-            "cover": "/media/covers/apic-departure.webp",
+            "src": "/media/video/apic-departure-final.mp4",
+            "loop": "/media/loops/apic-departure-final.mp4",
+            "cover": "/media/covers/apic-departure-final.webp",
             "ratio": "9/16",
             "desc": "Students and staff on what makes the place feel friendly."
           },
@@ -648,7 +797,37 @@ export const clientWork = [
             "cover": "/media/covers/apic-visas.webp",
             "ratio": "9/16",
             "desc": "An update on visa changes and the support available."
+          }
+        ]
+      },
+      {
+        "label": "AI at APIC",
+        "items": [
+          {
+            "id": "apic-ai-event",
+            "title": "AI event, highlight",
+            "kind": "video",
+            "src": "/media/video/apic-ai-event.mp4",
+            "loop": "/media/loops/apic-ai-event.mp4",
+            "cover": "/media/covers/apic-ai-event.webp",
+            "ratio": "9/16",
+            "desc": "Highlights from the AI event at the college."
           },
+          {
+            "id": "apic-ai",
+            "title": "Learning with AI",
+            "kind": "video",
+            "src": "/media/video/apic-ai.mp4",
+            "loop": "/media/loops/apic-ai.mp4",
+            "cover": "/media/covers/apic-ai.webp",
+            "ratio": "9/16",
+            "desc": "Students and staff on using AI to learn, and to teach."
+          }
+        ]
+      },
+      {
+        "label": "Photos",
+        "items": [
           {
             "id": "orientation-1",
             "title": "Orientation day",
@@ -668,6 +847,66 @@ export const clientWork = [
             "w": 6000,
             "h": 4000,
             "desc": "At the orientation stall."
+          },
+          {
+            "id": "orientation-sydney-24",
+            "title": "Orientation, Sydney",
+            "kind": "image",
+            "src": "/media/photos/orientation-sydney-24.webp",
+            "thumb": "/media/photos/orientation-sydney-24-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "New students at orientation."
+          },
+          {
+            "id": "orientation-sydney-44",
+            "title": "First class",
+            "kind": "image",
+            "src": "/media/photos/orientation-sydney-44.webp",
+            "thumb": "/media/photos/orientation-sydney-44-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "Orientation in Sydney."
+          },
+          {
+            "id": "orientation-sydney-45",
+            "title": "Welcome talk",
+            "kind": "image",
+            "src": "/media/photos/orientation-sydney-45.webp",
+            "thumb": "/media/photos/orientation-sydney-45-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "Orientation in Sydney."
+          },
+          {
+            "id": "orientation-sydney-46",
+            "title": "Day one",
+            "kind": "image",
+            "src": "/media/photos/orientation-sydney-46.webp",
+            "thumb": "/media/photos/orientation-sydney-46-sm.webp",
+            "w": 6000,
+            "h": 4000,
+            "desc": "Orientation in Sydney."
+          },
+          {
+            "id": "apic-still-32",
+            "title": "Graduation",
+            "kind": "image",
+            "src": "/media/photos/apic-still-32.webp",
+            "thumb": "/media/photos/apic-still-32-sm.webp",
+            "w": 4000,
+            "h": 5000,
+            "desc": "The graduation ceremony."
+          },
+          {
+            "id": "apic-still-33",
+            "title": "Congratulations, graduates",
+            "kind": "image",
+            "src": "/media/photos/apic-still-33.webp",
+            "thumb": "/media/photos/apic-still-33-sm.webp",
+            "w": 4000,
+            "h": 5000,
+            "desc": "On stage at graduation."
           }
         ]
       }
@@ -834,7 +1073,7 @@ export const clientWork = [
     "name": "Rockheads",
     "category": "events",
     "short": "Concert coverage",
-    "note": "Our concert coverage with ChitraKatha. The performance, the crowd and a little of what happens behind the camera.",
+    "note": "Our concert coverage with ChitraKatha. The performance, the crowd, a little of what happens behind the camera, and the posters that went out after the show.",
     "groups": [
       {
         "items": [
@@ -858,6 +1097,122 @@ export const clientWork = [
             "ratio": "16/9",
             "desc": "Our crew at work during a live show, narrated in Nepali."
           }
+        ],
+        "label": "Highlight films"
+      },
+      {
+        "label": "Posters",
+        "items": [
+          {
+            "id": "rockheads-01",
+            "title": "Poster 1",
+            "kind": "image",
+            "src": "/media/posters/rockheads-01.webp",
+            "thumb": "/media/posters/rockheads-01-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-02",
+            "title": "Poster 2",
+            "kind": "image",
+            "src": "/media/posters/rockheads-02.webp",
+            "thumb": "/media/posters/rockheads-02-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-03",
+            "title": "Poster 3",
+            "kind": "image",
+            "src": "/media/posters/rockheads-03.webp",
+            "thumb": "/media/posters/rockheads-03-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-04",
+            "title": "Poster 4",
+            "kind": "image",
+            "src": "/media/posters/rockheads-04.webp",
+            "thumb": "/media/posters/rockheads-04-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-05",
+            "title": "Poster 5",
+            "kind": "image",
+            "src": "/media/posters/rockheads-05.webp",
+            "thumb": "/media/posters/rockheads-05-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-06",
+            "title": "Poster 6",
+            "kind": "image",
+            "src": "/media/posters/rockheads-06.webp",
+            "thumb": "/media/posters/rockheads-06-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-07",
+            "title": "Poster 7",
+            "kind": "image",
+            "src": "/media/posters/rockheads-07.webp",
+            "thumb": "/media/posters/rockheads-07-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-08",
+            "title": "Poster 8",
+            "kind": "image",
+            "src": "/media/posters/rockheads-08.webp",
+            "thumb": "/media/posters/rockheads-08-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-09",
+            "title": "Poster 9",
+            "kind": "image",
+            "src": "/media/posters/rockheads-09.webp",
+            "thumb": "/media/posters/rockheads-09-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-10",
+            "title": "Poster 10",
+            "kind": "image",
+            "src": "/media/posters/rockheads-10.webp",
+            "thumb": "/media/posters/rockheads-10-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          },
+          {
+            "id": "rockheads-11",
+            "title": "Poster 11",
+            "kind": "image",
+            "src": "/media/posters/rockheads-11.webp",
+            "thumb": "/media/posters/rockheads-11-sm.webp",
+            "w": 1080,
+            "h": 1350,
+            "desc": "From the Rockheads show in Sydney."
+          }
         ]
       }
     ]
@@ -873,18 +1228,28 @@ export const clientWork = [
   {
     "id": "unique-wholefood",
     "name": "Unique Wholefood",
-    "short": "Crows Nest Festival",
-    "note": "Festival coverage for their stall, cut two ways.",
+    "short": "Ads and festival coverage",
+    "note": "An ad for the brand, and coverage of their stall at the Crows Nest Festival.",
     "groups": [
       {
         "items": [
           {
-            "id": "unique-wholefood-crows-nest",
+            "id": "unique-ad",
+            "title": "The ad",
+            "kind": "video",
+            "src": "/media/video/unique-ad.mp4",
+            "loop": "/media/loops/unique-ad.mp4",
+            "cover": "/media/covers/unique-ad.webp",
+            "ratio": "9/16",
+            "desc": "An ad for Unique Wholefood."
+          },
+          {
+            "id": "uw-crowsnest",
             "title": "30-second highlight",
             "kind": "video",
-            "src": "/media/video/unique-wholefood-crows-nest.mp4",
-            "loop": "/media/loops/unique-wholefood-crows-nest.mp4",
-            "cover": "/media/covers/unique-wholefood-crows-nest.webp",
+            "src": "/media/video/uw-crowsnest.mp4",
+            "loop": "/media/loops/uw-crowsnest.mp4",
+            "cover": "/media/covers/uw-crowsnest.webp",
             "ratio": "9/16",
             "desc": "The stall at the Crows Nest festival."
           },
@@ -912,14 +1277,14 @@ export const clientWork = [
       {
         "items": [
           {
-            "id": "drive2everest",
+            "id": "drive2everest-promo",
             "title": "Thinking of driving?",
             "kind": "video",
-            "src": "/media/video/drive2everest.mp4",
-            "loop": "/media/loops/drive2everest.mp4",
-            "cover": "/media/covers/drive2everest.webp",
+            "src": "/media/video/drive2everest-promo.mp4",
+            "loop": "/media/loops/drive2everest-promo.mp4",
+            "cover": "/media/covers/drive2everest-promo.webp",
             "ratio": "9/16",
-            "desc": "Promo."
+            "desc": "Promo for their lessons and test preparation classes."
           }
         ]
       }

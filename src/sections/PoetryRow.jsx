@@ -4,6 +4,9 @@ import { useState } from "react";
 import PoetryReader from "../components/PoetryReader.jsx";
 import { SubHead } from "../components/Heads.jsx";
 import { tornTopClip } from "../lib/hand.js";
+import Print from "../components/Print.jsx";
+import useViewer from "../components/useViewer.jsx";
+import { poemFilms } from "../data/work.js";
 
 const firstLines = (text, n = 6) =>
   (text || "")
@@ -14,6 +17,7 @@ const firstLines = (text, n = 6) =>
 
 export default function PoetryRow({ items = [] }) {
   const [active, setActive] = useState(null);
+  const { open, viewer } = useViewer(poemFilms);
   if (!items.length) return null;
 
   return (
@@ -21,6 +25,21 @@ export default function PoetryRow({ items = [] }) {
       <SubHead id="poems-title" title="nepali poems" width={250} seed={121} note="I write in Nepali. These are a few pages, torn out.">
         <p className="poems-ne" lang="ne">कविता</p>
       </SubHead>
+
+      {poemFilms.map((f) => (
+        <article key={f.id} className="poem-film">
+          <Print item={f} onOpen={open} angle={-0.5} tapeSeed={7} />
+          <div className="poem-film-copy">
+            <p className="film-credit">{f.tags.join(" · ")}</p>
+            <h3 className="poem-film-ne" lang="ne">{f.titleNe}</h3>
+            <p className="hand-title">{f.title}</p>
+            <p className="typed">{f.desc}</p>
+            <button type="button" className="text-link" onClick={() => open(f)}>
+              watch the poem
+            </button>
+          </div>
+        </article>
+      ))}
 
       <ul className="torn-pages">
         {items.map((p, i) => (
@@ -41,6 +60,7 @@ export default function PoetryRow({ items = [] }) {
         ))}
       </ul>
       {active && <PoetryReader poem={active} onClose={() => setActive(null)} />}
+      {viewer}
     </section>
   );
 }
