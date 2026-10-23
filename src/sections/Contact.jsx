@@ -12,26 +12,44 @@ export default function Contact() {
 
   const onChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
+  // the letter, ready to open in the visitor's own email app
+  const mailtoLink = () =>
+    `mailto:${EMAIL}?subject=${encodeURIComponent(`A letter from ${form.name || "your website"}`)}&body=${encodeURIComponent(
+      `${form.message}\n\n${form.name}\n${form.email}`
+    )}`;
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       setStatus({ sending: false, ok: false, msg: "The letter needs a message, your name and an email to reply to." });
       return;
     }
+    const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const template = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // no EmailJS keys on this build: hand the letter to the visitor's email app instead
+    if (!service || !template || !key) {
+      console.warn("[contact] EmailJS keys are missing, so the form is opening the email app instead.");
+      window.location.href = mailtoLink();
+      setStatus({ sending: false, ok: true, fallback: true, msg: "Your email app should open with the letter in it. Just press send there." });
+      return;
+    }
+
     try {
       setStatus({ sending: true, ok: null, msg: "" });
       const res = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        { from_name: form.name, from_email: form.email, message: form.message },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        service,
+        template,
+        { from_name: form.name, from_email: form.email, reply_to: form.email, message: form.message },
+        { publicKey: key }
       );
-      if (res.status !== 200) throw new Error("EmailJS returned non-200");
+      if (res.status !== 200) throw new Error(`EmailJS returned ${res.status}`);
       setStatus({ sending: false, ok: true, msg: "Sent. I’ll write back soon." });
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error(err);
-      setStatus({ sending: false, ok: false, msg: `It didn’t send. Try again, or email ${EMAIL}.` });
+      console.error("[contact] EmailJS could not send:", err?.status, err?.text || err);
+      setStatus({ sending: false, ok: false, fallback: true, msg: "It didn’t send from here." });
     }
   };
 
@@ -69,6 +87,12 @@ export default function Contact() {
           </button>
           <p className={`letter-flash${status.ok === true ? " ok" : status.ok === false ? " err" : ""}`} role="status" aria-live="polite">
             {status.msg}
+            {status.ok === false && status.fallback && (
+              <>
+                {" "}
+                <a href={mailtoLink()}>Send it from your email app instead</a>, or write to {EMAIL}.
+              </>
+            )}
           </p>
         </form>
 

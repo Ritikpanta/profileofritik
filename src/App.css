@@ -2277,3 +2277,4 @@ button {
   .hero-hint { top: 4%; bottom: auto; right: 4%; font-size: 1.25rem; max-width: 9.5em; flex-direction: column-reverse; align-items: flex-end; text-align: right; }
   .hero-hint-arrow { margin: 2px 18px 0 0; transform: rotate(100deg); }
 }
+.letter-flash a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

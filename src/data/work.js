@@ -332,6 +332,32 @@ export const animationProjects = [
       "reel"
     ],
     "desc": "I drew on the spot, ink first and then red marker."
+  },
+  {
+    "id": "sketch-by-the-water",
+    "title": "Drawing by the water",
+    "kind": "video",
+    "src": "/media/video/sketch-video-1.mp4",
+    "loop": "/media/loops/sketch-video-1.mp4",
+    "cover": "/media/covers/sketch-video-1.webp",
+    "ratio": "9/16",
+    "tags": [
+      "sketchbook"
+    ],
+    "desc": "Drawing a boat at the wharf, then looking up at the real thing."
+  },
+  {
+    "id": "sketch-red-page",
+    "title": "A red page",
+    "kind": "video",
+    "src": "/media/video/sketch-video-2.mp4",
+    "loop": "/media/loops/sketch-video-2.mp4",
+    "cover": "/media/covers/sketch-video-2.webp",
+    "ratio": "9/16",
+    "tags": [
+      "sketchbook"
+    ],
+    "desc": "One of my red pen pages, filled with drawings and Nepali notes."
   }
 ];
 
@@ -688,6 +714,96 @@ export const posters = [
     "w": 1122,
     "h": 1402,
     "desc": "A launch poster I designed."
+  },
+  {
+    "id": "talent-mela-poster",
+    "title": "Talent Mela",
+    "kind": "image",
+    "src": "/media/posters/talent-mela.webp",
+    "thumb": "/media/posters/talent-mela-sm.webp",
+    "w": 2480,
+    "h": 3508,
+    "desc": "A poster for an online talent show we ran."
+  },
+  {
+    "id": "host-poster",
+    "title": "Host",
+    "kind": "image",
+    "src": "/media/posters/host.webp",
+    "thumb": "/media/posters/host-sm.webp",
+    "w": 3508,
+    "h": 4961,
+    "desc": "I hosted the talent show, so I made this one for myself."
+  },
+  {
+    "id": "chess-carnival-poster",
+    "title": "Chess Carnival",
+    "kind": "image",
+    "src": "/media/posters/chess-carnival.webp",
+    "thumb": "/media/posters/chess-carnival-sm.webp",
+    "w": 3061,
+    "h": 3827,
+    "desc": "An online chess event I organised with my team, free to enter."
+  },
+  {
+    "id": "dream-team-poster",
+    "title": "Dream Team",
+    "kind": "image",
+    "src": "/media/posters/dream-team.webp",
+    "thumb": "/media/posters/dream-team-sm.webp",
+    "w": 4109,
+    "h": 3008,
+    "desc": "Our team, together since 2021."
+  },
+  {
+    "id": "iced-tea",
+    "title": "Lemon Iced Tea",
+    "kind": "image",
+    "src": "/media/posters/iced-tea.webp",
+    "thumb": "/media/posters/iced-tea-sm.webp",
+    "w": 5400,
+    "h": 7200,
+    "desc": "A drink poster for a cafe."
+  },
+  {
+    "id": "nepal-coffee",
+    "title": "Nepal Coffee",
+    "kind": "image",
+    "src": "/media/posters/coffee.webp",
+    "thumb": "/media/posters/coffee-sm.webp",
+    "w": 2480,
+    "h": 3508,
+    "desc": "A product poster for Nepali coffee."
+  },
+  {
+    "id": "utensils-sale",
+    "title": "Utensils Sale",
+    "kind": "image",
+    "src": "/media/posters/utensils.webp",
+    "thumb": "/media/posters/utensils-sm.webp",
+    "w": 3674,
+    "h": 4540,
+    "desc": "A sale poster for a kitchen shop."
+  },
+  {
+    "id": "fadebay",
+    "title": "Fadebay",
+    "kind": "image",
+    "src": "/media/posters/fadebay.webp",
+    "thumb": "/media/posters/fadebay-sm.webp",
+    "w": 1080,
+    "h": 1350,
+    "desc": "A poster for a barber."
+  },
+  {
+    "id": "boy-above-the-hill",
+    "title": "Boy Above the Hill",
+    "kind": "image",
+    "src": "/media/posters/boy-above-the-hill.webp",
+    "thumb": "/media/posters/boy-above-the-hill-sm.webp",
+    "w": 1782,
+    "h": 2000,
+    "desc": "A cover I designed for Boy Above the Hill."
   }
 ];
 
@@ -1383,6 +1499,26 @@ export const clientWork = [
             "cover": "/media/covers/hawaijahaz-on-set.webp",
             "ratio": "16/9",
             "desc": "A short cut from the shoot."
+          },
+          {
+            "id": "hawaijahaz-highlights",
+            "title": "Behind the scenes",
+            "kind": "video",
+            "src": "/media/video/hawaijahaz-highlights.mp4",
+            "loop": "/media/loops/hawaijahaz-highlights.mp4",
+            "cover": "/media/covers/hawaijahaz-highlights.webp",
+            "ratio": "16/9",
+            "desc": "A day on the Hawaijahaz Ma Sarara shoot, from early morning to the airport."
+          },
+          {
+            "id": "hawaijahaz-3",
+            "title": "The night shoot",
+            "kind": "video",
+            "src": "/media/video/hawaijahaz-3.mp4",
+            "loop": "/media/loops/hawaijahaz-3.mp4",
+            "cover": "/media/covers/hawaijahaz-3.webp",
+            "ratio": "16/9",
+            "desc": "More from the shoot, out in the bush at night with the camera."
           }
         ]
       }
