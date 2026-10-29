@@ -1085,10 +1085,10 @@ export const clientWork = [
             "id": "dean-graduates",
             "title": "To our graduates",
             "kind": "video",
-            "src": "/media/video/dean-graduates.mp4",
-            "loop": "/media/loops/dean-graduates.mp4?v=2",
-            "cover": "/media/covers/dean-graduates.webp?v=3",
-            "ratio": "1/1",
+            "src": "/media/video/dean-graduates.mp4?v=2",
+            "loop": "/media/loops/dean-graduates.mp4?v=3",
+            "cover": "/media/covers/dean-graduates.webp?v=4",
+            "ratio": "9/16",
             "desc": "The Dean's message to our graduates."
           },
           {
