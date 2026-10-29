@@ -1066,8 +1066,8 @@ export const clientWork = [
             "title": "World Cup special",
             "kind": "video",
             "src": "/media/video/dean-world-cup.mp4",
-            "loop": "/media/loops/dean-world-cup.mp4",
-            "cover": "/media/covers/dean-world-cup.webp",
+            "loop": "/media/loops/dean-world-cup.mp4?v=2",
+            "cover": "/media/covers/dean-world-cup.webp?v=2",
             "ratio": "9/16",
             "desc": "Our World Cup special. The Dean in green and gold, and students talking about home."
           },
@@ -1087,7 +1087,7 @@ export const clientWork = [
             "kind": "video",
             "src": "/media/video/dean-graduates.mp4",
             "loop": "/media/loops/dean-graduates.mp4?v=2",
-            "cover": "/media/covers/dean-graduates.webp?v=2",
+            "cover": "/media/covers/dean-graduates.webp?v=3",
             "ratio": "1/1",
             "desc": "The Dean's message to our graduates."
           },
@@ -1599,6 +1599,16 @@ export const clientWork = [
             "desc": "The whole night, cut into one highlight film."
           },
           {
+            "id": "rockheads-promo",
+            "title": "Concert promo",
+            "kind": "video",
+            "src": "/media/video/rockheads-promo.mp4",
+            "loop": "/media/loops/rockheads-promo.mp4",
+            "cover": "/media/covers/rockheads-promo.webp",
+            "ratio": "16/9",
+            "desc": "The promo for the Rockheads show in Sydney."
+          },
+          {
             "id": "rockheads-teaser",
             "title": "Short teaser",
             "kind": "video",
@@ -1781,6 +1791,16 @@ export const clientWork = [
     "groups": [
       {
         "items": [
+          {
+            "id": "uw-meet-the-maker",
+            "title": "Unique Wholefood, meet the maker",
+            "kind": "video",
+            "src": "/media/video/uw-meet-the-maker.mp4",
+            "loop": "/media/loops/uw-meet-the-maker.mp4",
+            "cover": "/media/covers/uw-meet-the-maker.webp",
+            "ratio": "9/16",
+            "desc": "Meeting the maker behind their chocolate-coated dates at the Crows Nest Festival."
+          },
           {
             "id": "momo-house-missing-nepal",
             "title": "8848 Momo House, Missing Nepal?",
