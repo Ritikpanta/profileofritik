@@ -26,7 +26,7 @@ The page reads like a notebook, and it leads with the films.
 - The saying: right under the landing page, the one line the whole site is about ("Watch it today. Come back to it in twenty years. It should still feel like the first time."), in English and Nepali. It lives in `src/sections/Saying.jsx`.
 - Films & stories: the films I wrote and directed, then "slice of life", the small personal pieces.
 - Sketchbook & animation: the animated pieces, then pages from the notebook.
-- भावना, I capture emotions: opens the dark side. Proposal, graduation and family films, with the stills from those shoots on a shelf underneath. Lives in `src/sections/Emotions.jsx`.
+- भावना, I capture emotions: opens the dark side. Proposal, graduation and family films, with photographs from those shoots ("photography") on a shelf underneath. Lives in `src/sections/Emotions.jsx`.
 - काम, commercial work: college marketing (APIC and A Minute with the Dean), ChitraKatha music videos, event coverage (Kritan Sajh, Rockheads) and brand work. Each client shows one set at a time, with tabs to switch, so the page stays calm.
 - Posters, photographs (a contact sheet), Nepali poems (with the poetry film Prem ko Patra), about, and the contact letter.
 
@@ -88,4 +88,8 @@ The old folders (`public/project`, `public/photography`, `public/hero`, `public/
 
    If it goes first in `films`, it becomes the big one at the top.
 
-The site uses client-side routing, so the host needs to send unknown paths to `index.html` (Vercel and Netlify do this with a rewrite rule).
+## Hosting
+
+The site lives on GitHub Pages at bagaichaofritik.com. Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site, leaves out the old full-size folders, copies `index.html` to `404.html` (so links like `/poetry/...` still open the app) and publishes it. It takes a couple of minutes; progress shows under the repo's Actions tab.
+
+The domain's DNS is at GoDaddy: four A records for `@` pointing at GitHub (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) and a CNAME for `www` pointing at `ritikpanta.github.io`.

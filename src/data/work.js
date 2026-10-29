@@ -1912,7 +1912,7 @@ export const emotionFilms = [
   }
 ];
 
-// Stills from those same kinds of days. Shown on a shelf under the films.
+// Photographs from those same days. Shown on a shelf under the films ("photography").
 export const emotionStills = [
   {
     "id": "emotion-just-engaged",

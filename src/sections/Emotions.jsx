@@ -67,10 +67,13 @@ export default function Emotions() {
         {items.length > 0 && (
           <div className="emotion-stills">
             <header className="emotion-stills-head">
-              <h3 className="emotion-stills-title">the stills from those days</h3>
-              <p className="emotion-stills-note">Photographs from the same shoots. Click one to see it bigger.</p>
+              <h3 className="emotion-stills-title">photography</h3>
+              <p className="emotion-stills-note">
+                I photograph these days too, so you get the film and the photos to keep. These are
+                from the same shoots. Click any one to see it bigger.
+              </p>
             </header>
-            <Shelf label="Stills from proposals and graduations" id="emotion-stills">
+            <Shelf label="Photographs from proposals and graduations" id="emotion-stills">
               {items.map((it) => (
                 <Thumb key={it.id} item={it} onOpen={stills.open} />
               ))}

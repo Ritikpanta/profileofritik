@@ -2468,6 +2468,7 @@ button {
   transform: rotate(-1.5deg);
 }
 .emotion-stills-note {
+  max-width: 40rem;
   margin: 10px 0 0;
   color: var(--chalk-dim);
   font-size: 0.95rem;
