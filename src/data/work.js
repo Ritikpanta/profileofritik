@@ -1906,7 +1906,7 @@ export const emotionFilms = [
     "cover": "/media/covers/emotion-proposal.webp",
     "ratio": "16/9",
     "tags": ["proposal film", "Sydney Harbour"],
-    "desc": "Regan dai asked her by the harbour. One knee, a ring, a yes, and the whole city watching quietly behind them."
+    "desc": "He asked her by the harbour. One knee, a ring, a yes, and the day to remember forever."
   },
   {
     "id": "emotion-graduation",
