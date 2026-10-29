@@ -2278,3 +2278,212 @@ button {
   .hero-hint-arrow { margin: 2px 18px 0 0; transform: rotate(100deg); }
 }
 .letter-flash a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ===================================================================
+   The saying: the one line under the landing page.
+   =================================================================== */
+
+.promise {
+  position: relative;
+  padding-block: clamp(80px, 11vw, 160px) clamp(30px, 5vw, 70px);
+  scroll-margin-top: var(--nav-h);
+}
+.promise-kicker {
+  margin: 0 0 clamp(16px, 2.2vw, 28px);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--pencil);
+}
+.promise-line {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4.1vw, 3.3rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+.promise-row {
+  display: block;
+}
+.promise-row + .promise-row {
+  margin-top: 0.14em;
+}
+.promise-ne {
+  margin: clamp(26px, 3.4vw, 44px) 0 0;
+  font-family: var(--brush) !important;
+  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+  line-height: 1.45;
+  color: var(--marker);
+}
+.promise-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 44px;
+  margin-top: 12px;
+}
+.promise-sign {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-family: var(--hand);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.promise-note {
+  font-size: 1.5rem;
+}
+.promise .marked--highlight .marked-ink {
+  transform: translateY(-0.2em);
+}
+/* the pen waits until you get here */
+.promise:not(.is-seen) .ink-draw {
+  animation-play-state: paused;
+}
+@media (max-width: 600px) {
+  .promise-row + .promise-row {
+    margin-top: 0.3em;
+  }
+  .promise-foot {
+    gap: 6px 24px;
+  }
+}
+
+/* ===================================================================
+   I capture emotions: opens the dark side, before the commercial shelves.
+   =================================================================== */
+
+.emotions .client-work-inner {
+  padding-bottom: clamp(50px, 7vw, 100px);
+}
+.emotions + .client-work .client-work-inner {
+  border-top: 1px solid rgba(236, 231, 220, 0.1);
+}
+.emotions-intro {
+  max-width: 42rem;
+  font-size: clamp(1.02rem, 1.3vw, 1.15rem);
+}
+.emotion-films {
+  display: grid;
+  gap: clamp(56px, 7vw, 96px);
+}
+.emotion--lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 60px);
+  align-items: end;
+}
+.emotion-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 4vw, 60px);
+}
+.emotion-hit {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.emotion-hit .media {
+  border-radius: 3px;
+  box-shadow: 0 30px 50px -30px rgba(0, 0, 0, 0.9);
+}
+.emotion-hit .media img {
+  transition: transform 0.8s ease, filter 0.3s ease;
+}
+.emotion-hit:hover .media img {
+  transform: scale(1.02);
+  filter: brightness(1.06);
+}
+.emotion--lead .media-play {
+  left: 18px;
+  bottom: 16px;
+  width: 46px;
+  height: 46px;
+}
+.emotion-copy {
+  position: relative;
+  padding-top: 18px;
+}
+.emotion--lead .emotion-copy {
+  padding: 0 0 6px;
+}
+.emotion-n {
+  margin: 0 0 4px;
+  font-family: var(--hand);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--hand-yellow);
+}
+.emotion-tags {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--chalk-dim);
+}
+.emotion-title {
+  margin: 6px 0 10px;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.emotion--lead .emotion-title {
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+}
+.emotion-desc {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--chalk-dim);
+  line-height: 1.75;
+}
+.emotion-watch {
+  margin-top: 20px;
+  padding: 9px 18px;
+  border: 1px solid rgba(243, 214, 78, 0.5);
+  border-radius: 999px;
+  background: none;
+  color: var(--chalk);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.emotion-watch:hover {
+  background: var(--hand-yellow);
+  color: var(--dark);
+}
+.emotion-stills {
+  margin-top: clamp(70px, 9vw, 120px);
+}
+.emotion-stills-title {
+  display: inline-block;
+  margin: 0;
+  font-family: var(--hand);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1;
+  color: var(--hand-yellow);
+  transform: rotate(-1.5deg);
+}
+.emotion-stills-note {
+  margin: 10px 0 0;
+  color: var(--chalk-dim);
+  font-size: 0.95rem;
+}
+.emotion-stills .thumb {
+  --h: 340px;
+}
+@media (max-width: 860px) {
+  .emotion--lead,
+  .emotion-pair {
+    grid-template-columns: 1fr;
+  }
+  .emotion--lead .emotion-copy {
+    padding: 4px 0 0;
+  }
+  .emotion-stills .thumb {
+    --h: 260px;
+  }
+}

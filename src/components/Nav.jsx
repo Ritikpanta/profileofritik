@@ -9,6 +9,7 @@ import { ListenPrompt, MusicButton } from "./Music.jsx";
 const LINKS = [
   ["films", "films"],
   ["sketchbook", "sketchbook"],
+  ["emotions", "emotions"],
   ["work", "commercial"],
   ["posters", "posters"],
   ["photos", "photos"],

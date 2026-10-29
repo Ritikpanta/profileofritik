@@ -22,8 +22,8 @@ const reelItems = reel
   .map((id) => everything.find((i) => i.id === id))
   .filter((i) => i && (i.kind === "video" || i.kind === "youtube") && i.cover && i.cover.startsWith("/"));
 
-// A word that gets crossed out (or highlighted) with a real-looking pen stroke.
-function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(--marker)", size = 5, animate }) {
+// A word that gets crossed out, underlined or highlighted with a real-looking pen stroke.
+export function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(--marker)", size = 5, animate }) {
   const ref = useRef(null);
   const [box, setBox] = useState(null);
   useLayoutEffect(() => {
@@ -40,12 +40,14 @@ function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(-
       {children}
       {box && box.w > 0 && (() => {
         const hl = kind === "highlight";
+        const ul = kind === "underline";
         const one = kind === "strike1";
-        const ih = Math.round(hl ? box.h * 0.42 : one ? box.h * 0.46 : box.h * 0.62);
+        const ih = Math.round(hl ? box.h * 0.42 : ul ? box.h * 0.22 : one ? box.h * 0.46 : box.h * 0.62);
         const pad = size * 2;
+        const top = hl ? box.h * 0.5 : ul ? box.h * 0.84 : one ? box.h * 0.27 : box.h * 0.2;
         return (
           <Ink
-            kind={hl ? "underline" : kind}
+            kind={hl || ul ? "underline" : kind}
             w={box.w + 10}
             h={ih}
             color={color}
@@ -55,7 +57,7 @@ function Marked({ children, kind = "strike", seed = 1, delay = 0, color = "var(-
             delay={delay}
             duration={hl ? 0.55 : 0.45}
             className="marked-ink"
-            style={{ left: -5 - pad, top: Math.round((hl ? box.h * 0.5 : one ? box.h * 0.27 : box.h * 0.2) - pad) }}
+            style={{ left: -5 - pad, top: Math.round(top - pad) }}
           />
         );
       })()}

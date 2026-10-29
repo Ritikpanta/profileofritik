@@ -18,7 +18,7 @@ const hasWork = (c) => c.groups?.some((g) => g.items?.length);
 const PAIRED = new Set(["events"]);
 const isBig = (c) => c.groups.filter((g) => g.items?.length).length > 1;
 
-function Thumb({ item, onOpen }) {
+export function Thumb({ item, onOpen }) {
   const preview = useLoopPreview(item);
   const r = item.kind === "image" ? `${item.w}/${item.h}` : item.ratio;
   const isPlayable = ["video", "youtube", "drive"].includes(item.kind);
@@ -40,7 +40,7 @@ function Thumb({ item, onOpen }) {
 }
 
 // A shelf that scrolls sideways, with quiet arrows when there is more to see.
-function Shelf({ children, label, id }) {
+export function Shelf({ children, label, id }) {
   const ref = useRef(null);
   const [edges, setEdges] = useState({ left: false, right: false });
   const measure = useCallback(() => {

@@ -1873,3 +1873,125 @@ export const recentClients = [
   "Kritan Sajh",
   "Rockheads"
 ];
+
+// "I capture emotions": the days people will want to feel again.
+// The first one is the big one at the top of the section.
+export const emotionFilms = [
+  {
+    "id": "emotion-proposal",
+    "title": "The Proposal",
+    "kind": "video",
+    "src": "/media/video/emotion-proposal.mp4",
+    "loop": "/media/loops/emotion-proposal.mp4",
+    "cover": "/media/covers/emotion-proposal.webp",
+    "ratio": "16/9",
+    "tags": ["proposal film", "Sydney Harbour"],
+    "desc": "Regan dai asked her by the harbour. One knee, a ring, a yes, and the whole city watching quietly behind them."
+  },
+  {
+    "id": "emotion-graduation",
+    "title": "Finally, an RN",
+    "kind": "video",
+    "src": "/media/video/emotion-graduation.mp4",
+    "loop": "/media/loops/emotion-graduation.mp4",
+    "cover": "/media/covers/emotion-graduation.webp",
+    "ratio": "16/9",
+    "tags": ["graduation film"],
+    "desc": "Her graduation day as a registered nurse. The gown, the family, the friends, and the one line she came to say."
+  },
+  {
+    "id": "emotion-milk-shower",
+    "title": "Milk Shower",
+    "kind": "video",
+    "src": "/media/video/emotion-milk-shower.mp4",
+    "loop": "/media/loops/emotion-milk-shower.mp4",
+    "cover": "/media/covers/emotion-milk-shower.webp",
+    "ratio": "16/9",
+    "tags": ["family film"],
+    "desc": "A baby's milk shower at home. Small hands, a purple flower, a mother's arms. The kind of day that is over too fast if no one keeps it."
+  }
+];
+
+// Stills from those same kinds of days. Shown on a shelf under the films.
+export const emotionStills = [
+  {
+    "id": "emotion-just-engaged",
+    "title": "Just engaged",
+    "kind": "image",
+    "src": "/media/photos/emotion-just-engaged.webp",
+    "thumb": "/media/photos/emotion-just-engaged-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "A few minutes after the yes, under the bridge."
+  },
+  {
+    "id": "emotion-flowers",
+    "title": "Just the flowers",
+    "kind": "image",
+    "src": "/media/photos/emotion-flowers.webp",
+    "thumb": "/media/photos/emotion-flowers-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "Everything else went black and white. Only the flowers kept their colour."
+  },
+  {
+    "id": "emotion-harbour-bride",
+    "title": "Under the bridge",
+    "kind": "image",
+    "src": "/media/photos/emotion-harbour-bride.webp",
+    "thumb": "/media/photos/emotion-harbour-bride-sm.webp",
+    "w": 1800,
+    "h": 1190,
+    "desc": "Her, the flowers and the Harbour Bridge. Nothing else needed."
+  },
+  {
+    "id": "emotion-grad-champagne",
+    "title": "Champagne, finally",
+    "kind": "image",
+    "src": "/media/photos/emotion-grad-champagne.webp",
+    "thumb": "/media/photos/emotion-grad-champagne-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "Graduation day. The bottle went off at exactly the right moment."
+  },
+  {
+    "id": "emotion-grad-steps",
+    "title": "The steps",
+    "kind": "image",
+    "src": "/media/photos/emotion-grad-steps.webp",
+    "thumb": "/media/photos/emotion-grad-steps-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "Gown, cap and a long way up. She made it."
+  },
+  {
+    "id": "emotion-grad-chimney",
+    "title": "Old chimney, new start",
+    "kind": "image",
+    "src": "/media/photos/emotion-grad-chimney.webp",
+    "thumb": "/media/photos/emotion-grad-chimney-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "Big sky, old brick, and a day she will tell her kids about."
+  },
+  {
+    "id": "emotion-graduate",
+    "title": "Graduate",
+    "kind": "image",
+    "src": "/media/photos/emotion-graduate.webp",
+    "thumb": "/media/photos/emotion-graduate-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "A photo that wanted to be a poster, so I let it."
+  },
+  {
+    "id": "emotion-last-walk",
+    "title": "Last walk in the gown",
+    "kind": "image",
+    "src": "/media/photos/emotion-last-walk.webp",
+    "thumb": "/media/photos/emotion-last-walk-sm.webp",
+    "w": 1200,
+    "h": 1800,
+    "desc": "Heels, gown and cap in hand. The end of one chapter."
+  }
+];

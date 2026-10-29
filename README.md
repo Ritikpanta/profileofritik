@@ -23,8 +23,10 @@ VITE_EMAILJS_PUBLIC_KEY=...
 The page reads like a notebook, and it leads with the films.
 
 - Landing: a question at the very top offers visitors Phool Harmonica while they look around. Below it, the torn hole in the page with the film loop (three.js) and the cut-out portrait.
+- The saying: right under the landing page, the one line the whole site is about ("Watch it today. Come back to it in twenty years. It should still feel like the first time."), in English and Nepali. It lives in `src/sections/Saying.jsx`.
 - Films & stories: the films I wrote and directed, then "slice of life", the small personal pieces.
 - Sketchbook & animation: the animated pieces, then pages from the notebook.
+- भावना, I capture emotions: opens the dark side. Proposal, graduation and family films, with the stills from those shoots on a shelf underneath. Lives in `src/sections/Emotions.jsx`.
 - काम, commercial work: college marketing (APIC and A Minute with the Dean), ChitraKatha music videos, event coverage (Kritan Sajh, Rockheads) and brand work. Each client shows one set at a time, with tabs to switch, so the page stays calm.
 - Posters, photographs (a contact sheet), Nepali poems (with the poetry film Prem ko Patra), about, and the contact letter.
 
@@ -35,6 +37,7 @@ The page reads like a notebook, and it leads with the films.
   - `sliceOfLife` - the small personal films under "slice of life".
   - `animationProjects`, `sketches`, `posters`, `photos` - set `pick: true` on a photo to circle it on the contact sheet.
   - `poemFilms` - poetry films, shown above the poem pages.
+  - `emotionFilms` and `emotionStills` - the "I capture emotions" section. The first film is the big one.
   - `clientWork` - one entry per client. Each `group` becomes a tab (the Dean series is a group inside APIC). A client with no items is hidden.
   - `reel` - the films printed on the 3D film roll on the landing page, by id. Visitors can click a frame to play that film, so only use films with a local cover.
   - `directorReels` - the "behind the camera" row under the films.
